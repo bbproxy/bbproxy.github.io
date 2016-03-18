@@ -85,6 +85,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		</script>
 	</head>
 	<body>
+		<div id="main" style="width:100%;height:100%;overflow:hidden;background:url('https://unblockweb.co/img/main_bg.jpg') repeat left top;position: relative;">
+        <a class="unblockweb_wp_settings" onclick="unblockweb_toggle_settings(); return false;" href="javascript:void();"></a>
+            <div class="unblockweb_wp_bar_popup" id="unblockweb_wp_bar_popup">
+        <label class="unblockweb_wp_bar_lbl"><input type="checkbox" name="encodeURL" onchange="unblockweb_toggle_setting('encodeURL'); id=" encodeurl"="" checked="checked">&nbsp;&nbsp;Encrypt URL</label><label class="unblockweb_wp_bar_lbl"><input type="checkbox" name="encodePage" onchange="unblockweb_toggle_setting('encodePage'); id=" encodepage"="">&nbsp;&nbsp;Encrypt Page</label><label class="unblockweb_wp_bar_lbl"><input type="checkbox" name="allowCookies" onchange="unblockweb_toggle_setting('allowCookies'); id=" allowcookies"="" checked="checked">&nbsp;&nbsp;Allow Cookies</label><label class="unblockweb_wp_bar_lbl"><input type="checkbox" name="stripJS" onchange="unblockweb_toggle_setting('stripJS'); id=" stripjs"="" checked="checked">&nbsp;&nbsp;Remove Scripts</label><label class="unblockweb_wp_bar_lbl"><input type="checkbox" name="stripObjects" onchange="unblockweb_toggle_setting('stripObjects'); id=" stripobjects"="" checked="checked">&nbsp;&nbsp;Remove Objects</label>            </div>
 		<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
