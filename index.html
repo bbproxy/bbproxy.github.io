@@ -24,6 +24,41 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script>
+		            function unblockweb_toggle_settings() {
+              
+                if (window.getComputedStyle(document.getElementById("unblockweb_wp_bar_popup"), null).display == "none") {
+                    document.getElementById("unblockweb_wp_bar_popup").style.display = "block";
+                    setTimeout(function(){addEventHandler(document, "click", check_setting_status); }, 100);
+                } else {
+                    document.getElementById("unblockweb_wp_bar_popup").style.display = "none";
+                    removeEventHandler(document, "click", check_setting_status);
+                }
+            }
+           var scrollY = 0;
+      var distance = 40;
+      var speed = 24;
+
+            function autoScrollTo(el) {
+
+        var currentY = window.pageYOffset;
+        var targetY = document.getElementById("main").offsetHeight * el; //document.getElementById(el).offsetTop;
+        var bodyHeight = document.body.offsetHeight;
+        var yPos = currentY + window.innerHeight;
+        var animator = setTimeout('autoScrollTo(\''+ el +'\')',24);
+
+        if(currentY >= targetY){
+          clearTimeout(animator);
+        } else {
+          if(currentY < targetY){
+              scrollY = currentY + distance;
+              window.scroll(0, scrollY);
+            } else {
+              clearTimeout(animator);
+            }
+        }
+      }
+        </script>
 		<meta charset="utf-8">
 		<title>BannerBomb</title>
 		<meta content="self" http-equiv="Content-Security-Policy">
@@ -84,6 +119,19 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 				<label class="control-label" for="url" form="proxy">http(s)://</label>
 				<input autocomplete="off" autofocus form="proxy" id="url" inputmode="url" name="url" placeholder="www.example.org" required spellcheck="false" type="text">
 				<button class="btn btn-primary btn-sm" data-loading-text="Loading..." form="proxy" onclick="doclick()" style="display: block;" type="button">Browse</button>
+				<p>
+         <b>Options:</b>         <input type="checkbox" name="encodeURL" id="encodeURL" checked="checked">
+         <label for="encodeURL">Encrypt URL</label>
+         <input type="checkbox" name="encodePage" id="encodePage">
+         <label for="encodePage">Encrypt Page</label>
+         <input type="checkbox" name="allowCookies" id="allowCookies" checked="checked">
+         <label for="allowCookies">Allow Cookies</label>
+         <input type="checkbox" name="stripJS" id="stripJS">
+         <label for="stripJS">Remove Scripts</label>
+         <input type="checkbox" name="stripObjects" id="stripObjects" checked="checked">
+         <label for="stripObjects">Remove Objects</label>
+      </p>
+
 			</form>
 			<br>
 		</main>
