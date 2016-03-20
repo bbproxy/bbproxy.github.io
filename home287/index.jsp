@@ -21,8 +21,8 @@
 <body>
 
 <script type="text/javascript">
-	var ROOT_DOMAIN='awhoer.net';
-	var REAL_PROXY_HOST='us4.gsr.awhoer.net';
+	var ROOT_DOMAIN='bannerbombproxy.github.io';
+	var REAL_PROXY_HOST='us4.gsr.bannerbomb.net';
 	var PROXY_MODE='STD';
 	var REAL_URL='';
 	var PRX_MODE='general';
