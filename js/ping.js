@@ -1,0 +1,6 @@
+var ping=new Object;ping={servers:[],taskID:'',url:'',run:function(opts){var $t=new Date();$.getJSON(this.url+"?task_id="+ this.taskID+"&servers="+ this.servers).done(function(data){$.each(data,function(srv,result){if(result!='{}'){ping.servers.splice($.inArray(srv,ping.servers),1);ping.set_result(srv,result,opts.messages);}});});},set_result:function(srv,resultRaw,messages){var result=$.parseJSON(resultRaw);if(result["error"]===undefined){$("#srv_"+ srv+"_ip").html(result["ip"]);var status=result["good"]*100/result["times"];var res_msg='';if(status!=100){res_msg='<span class="lost-pack"> '+
+messages["ATTENTION"]+' ('+(100- status)+'%)'
++'</span>';$("#srv_"+ srv+"_res").html(res_msg);}
+else{res_msg='<span class="ok"> </span>';$("#srv_"+ srv+"_res").html(res_msg);}
+if(status!=0){$("#srv_"+ srv+"_min").html(result["min"].toFixed(1));$("#srv_"+ srv+"_avg").html(result["avg"].toFixed(1));$("#srv_"+ srv+"_max").html(result["max"].toFixed(1));}}else{var err_msg='Error';if(messages[result["error"]]!=undefined){err_msg=messages[result["error"]];}
+err_msg='<span class="not-available">'+ err_msg+'</span>';$("#srv_"+ srv+"_res").html(err_msg);}},clean_up_servers:function(messages){var srv_length=ping.servers.length;for(i=0;i<srv_length;i++){err_msg='<span class="not-available">'+ messages['TIMEOUT']+'</span>';$("#srv_"+ ping.servers[i]+"_res").html(err_msg);}}};
