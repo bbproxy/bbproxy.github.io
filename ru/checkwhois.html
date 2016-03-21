@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Whois service для проверки домена и IP-адреса</title>
+<meta name="description" content="Whois service для проверки домена, сайта и IP-адреса. Сервис, который позволяет получить информацию по местоположению IP-адреса, веб-сайта или сервера."/>
+<link rel="stylesheet" href="/css/all.css?1455717124" type="text/css" async />
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/js/whoer.notpacked.js?1458291247"></script>
+<script type="text/javascript" src="/js/form.js"></script>
+<script type="text/javascript" src="/js/clear-form-fields.js"></script>
+<link rel="stylesheet" href="/css/new.css?1455717124" type="text/css"/>
+<script type="text/javascript" src="/js/jquery-ui.min.js?1.9.2"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen"/><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/css/ie8.css" media="screen"/><![endif]-->
+<link rel="alternate" hreflang="ru" href="/ru/checkwhois.html"/>
+<link rel="alternate" hreflang="en" href="/checkwhois.html"/>
+<meta name="google-site-verification" content="hpqD4A3XBmfYlpu69cOGPgqBEU9u6_YIQAAvN5h2-ec"/>
+<meta name='yandex-verification' content='4499c8d1539e0ccc'/>
+</head>
+<body>
+<div id="wrapper">
+<div class="w1">
+<div class="w2 ">
+<div class="w3">
+<div id="header">
+<strong class="logo"><a href="/ru/myip.html">BannerBomb.github.io</a></strong>
+<div class="header-column">
+<div class="top-row">
+<div class="select-lang">
+<a id="first-lang" href="/ru/checkwhois.html" class="lang">
+<img src="/images/flags/ru.png" style="width:16px;height:16px;" alt=""> Русский
+</a>
+<ul class="drop">
+<li>
+<a href="/checkwhois.html" onclick="document.cookie='LANG=en; path=/'">
+<img src="/images/flags/en.png" style="width:16px;height:16px;" alt=""> Английский
+</a>
+</li>
+</ul>
+</div>
+ 
+<a rel="nofollow" href="https://twitter.com/BannerBomb_1" class="btn-twitter" target="_blank">
+<span>Следуйте за нами в Twitter</span></a>
+<ul class="social">
+<li class="facebok">
+<a target="_blank" title="Поделиться в Facebook" href="http://www.facebook.com/share.php?u=https://bannerbombproxy.github.io/ru/checkwhois.html">
+facebok
+</a>
+</li>
+<li class="google">
+<a target="_blank" title="Поделиться в Google+" href="https://plusone.google.com/_/+1/confirm?&url=https://bannerbombproxy.github.io/ru/checkwhois.html">
+google
+</a>
+</li>
+<li class="twitter">
+<a target="_blank" title="Поделиться в Twitter" href="http://twitter.com/share?url=https://bannerbombproxy.github.io/ru/checkwhois.html">
+twitter
+</a>
+</li>
+<li class="incontact">
+<a target="_blank" title="Поделиться в VK" href="http://vk.com/share.php?url=https://bannerbombproxy.github.io/ru/checkwhois.html">
+vkontakte
+</a>
+</li>
+</ul>
+</div>
+<ul id="menu">
+<li class=" menu-ico-01">
+<a href="/ru/myip.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Мой IP</span>
+</a>
+</li>
+<li class=" menu-ico-03">
+<a href="/ru/anonymizer.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Анонимайзер</span>
+</a>
+</li>
+<li class=" menu-ico-04">
+<a href="/ru/speedtest.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Тест скорости</span>
+</a>
+</li>
+<li class=" menu-ico-05">
+<a href="/ru/ping.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Пинг</span>
+</a>
+</li>
+<li class="active menu-ico-06">
+<a href="/ru/checkwhois.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Whois</span>
+</a>
+</li>
+<li class="menu-ico-07">
+<a href="/blog/statii.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Статьи</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="content">
+<div class="proxy-box">
+<div class="proxy-box-holder">
+<h1 class="slim"><strong class="proxy-title">Whois</strong></h1>
+<p>
+Whois сервис (или whois service) - это сервис, который позволяет получить информацию по местоположению IP-адреса, веб-сайта или сервера. Вы также можете определить регистрационные данные о владельцах доменных имён и IP-адресов. Введите в поле нужный домен, IP или имя хоста и нажмите "Проверить".
+</p>
+<form class="ping-form" action='/ru/checkwhois.html'>
+<fieldset>
+<div class="text-holder">
+<input type="text" name="host" class="text" value="" autofocus placeholder="IP-адрес или имя хоста"/>
+</div>
+<input type="submit" value="Проверить" class="btn-ping"/>
+</fieldset>
+</form>
+<div id="internal-who-is-block">
+</div>
+</div>
+</div>
+<script>
+$(".btn-ping").on('click', function() {
+    if (! $('input[name=host]').val()) return false;
+
+    var params = {};
+    params['partial'] = 1;
+    params['host'] = $('input[name=host]').val();
+
+    check_who_is('#internal-who-is-block',
+                 '/ru/checkwhois',
+                params);
+    return false;
+})
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="footer-holder">
+<em class="copyright">Copyright © BannerBombProxy 2008-2016</em>
+<div class="nav-column">
+<ul class="nav">
+<li><a href="/ru/domain/terms_of_use.html">Соглашение</a></li>
+<li><a href="/blog/ru/blog.html">Блог</a></li>
+<li><a href="/ru/vpn.html">Vpn</a></li>
+<li><a href="/ru/im.html">IM</a></li>
+<li><a href="/ru/domain/contacts.html">Контакты</a></li>
+</ul>
+<div class="partners">
+<span class="join_us"><strong class="title">Присоединяйтесь:</strong></span>
+<a target="_blank" href="https://www.facebook.com/BannerBomb/"><img src="/images/joinus/fb2.png"></a>
+<a target="_blank" href="https://twitter.com/BannerBomb_1"><img src="/images/joinus/tw.png"></a>
+<a target="_blank" href="https://vk.com/BannerBomb"><img src="/images/joinus/vk.png"></a>
+<a target="_blank" href="https://www.instagram.com/BannerBomb1/"><img src="/images/joinus/ig.png"></a>
+<a target="_blank" href="https://www.youtube.com/channel/UCinpqmUtvCExGTBXZ3wCXyA"><img src="/images/joinus/yt.png"></a>
+</div>
+</div>
+</div>
+</div>
+<script defer type="text/javascript" src="/js/jquery.main.js?1450273008"></script>
+<script>
+$(document).ready(function() {
+    $('.select-lang #first-lang').click(function(event) {
+        if ($('.select-lang .drop').is(':visible')) {
+            $('.select-lang .drop').hide();
+        } else {
+            $('.select-lang .drop').css('display', 'block'); 
+        }
+        return false;
+    });
+});
+</script>
+<div id="bugform-btn">
+<a href="#" id="bugform_show" rel="popup[bugform_popup]"><img src="/images/bugform-ru.png?1" alt=""></a>
+</div>
+<div class="popup-holder" id="bugform_popup">
+<div class="bg"></div>
+<div class="popup">
+<div class="heading">
+<strong class="title">Отзыв</strong>
+<a href="#" class="btn-close">x</a>
+</div>
+<div class="bug-container">
+<p class="complete skip">Ваше сообщение успешно отправлено!</p>
+<p class="sending skip"><img src="/images/big-preloader.gif"/></p>
+<p class="alarmhead error skip">Ваше сообщение не отправлено, подождите 10 секунд до следующей попытки.</p>
+<form class="question-form new" action="/ru/bug">
+<fieldset>
+<p class="alarmhead"> </p>
+<div class="text-holder mail">
+<input name="email" type="email" class="text" placeholder="E-mail" required>
+</div>
+<div class="text-holder area">
+<textarea name="msg" placeholder="Сообщение" required></textarea>
+</div>
+<div class="btn-holder">
+<input name="send" type="submit" class="submit" value="Отправить"/>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+ 
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-59809509-1']);
+      _gaq.push(['_setDomainName', 'whoer.net']);
+      _gaq.push(['_setAllowHash', 'false']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+ 
+ 
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21087886 = new Ya.Metrika({
+                    id:21087886,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/21087886" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+ 
+</body>
+</html>
