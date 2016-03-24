@@ -132,7 +132,7 @@ vkontakte
 <p>
 Whois-service is a service that allows to retreive information about the location of IP addresses, servers or websites. You can find out the owner of Internet resource and its contact details. Type in the desired domain, IP address or hostname and click "Check".
 </p>
-<form class="ping-form" action='/checkwhois'>
+<form class="ping-form" action='/checkwhois.html'>
 <fieldset>
 <div class="text-holder">
 <input type="text" name="host" class="text" value="" autofocus placeholder="IP address or hostname"/>
@@ -153,7 +153,7 @@ $(".btn-ping").on('click', function() {
     params['host'] = $('input[name=host]').val();
 
     check_who_is('#internal-who-is-block',
-                 '/checkwhois',
+                 '/checkwhois.html',
                 params);
     return false;
 })
