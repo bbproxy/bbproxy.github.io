@@ -1,0 +1,3 @@
+#content{margin-top:expression(document.getElementById("header").offsetHeight + "px");
+}#header{margin-top:expression((0 - (this.offsetHeight + document.getElementById("content").offsetHeight)) + "px");
+}#footer .partners .title,#footer .partners ul,#footer .partners ul li,.lang .ui-selectmenu-item-icon,.payment .ui-selectmenu-item-icon,#menu li a{display:inline;}.lang .ui-selectmenu-item-icon,.payment .ui-selectmenu-item-icon{vertical-align:middle;}.foregn-gallery .gallery-holder .name,.foregn-gallery .gallery-holder .name-holder{display:block;}#header{padding:0 0 40px;}.bar-block .bar-frame{float:left;}.tunes-block .row{margin-right:-30px;}.tunes-block label{white-space:nowrap;}.big-social-list li{display:inline;}
