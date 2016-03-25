@@ -1,3 +1,6 @@
+Access-Control-Allow-Origin: http://underget.com/
+Access-Control-Allow-Methods: GET, POST, PUT
+Access-Control-Allow-Headers: Content-Type
 ﻿var UrlList = null;
 var DefaultUrlFilter = ".exe;.zip;.rar;.arj;.z;.gz;.tar;.lzh;.cab;.hqx;.ace;.iso;.raw;.bin;.avi;.wmv;.wma;.mp3;.msi"
 var ResultFileName = "";
