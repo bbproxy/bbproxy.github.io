@@ -30,7 +30,7 @@ $(function () {
     $("#ButtonUrlNext").click(function () {
         $("#ButtonUrlNext").attr("disabled", true);
         $("#EnterUrlWait").css("visibility", "visible");
-        AjaxJsonCall("Default.aspx/ExaminePageUrls", ["Url", $("#TextBoxUrl").val()],
+        AjaxJsonCall("http://underget.com/Default.aspx/ExaminePageUrls", ["Url", $("#TextBoxUrl").val()],
             function (data) {
                 $("#EnterUrlWait").css("visibility", "hidden");
                 var result = data.d;
@@ -64,7 +64,7 @@ $(function () {
 
     $("#ButtonSelectUrlNext").click(function () {
         $("#SelectUrlWait").css("visibility", "visible");
-        AjaxJsonCall("Default.aspx/ExaminePageUrls", ["Url", $("#ListBoxUrls :selected").text()],
+        AjaxJsonCall("http://underget.com/Default.aspx/ExaminePageUrls", ["Url", $("#ListBoxUrls :selected").text()],
             function (data) {
                 $("#SelectUrlWait").css("visibility", "hidden");
                 var result = data.d;
