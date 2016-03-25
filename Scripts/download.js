@@ -28,7 +28,7 @@ $(function () {
 
 
     $("#ButtonUrlNext").click(function () {
-        $("#ButtonUrlNext").attr("disabled", true);
+        $("#ButtonUrlNext").attr("disabled", false);
         $("#EnterUrlWait").css("visibility", "visible");
         AjaxJsonCall("Default.aspx/ExaminePageUrls", ["Url", $("#TextBoxUrl").val()],
             function (data) {
@@ -55,7 +55,10 @@ $(function () {
                 }
                 $("#ButtonUrlNext").removeAttr("disabled");
             },
-
+            function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.statusText);
+                $("#ButtonUrlNext").removeAttr("disabled");
+            }
         );
     });
 
