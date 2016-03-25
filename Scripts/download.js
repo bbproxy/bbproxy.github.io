@@ -55,7 +55,10 @@ $(function () {
                 }
                 $("#ButtonUrlNext").removeAttr("disabled");
             },
-            
+            function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.statusText);
+                $("#ButtonUrlNext").removeAttr("disabled");
+            }
         );
     });
 
@@ -77,7 +80,9 @@ $(function () {
                     }
                 }
             },
-            
+            function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.statusText);
+            }
         );
     });
 
