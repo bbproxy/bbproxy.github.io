@@ -28,7 +28,7 @@ $(function () {
 
 
     $("#ButtonUrlNext").click(function () {
-        $("#ButtonUrlNext").attr("disabled", false);
+        $("#ButtonUrlNext").attr("disabled", true);
         $("#EnterUrlWait").css("visibility", "visible");
         AjaxJsonCall("Default.aspx/ExaminePageUrls", ["Url", $("#TextBoxUrl").val()],
             function (data) {
@@ -55,10 +55,7 @@ $(function () {
                 }
                 $("#ButtonUrlNext").removeAttr("disabled");
             },
-            function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(XMLHttpRequest.statusText);
-                $("#ButtonUrlNext").removeAttr("disabled");
-            }
+            
         );
     });
 
@@ -80,9 +77,7 @@ $(function () {
                     }
                 }
             },
-            function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(XMLHttpRequest.statusText);
-            }
+            
         );
     });
 
