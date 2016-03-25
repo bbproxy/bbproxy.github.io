@@ -28,7 +28,7 @@ $(function () {
 
 
     $("#ButtonUrlNext").click(function () {
-        $("#ButtonUrlNext").attr("disabled", false);
+        $("#ButtonUrlNext").attr("disabled", true);
         $("#EnterUrlWait").css("visibility", "visible");
         AjaxJsonCall("Default.aspx/ExaminePageUrls", ["Url", $("#TextBoxUrl").val()],
             function (data) {
@@ -241,4 +241,3 @@ function changeFileExtension(fileName, ext) {
 function IsEmptyString(str) {
     return (str.replace(/\s/g, "") == "");
 }
-
