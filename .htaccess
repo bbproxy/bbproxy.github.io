@@ -1,3 +1,17 @@
+<Files ~ "\.sqlite$">
+    Order allow,deny
+    Deny from All
+</Files>
+
+<Files ~ "\.config$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.log$">
+    Order allow,deny
+    Deny from all
+</Files>
 ErrorDocument 404 /notfound.html
 Access-Control-Allow-Origin: http://underget.com
 Access-Control-Allow-Methods: GET, POST, PUT
