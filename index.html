@@ -165,6 +165,8 @@ Amsterdam</option>
 Moscow</option>
 <option value="ru3">Russia,
 Saint-Petersburg</option>
+<option value="ru4">Russia,
+Moscow</option>
 <option value="se1">Sweden,
 Stockholm</option>
 <option value="uk2">United Kingdom,
@@ -186,10 +188,14 @@ New York</option>
 <label>Country</label>
 <select class="proxy-select" id="server" name="server">
 <option value="rnd">Random server</option>
-<option value="uk2">United Kingdom
-London</option>
+<option value="us4">USA
+NewYork</option>
+<option value="us3">USA
+LosAngeles</option>
 <option value="ru2">Russia
 Moscow</option>
+<option value="uk2">United Kingdom
+London</option>
 <option value="se1">Sweden
 Stockholm</option>
 <option value="nl4">Netherlands
@@ -200,10 +206,8 @@ Amsterdam</option>
 SaintPetersburg</option>
 <option value="fr2">France
 Paris</option>
-<option value="us4">USA
-NewYork</option>
-<option value="us3">USA
-LosAngeles</option>
+<option value="ru4">Russia
+Moscow</option>
 </select>
 </div>
 <div class="row">
@@ -326,9 +330,13 @@ var servers = {
     "rnd" : { "name" : "Random server", "ips" : []}
 };
 
-  servers["uk2"] = { "name" : "United Kingdom", "ips" : ["209.222.30.93"], "address" : "uk2.gsr.awhoer.net"
+  servers["us4"] = { "name" : "USA", "ips" : ["192.240.96.253"], "address" : "us4.gsr.awhoer.net"
+};
+  servers["us3"] = { "name" : "USA", "ips" : ["192.52.167.149"], "address" : "us3.gsr.awhoer.net"
 };
   servers["ru2"] = { "name" : "Russia", "ips" : ["195.88.208.155"], "address" : "ru2.gsr.awhoer.net"
+};
+  servers["uk2"] = { "name" : "United Kingdom", "ips" : ["209.222.30.93"], "address" : "uk2.gsr.awhoer.net"
 };
   servers["se1"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
 };
@@ -340,9 +348,7 @@ var servers = {
 };
   servers["fr2"] = { "name" : "France", "ips" : ["5.135.76.7"], "address" : "fr2.gsr.awhoer.net"
 };
-  servers["us4"] = { "name" : "USA", "ips" : ["192.240.96.253"], "address" : "us4.gsr.awhoer.net"
-};
-  servers["us3"] = { "name" : "USA", "ips" : ["192.52.167.149"], "address" : "us3.gsr.awhoer.net"
+  servers["ru4"] = { "name" : "Russia", "ips" : ["92.63.100.80"], "address" : "ru4.gsr.awhoer.net"
 };
 
 $('#server').on('change', function() {
