@@ -1,2 +1,0 @@
-@keyframes ani_blink{0%{opacity:1.0}50%{opacity:0.0}100%{opacity:1.0}}
-.ani_blink{-webkit-animation:ani_blink 1s linear infinite;
