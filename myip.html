@@ -1470,11 +1470,11 @@ var parameters = {
     callback_for_os: "set_os_data",
 
     dns_sys_id: "#dns_java_system",
-    dns_sys_request: "https://whoer.net/ips2country?ips=",
+    dns_sys_request: "/ips2country?ips=",
 
     dns_resolve_id: "#dns_java_resolve",
     unique_domain: "heddz1459222.jv.whrq.net",
-    dns_request: "https://whoer.net/dns?domain=heddz1459222.jv",
+    dns_request: "/dns?domain=heddz1459222.jv",
     callback_for_dns: "async_req",
 
     callback_for_version: "set_version_data",
@@ -1487,13 +1487,13 @@ var parameters = {
     udp_host: "ns8.whdn.net",
     tcp_port: "80",
     udp_port: "53",
-    request: "https://whoer.net/ip_json",
+    request: "/ip_json",
     timeout: "9000",
 
     not_available: "N/A",
 
     udp_message: "dhcjn1459222.ud",
-    udp_result_request: "https://whoer.net/dns?domain=dhcjn1459222.ud",
+    udp_result_request: "/dns?domain=dhcjn1459222.ud",
 
     callback_for_udp: "async_req",
     udp_ip_id: "#ip_java_udp",
@@ -1518,7 +1518,7 @@ var parameters = {
 </script>
  
 <script>
-var flash_obj ='<object width="1" height="1">   <param name="movie" value="https://whoer.net/flash/WhoerDetection.swf?1459222400">   <param name="menu" value="false">   <param name="allowScriptAccess" value="always">   <param name="bgcolor" value="#ffffff">   <param name="flashVars"          value="callback_for_dns=async_req&dns_request=https://whoer.net/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  <embed     src="https://whoer.net/flash/WhoerDetection.swf?1459222400" width="1" height="1"     menu="false"     loop="false"     allowScriptAccess="always"     flashVars="callback_for_dns=async_req&dns_request=https://whoer.net/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  </embed></object>';
+var flash_obj ='<object width="1" height="1">   <param name="movie" value="/flash/WhoerDetection.swf?1459222400">   <param name="menu" value="false">   <param name="allowScriptAccess" value="always">   <param name="bgcolor" value="#ffffff">   <param name="flashVars"          value="callback_for_dns=async_req&dns_request=/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  <embed     src="/flash/WhoerDetection.swf?1459222400" width="1" height="1"     menu="false"     loop="false"     allowScriptAccess="always"     flashVars="callback_for_dns=async_req&dns_request=/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  </embed></object>';
 
 $("#run_interactive").on('click', function() {
         $(this).addClass("done");
@@ -1527,7 +1527,7 @@ $("#run_interactive").on('click', function() {
 
         $('#flash_container').html(flash_obj);
         run_java_ext_applet();
-        async_req('#proxy_ports', 'https://whoer.net/ports', 'ports');
+        async_req('#proxy_ports', '/ports', 'ports');
 
 
 //event.stopPropagation();
@@ -1554,7 +1554,7 @@ $(document).ready(function() {
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
 })();
-async_req('.dns_br', 'https://whoer.net/dns?domain=fkbwf1459222.bu', 'dns');
+async_req('.dns_br', '/dns?domain=fkbwf1459222.bu', 'dns');
 
 });
 </script>
