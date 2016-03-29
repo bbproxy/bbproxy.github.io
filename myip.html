@@ -1116,9 +1116,9 @@ checking by Java, Flash and WebRTC, allowing to detect the actual system setting
 <img data-src="/images/alevel-flash.png"/>
 </div>
 <div class="content">
-<span class="title"><a href="/blog/article/how-to-disable-flash-in-browser/">Flash enabled</a></span>
+<span class="title"><a href="/blog/article/how-to-disable-flash-in-browser.html">Flash enabled</a></span>
 <span class="description">
-We strongly recommend our users to disable Flash Player in their browsers. If you have to use Flash sites, it is better to do it in another browser and only with a specific trusted site. <a target="_blank" href="/blog/article/how-to-disable-flash-in-browser/">More...</a>
+We strongly recommend our users to disable Flash Player in their browsers. If you have to use Flash sites, it is better to do it in another browser and only with a specific trusted site. <a target="_blank" href="/blog/article/how-to-disable-flash-in-browser.html">More...</a>
 </span>
 <span class="persent">-10</span>
 </div>
@@ -1130,7 +1130,7 @@ We strongly recommend our users to disable Flash Player in their browsers. If yo
 <div class="content">
 <span class="title"><a href="/blog/article/how-to-disable-java-in-various-operating-systems.html">Java enabled</a></span>
 <span class="description">
-We strongly recommend our users to disable Java in the main browser. If you have to use Flash sites, it is better to do it in another browser and only with a specific trusted site. <a target="_blank" href="/blog/article/how-to-disable-java-in-various-operating-systems/">More...</a>
+We strongly recommend our users to disable Java in the main browser. If you have to use Flash sites, it is better to do it in another browser and only with a specific trusted site. <a target="_blank" href="/blog/article/how-to-disable-java-in-various-operating-systems.html">More...</a>
 </span>
 <span class="persent">-10</span>
 </div>
@@ -1164,7 +1164,7 @@ We strongly recommend our users to disable ActiveX in their main browser. If you
 <img data-src="/images/alevel-webrtc-local.png"/>
 </div>
 <div class="content">
-<span class="title"><a href="/blog/article/how-to-disable-webrtc-in-various-browsers/">WebRTC</a></span>
+<span class="title"><a href="/blog/article/how-to-disable-webrtc-in-various-browsers.html">WebRTC</a></span>
 <span class="description">
 We detected A Class network in your local IP addresses. Since you are on this site and we detected it, you are possibly using VPN. <a target="_blank" href="/blog/article/how-to-disable-webrtc-in-various-browsers.html">How to disable WebRTC</a>
 </span>
@@ -1415,7 +1415,7 @@ $(document).ready(function() {
     pub["ua_mismatch"] = scripts.jsua( '.js-ua-headers', '.browser-ua-headers', '.diff-ua-headers');
 
 
-    pub["anonymizer"] = scripts.anonymizer( 'bannerbombproxy'+ '.' +'github'+ '.' +'com', '#using-anonymizer');
+    pub["anonymizer"] = scripts.anonymizer( 'bannerbombproxy'+ '.' +'github'+ '.' +'io', '#using-anonymizer');
 
     scripts.languages('.js_language');
     
@@ -1470,11 +1470,11 @@ var parameters = {
     callback_for_os: "set_os_data",
 
     dns_sys_id: "#dns_java_system",
-    dns_sys_request: "/ips2country?ips=",
+    dns_sys_request: "https://whoer.net/ips2country?ips=",
 
     dns_resolve_id: "#dns_java_resolve",
     unique_domain: "heddz1459222.jv.whrq.net",
-    dns_request: "/dns?domain=heddz1459222.jv",
+    dns_request: "https://whoer.net/dns?domain=heddz1459222.jv",
     callback_for_dns: "async_req",
 
     callback_for_version: "set_version_data",
@@ -1487,13 +1487,13 @@ var parameters = {
     udp_host: "ns8.whdn.net",
     tcp_port: "80",
     udp_port: "53",
-    request: "/ip_json",
+    request: "https://whoer.net/ip_json",
     timeout: "9000",
 
     not_available: "N/A",
 
     udp_message: "dhcjn1459222.ud",
-    udp_result_request: "/dns?domain=dhcjn1459222.ud",
+    udp_result_request: "https://whoer.net/dns?domain=dhcjn1459222.ud",
 
     callback_for_udp: "async_req",
     udp_ip_id: "#ip_java_udp",
@@ -1518,7 +1518,7 @@ var parameters = {
 </script>
  
 <script>
-var flash_obj ='<object width="1" height="1">   <param name="movie" value="/flash/WhoerDetection.swf?1459222400">   <param name="menu" value="false">   <param name="allowScriptAccess" value="always">   <param name="bgcolor" value="#ffffff">   <param name="flashVars"          value="callback_for_dns=async_req&dns_request=/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  <embed     src="/flash/WhoerDetection.swf?1459222400" width="1" height="1"     menu="false"     loop="false"     allowScriptAccess="always"     flashVars="callback_for_dns=async_req&dns_request=/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  </embed></object>';
+var flash_obj ='<object width="1" height="1">   <param name="movie" value="https://whoer.net/flash/WhoerDetection.swf?1459222400">   <param name="menu" value="false">   <param name="allowScriptAccess" value="always">   <param name="bgcolor" value="#ffffff">   <param name="flashVars"          value="callback_for_dns=async_req&dns_request=https://whoer.net/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  <embed     src="https://whoer.net/flash/WhoerDetection.swf?1459222400" width="1" height="1"     menu="false"     loop="false"     allowScriptAccess="always"     flashVars="callback_for_dns=async_req&dns_request=https://whoer.net/dns?domain=aynrx1459222.fl&unique_domain=aynrx1459222.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  </embed></object>';
 
 $("#run_interactive").on('click', function() {
         $(this).addClass("done");
@@ -1527,7 +1527,7 @@ $("#run_interactive").on('click', function() {
 
         $('#flash_container').html(flash_obj);
         run_java_ext_applet();
-        async_req('#proxy_ports', '/ports', 'ports');
+        async_req('#proxy_ports', 'https://whoer.net/ports', 'ports');
 
 
 //event.stopPropagation();
@@ -1554,7 +1554,7 @@ $(document).ready(function() {
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
 })();
-async_req('.dns_br', '/dns?domain=fkbwf1459222.bu', 'dns');
+async_req('.dns_br', 'https://whoer.net/dns?domain=fkbwf1459222.bu', 'dns');
 
 });
 </script>
