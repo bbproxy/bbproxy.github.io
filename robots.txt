@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /os
+Disallow: /ports
+Disallow: /whois
+Disallow: /*?*lang=
+Disallow: /*?*host=
+
+Host: whoer.net
