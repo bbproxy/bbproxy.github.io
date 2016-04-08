@@ -184,6 +184,7 @@ London</option>
 Los Angeles</option>
 <option value="us4">USA,
 New York</option>
+<option value="us5">USA, NC</option>
 </select>
 </div>
 <div class="btn-tunes hidden">  
@@ -217,6 +218,7 @@ Paris</option>
 Amsterdam</option>
 <option value="se1">Sweden
 Stockholm</option>
+<option value="us5">US, NC</option>
 </select>
 </div>
 <div class="row">
@@ -358,6 +360,8 @@ var servers = {
   servers["nl4"] = { "name" : "Netherlands", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
 };
   servers["se1"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
+};
+  servers["us5"] = { "name" : "USA", "ips" : ["8.8.8.8"], "address" : "google.com"
 };
 
 $('#server').on('change', function() {
