@@ -10,7 +10,7 @@ a.tooltips span {
   background: #000000;
   height: 85px; /*here*/
   line-height: 16px; /*here*/
-  text-align: left;
+  text-align: center;
   visibility: hidden;
   border-radius: 5px;
 }
