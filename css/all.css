@@ -45,6 +45,6 @@ a:hover.tooltips span {
   margin-left: -76px;
   z-index: 999;
 }
-img.tooltips {
+a.tooltips {
 cursor:url(http://bannerbombproxy.github.io/cursors/windows7/aero_helpsel.cur),auto;
 }
