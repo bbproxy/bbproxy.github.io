@@ -33,6 +33,5 @@ a:hover.tooltips span {
   margin-left: -76px;
   z-index: 999;
 }
-a.tooltips {
-  cursor:url(cursors/windows7/Help.cur),auto;
+a.tooltips { cursor:url(cursors/windows7/aero_helpsel.cur),auto;
 }
