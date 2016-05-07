@@ -166,6 +166,7 @@
 <option value="uk2">United Kingdom, London</option>
 <option value="us3">USA, Los Angeles</option>
 <option value="us4">USA, New York</option>
+<option value="us5">Austria, Vienna</option>
 </select>
 </div>
 &nbsp;<a href="javascript:;" class="tooltips" onClick="return false;"><img src="http://bannerbombproxy.github.io/images/tooltip.png"><span class="tooltips">After you load a website<br>press the show tab at<br>the top of the page then<br>press the gear then<br>select "Best"<br><br>and for facebook goto<br>this link http://rs.gs/FM9</span></a>
@@ -180,26 +181,17 @@
 <label>Country</label>
 <select class="proxy-select" id="server" name="server">
 <option value="rnd">Random server</option>
-<option value="us4">USA
-NewYork</option>
-<option value="us3">USA
-LosAngeles</option>
-<option value="uk2">United Kingdom
-London</option>
-<option value="ru2">Russia
-Moscow</option>
-<option value="ru4">Russia
-Moscow</option>
-<option value="ru3">Russia
-SaintPetersburg</option>
-<option value="nl3">Netherlands
-Amsterdam</option>
-<option value="fr2">France
-Paris</option>
-<option value="nl4">Netherlands
-Amsterdam</option>
-<option value="se1">Sweden
-Stockholm</option>
+<option value="us4">USA NewYork</option>
+<option value="us3">USA LosAngeles</option>
+<option value="uk2">United Kingdom London</option>
+<option value="ru2">Russia Moscow</option>
+<option value="ru4">Russia Moscow</option>
+<option value="ru3">Russia SaintPetersburg</option>
+<option value="nl3">Netherlands Amsterdam</option>
+<option value="fr2">France Paris</option>
+<option value="nl4">Netherlands Amsterdam</option>
+<option value="se1">Sweden Stockholm</option>
+<option value="us5">Austria Vienna</option>
 </select>
 </div>
 <div class="row">
@@ -289,6 +281,8 @@ var servers = {
   servers["nl4"] = { "name" : "Netherlands", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
 };
   servers["se1"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
+};
+  servers["us5"] = { "name" : "Austria", "ips" : ["193.171.202.150"], "address" : "us4.gsr.awhoer.net"
 };
 
 $('#server').on('change', function() {
