@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="8Wv7b8Eq5nvoReKg28IlWdeRuXMb5ddh3MXkMcUi718=" name="csrf-token" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+       <link href="https://www.manymo.com/assets/application-ie9-1b6b302a235634d50bf7365d9e05b2b8.css" media="all" rel="stylesheet" type="text/css" />
+    <![endif]-->    
+    <link href="https://www.manymo.com/assets/application-176205a84663a30a505e2fa939b21a48.css" media="all" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+//<![CDATA[
+var INCLUDE_URI = 'https://www.manymo.com/assets/noVNC/';
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+var WEB_SOCKET_DEBUG = false;
+//]]>
+</script>  <script>
+    if (navigator.userAgent.search(/Chrome/) == -1 && navigator.userAgent.search(/Safari\/(\d+)/) > 1 && parseInt(RegExp.$1) < 536) {
+      window.WEB_SOCKET_FORCE_FLASH = true;
+    }
+  </script>
+  <script>
+    if (window != window.top) {
+      window.top.location = 'https://www.manymo.com';
+    }
+  </script>
+
+    <script src="https://www.manymo.com/assets/application-77a706d0b9f35bc15a480b4fe1368544.js" type="text/javascript"></script>
+        <script>
+      $(function() {      
+
+        $(".copy-to-clipboard").tooltip({
+          "placement": "right",
+          "trigger": "manual",
+          "title": "copy to clipboard"
+        });  
+
+
+        ZeroClipboard.setDefaults({ moviePath: "https://www.manymo.com/assets/ZeroClipboard-95db02d3ad33b80d814203cf3107ef1a.swf" });
+  
+        var clip = new ZeroClipboard($(".copy-to-clipboard"));
+
+        clip.on('mouseover', function(client, args) {
+          $(this).tooltip('show');
+        });
+
+        clip.on('mouseout', function(client) {
+          $(this).tooltip('hide');
+          $(this).attr('data-original-title', "copy to clipboard")
+        });
+  
+        clip.on('complete', function(client, args) {
+          $(this).attr('data-original-title', "copied").tooltip('fixTitle').tooltip('show');        
+        });
+
+        $(window).resize(function() {
+          clip.reposition();
+        });
+  
+        clip.on('noflash', function(client, args) {
+          $(".copy-to-clipboard").hide();
+        });
+
+        clip.on('wrongflash', function(client, args) {
+          $(".copy-to-clipboard").hide();
+        });
+      });
+    </script>
+  <style>   
+    .alert-notice, .alert-wait {
+      color: black;      
+      background-color: white;      
+    }
+    
+    .alert-wait {
+      text-indent: 19px;
+      background-repeat:no-repeat;
+      background-image: url('https://www.manymo.com/assets/spinner-white.gif');
+      background-position: 10px 10px;      
+    }
+       
+    .alert-warning {
+      color: #ba9100;
+      background-color: #fff7b8;
+    }
+
+    .alert-error {
+      color: #b7230a;
+      background: #fbd2c2;
+    }
+    
+    #emulator-status {
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      margin-bottom: 8px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      border-color: #c5c5c5;
+      -moz-box-shadow: 1px 1px 5px #a8a8a8;
+      -webkit-box-shadow: 1px 1px 5px #a8a8a8;
+      box-shadow: 1px 1px 5px #a8a8a8;
+    }
+  </style>
+
+  <script>
+    /*jslint white: false */
+    /*global window, $, Util, RFB, */
+    "use strict";
+
+    var rfb;
+    var vncStatus;
+    var vncLevel;
+    var displayMgr;
+    var emulatorWidth;
+    var emulatorHeight;
+    var executeAfterEmulatorStarted = [];
+
+    executeAfterEmulatorStarted.push(
+      function (params) {
+        $.idleTimeout('#emulator-status', '#emulator-status a#idletimeout-resume', {
+          idleAfter: 1140,
+          warningLength: 60,
+          pollingInterval: 8640000,
+          keepAliveURL: '#',
+          onTimeout: function() {
+            $('.modal').modal('hide');
+            status = $("#idletimeout-override").html() || $("#idletimeout").html();
+            updateStatus(status, "error");
+            rfb.disconnect();
+          },
+          onIdle: function() {
+            $('.modal').modal('hide');
+            updateStatus($('#idletimeout-warn').html(), "warning");
+          },
+          onCountdown: function(counter) {
+            $(this).find("span").html( counter ); // update the counter
+          },
+          onResume: function(){
+            clearStatus();
+          }
+        });
+      }
+    );
+
+    function updateVNCState(rfb, state, oldstate, msg) {
+      var s = $D('noVNC_status');
+      var sb = $D('noVNC_status_bar');
+      var level;
+
+      switch (state) {
+        case 'failed':       level = "error";  break;
+        case 'fatal':        level = "error";  break;
+        case 'normal':       level = "normal"; break;
+        case 'disconnected': level = "normal"; break;
+        case 'loaded':       level = "normal"; break;
+        default:             level = "warn";   break;
+      }
+
+      if (state == "normal") {
+        rescale();
+      }
+
+      if (state == "failed" || state == "fatal") {
+        updateStatus(msg, "error");
+        _gaq.push(['_trackEvent', 'emulators', 'vnc-error', msg]);
+      }
+
+      vncStatus = msg;
+      vncLevel = level;
+
+      if (typeof(msg) !== 'undefined') {
+        sb.setAttribute("class", "noVNC_status_" + level);
+        s.innerHTML = msg;
+      }
+    }
+
+    function vncOK() {
+      return (vncStatus != "fatal" && vncStatus != "failed");
+    }
+
+    function relaunch() {
+      window.location.reload();
+      updateStatus("Re-launching emulator", "wait");
+    }
+
+    function launch() {
+      $.ajax({
+          url: 'https://www.manymo.com/launch_emulator',
+        data: {"id":"86"},
+        success: function(data, textStatus, jqXHR) {
+          for (var i = 0; i < executeAfterEmulatorStarted.length ; i++) {
+            executeAfterEmulatorStarted[i](data);
+          }
+          initializeVNC(data);
+        },
+        error: function(xhr, textStatus, errorThrown) {
+          if (xhr.status == 503) {
+            _gaq.push(['_trackEvent', 'subscriptions', 'wall-shown', 'over-capacity']);
+            updateStatus($("#over-capacity").html(), "error");
+          } else {
+            updateStatus("Unable to launch emulator", "error");
+          };
+        }
+      });
+    }
+
+    function initializeVNC(params) {
+
+      emulatorWidth = params.width;
+      emulatorHeight = params.height;
+
+      $("#noVNC_screen").append('<canvas id="noVNC_canvas" width="' + emulatorWidth + 'px" height="' + emulatorHeight + 'px">Canvas not supported.</canvas>')
+
+      var scale = rescale();
+      window.onresize = function() {
+        rescale();
+      }
+
+      var encrypt = ('https:' == document.location.protocol);
+
+      rfb = new RFB({
+        'target':       $D('noVNC_canvas'),
+        'true_color':   true,
+        'encrypt':      encrypt,
+        'display_scale': scale,
+        'local_cursor': true,
+        'shared':       false,
+        'connectTimeout': 10,
+        'view_only':    false,
+        'check_rate':   100,
+        'fbu_req_rate': 150,
+        'focusContainer': $("#noVNC_screen")[0],
+        'updateState':  updateVNCState
+      });
+
+      $("#noVNC_screen").click(function() {
+        $(this).focus();
+      });
+
+      rfb.connect(params.hostname, encrypt ? 443 : 80, params.password, 'display' + params.websocketPort);
+
+      displayMgr = new WebSocket((encrypt ? "wss://" : "ws://") + params.hostname + "/displaymgr?display=" + params.displayNumber + "&password=" + params.password);
+
+      displayMgr.onmessage = function(evt) {
+        var msg = JSON.parse(evt.data);
+        if (msg.type == 'keep_alive') {
+          // console.log(msg.type);
+        } else if (msg.type == 'resize') {
+          emulatorWidth = msg.width;
+          emulatorHeight = msg.height;
+          rescale();
+          // console.log('resize: ' + msg.width + 'x' + msg.height);
+        }
+      }
+    }
+
+    function rescale() {
+      var height_scale =  maxHeight() / (emulatorHeight);
+      var width_scale = maxWidth() / (emulatorWidth);
+      var scale = Math.min(height_scale, width_scale);
+
+      if (scale > 1.0) {
+        scale = 1.0;
+      }
+
+      $('#noVNC_screen').height(emulatorHeight * scale);
+      $('#noVNC_screen').width(emulatorWidth * scale);
+
+      if (rfb) {
+        rfb.get_display().set_scale(scale);
+        rfb.get_mouse().set_scale(scale);
+      }
+
+      return scale;
+    }
+
+    function ajax(params) {
+      $.ajax({
+        url: params.url,
+        data: params.data,
+        success: function(data, textStatus, jqXHR) {
+          if (vncOK()) {
+            clearStatus();
+          }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          updateStatus("An error has occurred", "error");
+        }
+      });
+    }
+
+      (function() {
+        var timestamp = (new Date()).getTime() + 20*60*1000; // 20 minutes
+
+        (function tick() {
+          var left = Math.floor((timestamp - (new Date())) / 1000);
+
+          if (left <= 0) {
+            updateStatus($('#timelimit').html(), "error");
+            rfb.disconnect();
+          } else {
+            if (left <= 60) {
+              $('#timelimit-warn span').text(Math.floor(left));
+              updateStatus($('#timelimit-warn').html(), "warning");
+              rescale();
+            }
+            setTimeout(tick, 1000);
+          }
+        })();
+      })();
+
+  </script>
+  <script>
+
+
+    function updateStatus(newStatus, level) {
+      $('#emulator-status').attr("class", "alert alert-"+level);
+      $('#emulator-status').html("<div>" + newStatus + "</div>");
+    }
+
+    function clearStatus() {
+      if (connectedStatus = $('#connected-status').html()) {
+        updateStatus(connectedStatus, "notice");
+      } else if (vncStatus) {
+        if (vncLevel == "error") {
+          updateStatus(vncStatus, "error");
+        } else {
+          updateStatus("Connected", "notice");
+        }
+      }
+    }
+
+    function maxHeight() {
+      return $('body').height()-$("#emulator-status").outerHeight(true)-10;
+    }
+
+    function maxWidth() {
+      return $('body').width()-20;
+    }
+
+    $(function() {
+        launch();
+    });
+
+    // No frames, iframes
+
+  </script>
+  <script>
+    executeAfterEmulatorStarted.push(
+      function (params) {
+        clearStatus();
+      }
+    );
+  </script>
+    
+    <!--[if IE 9]>
+      <script src="https://www.manymo.com/assets/ie9-3f21d468c21848d12fbf23b41d85134a.js" type="text/javascript"></script>
+    <![endif]-->
+      <!--[if lt IE 9]>
+        <script>
+          if ($.browser.msie && $.browser.version < 9) {
+            alert('Unsupported browser.  Please upgrade to a newer version of Internet Explorer, or use Chrome or Firefox.');
+          }
+        </script>
+      <![endif]-->   
+    <title>Manymo</title>    
+  </head>
+  <body class="bare">   
+    <div id="addition-develop" class="addition">
+  <a href="#" onclick="$('#develop-automate').modal('toggle');">Develop</a>
+</div>
+
+<script>
+  $(function() {
+    $("#additions").append($("#addition-develop").html());    
+  });
+  
+  executeAfterEmulatorStarted.push(
+    function (params) {
+      $("#hostname").text(params.hostname);
+      $("#emulator-console-port").text(params.emulatorConsolePort);
+      $("#password").text(params.password);      
+    }    
+  );
+  
+</script>
+
+<div id="develop-automate" class="modal hide fade" role="dialog">
+  <div class="modal-header">
+    <div id="close" onclick="$('#develop-automate').modal('toggle')"></div>  
+    <h1>Develop</h1>
+  </div>
+  <div class="modal-body">
+    <p>Use this with the <a href="#" onclick="window.open('https://www.manymo.com/pages/documentation/manymo-command-line-tool')">Manymo command line tool</a> to make this emulator appear as local:</p>
+    <p>
+      <code id="command-line" class="copyable">manymo tunnel <span id="hostname"></span>:<span id="emulator-console-port"></span>:<span id="password"></span></code>
+      <img alt="Copy_to_clipboard" class="copy-to-clipboard" data-clipboard-target="command-line" height="16" src="https://www.manymo.com/assets/copy_to_clipboard-ea373d7e238326a93268c60b1be56c61.png" style="cursor: pointer;" width="16" />
+
+
+      <br style="clear: both">
+    </p>
+    <p>Use this when you use with Eclipse, IntelliJ/IDE, automation and SDK tools (e.g., adb).</p>
+  </div>
+</div>
+
+<div id="connected-status">
+  Connected
+    <span id="additions"></span>
+</div>
+
+
+
+  <div id="timelimit" style="display: none">
+    Your emulator has reached its 20 minute limit and has been closed.
+    <a href="#" onclick="window.open('https://www.manymo.com/user/subscription')">Upgrade</a> to access emulators without this limitation.
+  </div>
+
+  <div id="timelimit-warn" style="display:none">
+    Your emulator is nearing its 20 minute limit.  Your emulator will be terminated in <span><!-- coundown place holder --></span> seconds.
+    <a href="#" onclick="window.open('https://www.manymo.com/user/subscription')">Upgrade</a> to access emulators without this limit.
+  </div>
+
+<div id="idletimeout" style="display: none">
+    You have been idle for more than 20 minutes.  Your emulator session has ended.
+    <nobr><a href="#" onClick="relaunch();">Re-launch emulator.</a></nobr>
+</div>
+
+<div id="idletimeout-warn" style="display: none">
+	You appear to be idle.  Your emulator will be terminated in <span><!-- countdown place holder --></span> seconds.
+	<a id="idletimeout-resume" href="#">Continue using Manymo.</a>
+</div>
+
+<div id="over-capacity" style="display: none">
+    Sorry! Manymo is currently out of free emulators. Please try again later, or <a href="#" onclick="window.open('https://www.manymo.com/user/subscription')">Upgrade</a> to have access to emulators reserved for paying customers.
+</div>
+
+<div class="alert alert-wait" id="emulator-status"><div>Starting Android</div></div>
+
+<div id="noVNC_screen" tabindex="0">
+  <div id="noVNC_status_bar" class="noVNC_status_bar" style="margin-top: 0px;">
+    <table border=0 width="100%">
+      <tr>
+        <td><div id="noVNC_status"></div></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34483312-1']);
+      _gaq.push(['_setDomainName', 'manymo.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","f0fa7c32e9","1738141","cw1YQhcNW1hQEBZRC0UOV0IKEEQbVg1XWgNTFg==",0,53,new Date().getTime(),"","","","",""]);</script></body>
+</html>
