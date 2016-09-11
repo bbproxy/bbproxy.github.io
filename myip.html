@@ -138,9 +138,7 @@
                                         <h1 class="slim">
                                             <strong class="title">My IP:</strong>
                                         </h1>
-                                        <strong class="your-ip">
-                                            
-                                        </strong>
+                                        <strong class="your-ip"><script type="text/javascript">var userip;</script><script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script><script type="text/javascript">document.write("", userip);</script></strong>
                                     </div>
                                     <dl class="ping">
                                         <dt>Location</dt>
@@ -148,42 +146,108 @@
                                             <span class="ico-holder no-back">
                                                 <img src="/images/flags/us.png">
                                             </span>
-                                            <span class="cont offDate overdots">
-                                                United Kingdom (GB), London
-                                            </span>
+                                            <span class="cont offDate overdots">United States (US), Greensboro</span>
                                         </dd>
                                         <dt>ISP:</dt>
                                         <dd>
                                             <span class="ico-holder isp"> </span>
-                                            <span class="cont offDate overdots">Digital Ocean</span>
+                                            <span class="cont offDate overdots">North Carolina Research and Education Network</span>
                                         </dd>
                                         <dt>Hostname:</dt>
                                         <dd>
                                             <span class="ico-holder hostname"> </span>
-                                            <span class="cont offDate overdots">uk.ab-websites.com</span>
+                                            <span class="cont offDate overdots">proxy-c2-7b3.rtp.zs.ncren.net</span>
                                         </dd>
                                         <dt>OS: </dt>
                                         <dd>
                                             <span class="ico-holder os-chromeos"> </span>
-                                            <span class="cont overdots">
-                                                Chrome OS
-                                                </span>
+                                            <span class="cont overdots">Chrome OS</span>
                                         </dd>
                                         <dt>Browser:</dt>
                                         <dd>
                                             <span class="ico-holder browser-chrome"> </span>
                                             <span class="cont overdots">
-                                                Chrome 52.0
+                                                <script>
+                                                var nVer = navigator.appVersion;
+                                                var nAgt = navigator.userAgent;
+                                                var browserName  = navigator.appName;
+                                                var fullVersion  = ''+parseFloat(navigator.appVersion); 
+                                                var majorVersion = parseInt(navigator.appVersion,10);
+                                                var nameOffset,verOffset,ix;
+                                                
+                                                // In Opera, the true version is after "Opera" or after "Version"
+                                                if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+                                                    browserName = "Opera";
+                                                fullVersion = nAgt.substring(verOffset+6);
+                                                if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+                                                fullVersion = nAgt.substring(verOffset+8);
+                                                    
+                                                }
+                                                // In MSIE, the true version is after "MSIE" in userAgent
+                                                else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+                                                    browserName = "Microsoft Internet Explorer";
+                                                    fullVersion = nAgt.substring(verOffset+5);
+                                                    
+                                                }
+                                                // In Chrome, the true version is after "Chrome" 
+                                                else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+                                                    browserName = "Chrome";
+                                                fullVersion = nAgt.substring(verOffset+7);
+                                                    
+                                                }
+                                                // In Safari, the true version is after "Safari" or after "Version" 
+                                                else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+                                                    browserName = "Safari";
+                                                fullVersion = nAgt.substring(verOffset+7);
+                                                if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+                                                fullVersion = nAgt.substring(verOffset+8);
+                                                    
+                                                }
+                                                // In Firefox, the true version is after "Firefox" 
+                                                else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+                                                    browserName = "Firefox";
+                                                    fullVersion = nAgt.substring(verOffset+8);
+                                                    
+                                                }
+                                                // In most other browsers, "name/version" is at the end of userAgent 
+                                                else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+                                                (verOffset=nAgt.lastIndexOf('/')) ) 
+                                                {
+                                                    browserName = nAgt.substring(nameOffset,verOffset);
+                                                fullVersion = nAgt.substring(verOffset+1);
+                                                if (browserName.toLowerCase()==browserName.toUpperCase()) {
+                                                    browserName = navigator.appName;
+                                                    
+                                                }
+                                                    
+                                                }
+                                                // trim the fullVersion string at semicolon/space if present
+                                                if ((ix=fullVersion.indexOf(".2"))!=-1)
+                                                fullVersion=fullVersion.substring(0,ix);
+                                                if ((ix=fullVersion.indexOf(" "))!=-1)
+                                                fullVersion=fullVersion.substring(0,ix);
+                                                
+                                                majorVersion = parseInt(''+fullVersion,10);
+                                                if (isNaN(majorVersion)) {
+                                                    fullVersion  = ''+parseFloat(navigator.appVersion); 
+                                                majorVersion = parseInt(navigator.appVersion,10);
+                                                    
+                                                }
+                                                
+                                                document.write(''
+                                                +''+browserName+'&nbsp;'+fullVersion+''
+                                                )
+                                                </script>
                                             </span>
                                         </dd>
                                     </dl>
                                 </div>
                                 <div class="column-right">
                                     <div class="score-godless" id="anonym_level">
-                                        <a class="title" onclick="$('#hidden-images img').reveal('fadeIn', 500);" href="#" rel="popup[hide_control_popup]">Your anonymity: N/A</a>
-                                        <span class="description">
-                                            <span class="disabled">N/A</span>
-                                            </span>
+                                        <a class="title" onclick="$('#hidden-images img').reveal('fadeIn', 500);" href="#" rel="popup[hide_control_popup]">
+                                            <span>Your anonymity: 20%</span>
+                                        </a>
+                                        <span class="description">Knock knock Neo...</span>
                                     </div>
                                     <dl class="ping">
                                         <dt>
@@ -192,10 +256,10 @@
                                         </dt>
                                         <dd>
                                             <span class="ico-holder ico-dns-net"> </span>
-                                            <span class="cont dns_br_ip max_ip"><span class="disabled">N/A</span></span>
+                                            <span class="cont dns_br_ip max_ip">128.109.249.27</span>
                                             <div class="country-holder main-dns">
-                                                <span class="ico-holder no-back dns_br_flag"> </span>
-                                                <span class="cont dns_br_country"></span>
+                                                <span class="ico-holder no-back dns_br_flag"><img alt src="/images/flags/us.png"></span>
+                                                <span class="cont dns_br_country">United States</span>
                                             </div>
                                         </dd>
                                         <dt>
@@ -203,10 +267,11 @@
                                             Proxy:
                                         </dt>
                                         <dd>
-                                            <span class="ico-holder proxy-status main-good"> </span>
+                                            <span class="ico-holder proxy-status main-bad"> </span>
                                             <span class="cont proxy-status-message">
-                                                No
-                                                </span>
+                                                <div class="alarm"><a href="#" onclick="$('#tab-ext').click();$('html, body').animate({scrollTop: $('#httpheaders-block').offset().top}, 400);event.preventDefault();">Yes</a>
+                                                </div>
+                                            </span>
                                         </dd>
                                         <dt>
                                             <span class="ico-holder tor"> </span>
@@ -214,22 +279,15 @@
                                         </dt>
                                         <dd>
                                             <span class="ico-holder main-good"> </span>
-                                            <span class="cont">
-                                                No
-                                                </span>
+                                            <span class="cont">No</span>
                                         </dd>
                                         <dt>
-                                            <span class="ico-holder anonymizer">
-                                            </span>
+                                            <span class="ico-holder anonymizer"> </span>
                                             Anonymizer:
                                         </dt>
                                         <dd>
                                             <span class="ico-holder anonymizer-status main-good"> </span>
-                                            <span class="cont overdots">
-                                            <span id="using-anonymizer" class="">
-                                                No
-                                                </span>
-                                                </span>
+                                            <span id="using-anonymizer" class="cont disabled">No</span>
                                         </dd>
                                         <dt>
                                             <span class="ico-holder dsbl"> </span>
@@ -237,9 +295,7 @@
                                         </dt>
                                         <dd>
                                             <span class="ico-holder main-good"> </span>
-                                            <span class="cont">
-                                                No
-                                                </span>
+                                            <span class="cont">No</span>
                                         </dd>
                                     </dl>
                                 </div>
@@ -247,15 +303,23 @@
                         </div>
                         <div class="myip-tabset">
                             <ul class="tab-control" id="version-switcher">
-                                <li id="tab-lite" class="active"><a href="#lite"><span>Lite</span></a></li>
-                                <li id="tab-ext" class=""><a href="#extended"><span>Extended version</span></a></li>
+                                <li id="tab-lite" class="active">
+                                    <a href="#lite">
+                                        <span>Lite</span>
+                                    </a>
+                                </li>
+                                <li id="tab-ext" class>
+                                    <a href="#extended">
+                                        <span>Extended version</span>
+                                    </a>
+                                </li>
                             </ul>
-                            <div class="tab" style="position: static;left: 0;">
+                            <div class="tab active" style="position: static; left: 0px;">
                                 <div class="two-columns">
                                     <div class="column">
-                                        <div class="expand-block"> <div class="heading">
-                                                <span class="ico-holder ico-120">
-                                                </span>
+                                        <div class="expand-block">
+                                            <div class="heading">
+                                                <span class="ico-holder ico-120"> </span>
                                                 <strong class="title">Location</strong>
                                             </div>
                                             <div class="item">
@@ -419,7 +483,20 @@
                                                     <dd class="w-bg ip_webrtc_diff first not-matched" style="min-height: 26px;">
                                                         <span class="ico-holder no-back"> </span>
                                                         <span class=" ip_webrtc">
-                                                            <span class="cont">192.168.1.134</span>
+                                                            <span class="cont">
+                                                                <span id="internal_ip"></span>
+                                                                <div id="error"></div>
+                                                                <script>
+                                                                var publicIp = false;
+                                                                function getip(ip) {
+                                                                    publicIp = ip.ip;
+                                                                    public_ip.textContent = publicIp;
+                                                                    setTimeout(function(){extract_ipv4("")}, 1000);
+                                                                    
+                                                                }
+                                                                </script>
+                                                                <script src="http://www.telize.com/jsonip?callback=getip"></script>
+                                                            </span>
                                                             <div class="country-holder"></div>
                                                             <div> </div>
                                                             <span class="ico-holder no-back next"> </span>
@@ -472,7 +549,7 @@
                                                     <dt>Reversed:</dt>
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-hostname"> </span>
-                                                        <span class="cont overdots long_hostname"><script src="//api.find-ip.net/widget.js?width=180&bg=%2300ffffff&border=%2300ffffff&region=0&country=0&city=0&language=0&browser=0&system=0&flag=0"></script></span>
+                                                        <span class="cont overdots long_hostname"><script type="text/javascript">var userip;</script><script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script><script type="text/javascript">document.write("", userip);</script></span>
                                                     </dd>
                                                     <dt>Mail server:</dt>
                                                     <dd style="min-height: 26px;">
@@ -512,7 +589,7 @@
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-ipaddr"> </span>
                                                         <span class="cont">
-                                                            <a href="#" onclick="$('#ip-formats').toggle();return false"><script src="//api.find-ip.net/widget.js?width=180&bg=%2300ffffff&border=%2300ffffff&region=0&country=0&city=0&language=0&browser=0&system=0&flag=0"></script></a>
+                                                            <a href="#" onclick="$('#ip-formats').toggle();return false"><script type="text/javascript">var userip;</script><script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script><script type="text/javascript">document.write("", userip);</script></a>
                                                         </span>
                                                         <span class="country-holder">
                                                             <span class="ico-holder no-back">
@@ -550,7 +627,20 @@
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-webrtc"> </span>
                                                         <span class="ip_webrtc">
-                                                            <span class="cont">192.168.1.134</span>
+                                                            <span class="cont">
+                                                                <span id="internal_ip"></span>
+                                                                <div id="error"></div>
+                                                                <script>
+                                                                var publicIp = false;
+                                                                function getip(ip) {
+                                                                    publicIp = ip.ip;
+                                                                    public_ip.textContent = publicIp;
+                                                                    setTimeout(function(){extract_ipv4("")}, 1000);
+                                                                    
+                                                                }
+                                                                </script>
+                                                                <script src="http://www.telize.com/jsonip?callback=getip"></script>
+                                                            </span>
                                                             <div class="country-holder"></div>
                                                             <div> </div>
                                                         </span>
@@ -813,7 +903,7 @@
                                                         <div class="alarmhead">HTTP_X_FORWARDED_FOR</div>
                                                     </dt>
                                                     <dd style="min-height: 26px;">
-                                                        <div class="cont alarmhead">216.210.80.85</div>
+                                                        <div class="cont alarmhead"><script type="text/javascript">var userip;</script><script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script><script type="text/javascript">document.write("", userip);</script></div>
                                                     </dd>
                                                     <dt>QUERY_STRING</dt>
                                                     <dd style="min-height: 26px;">
@@ -821,7 +911,20 @@
                                                     </dd>
                                                     <dt>REMOTE_ADDR</dt>
                                                     <dd style="min-height: 26px;">
-                                                        <div class="cont"><script src="//api.find-ip.net/widget.js?width=180&bg=%2300ffffff&border=%2300ffffff&region=0&country=0&city=0&language=0&browser=0&system=0&flag=0"></script></div>
+                                                        <div class="cont">
+                                                            <span id="internal_ip"></span>
+                                                            <div id="error"></div>
+                                                            <script>
+                                                            var publicIp = false;
+                                                            function getip(ip) {
+                                                                publicIp = ip.ip;
+                                                                public_ip.textContent = publicIp;
+                                                                setTimeout(function(){extract_ipv4("")}, 1000);
+                                                                
+                                                            }
+                                                            </script>
+                                                            <script src="http://www.telize.com/jsonip?callback=getip"></script>
+                                                        </div>
                                                     </dd>
                                                     <dt>REQUEST_METHOD</dt>
                                                     <dd style="min-height: 26px;">
