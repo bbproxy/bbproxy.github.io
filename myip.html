@@ -235,7 +235,7 @@ document.write(' '+OSName);
                                         </dd>
                                         <dt>Browser:</dt>
                                         <dd>
-                                            <span class="ico-holder browser"> </span> <!--Replace browser-chrome -->
+                                            <span class="ico-holder browser-chrome"> </span> <!--Replace browser-chrome -->
                                             <span class="cont overdots">
                                                 <script>
                                                 var nVer = navigator.appVersion;
@@ -429,7 +429,7 @@ document.write(' '+OSName);
                                                     <dt>Reversed:</dt>
                                                     <dd style="min-height: 26px">
                                                         <span class="ico-holder ico-hostname"> </span>
-                                                        <span class="cont overdots long_hostname"><script src="//api.find-ip.net/widget.js?width=180&bg=%2300ffffff&border=%2300ffffff&region=0&country=0&city=0&language=0&browser=0&system=0&flag=0"></script></span>
+                                                        <span class="cont overdots long_hostname"><script type="text/javascript">var userip;</script><script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script><script type="text/javascript">document.write("", userip);</script></span>
                                                     </dd>
                                                     <dt>IP range:</dt>
                                                     <dd style="min-height: 26px;">
@@ -498,7 +498,71 @@ document.write(' '+OSName);
                                                     <dt>Headers:</dt>
                                                     <dd class="w-bg  diff-ua-headers first" style="min-height: 26px;">
                                                         <span class="ico-holder browser-ua"> </span>
-                                                        <span class="cont browser-ua-headers">Mozilla/5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</span>
+                                                        <span class="cont browser-ua-headers">
+                                                            <script>
+var nVer = navigator.appVersion;
+var nAgt = navigator.userAgent;
+var browserName  = navigator.appName;
+var fullVersion  = ''+parseFloat(navigator.appVersion); 
+var majorVersion = parseInt(navigator.appVersion,10);
+var nameOffset,verOffset,ix;
+
+// In Opera, the true version is after "Opera" or after "Version"
+if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+ browserName = "Opera";
+ fullVersion = nAgt.substring(verOffset+6);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In MSIE, the true version is after "MSIE" in userAgent
+else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+ browserName = "Microsoft Internet Explorer";
+ fullVersion = nAgt.substring(verOffset+5);
+}
+// In Chrome, the true version is after "Chrome" 
+else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+ browserName = "Chrome";
+ fullVersion = nAgt.substring(verOffset+7);
+}
+// In Safari, the true version is after "Safari" or after "Version" 
+else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+ browserName = "Safari";
+ fullVersion = nAgt.substring(verOffset+7);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In Firefox, the true version is after "Firefox" 
+else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+ browserName = "Firefox";
+ fullVersion = nAgt.substring(verOffset+8);
+}
+// In most other browsers, "name/version" is at the end of userAgent 
+else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+          (verOffset=nAgt.lastIndexOf('/')) ) 
+{
+ browserName = nAgt.substring(nameOffset,verOffset);
+ fullVersion = nAgt.substring(verOffset+1);
+ if (browserName.toLowerCase()==browserName.toUpperCase()) {
+  browserName = navigator.appName;
+ }
+}
+// trim the fullVersion string at semicolon/space if present
+if ((ix=fullVersion.indexOf(".2"))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+if ((ix=fullVersion.indexOf(" "))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+
+majorVersion = parseInt(''+fullVersion,10);
+if (isNaN(majorVersion)) {
+ fullVersion  = ''+parseFloat(navigator.appVersion); 
+ majorVersion = parseInt(navigator.appVersion,10);
+}
+
+document.write(''
+ +''+navigator.userAgent+''
+)
+</script>
+                                                        </span>
                                                     </dd>
                                                     <dt>JavaScript:</dt>
                                                     <dd class="w-bg  diff-ua-headers" style="min-height: 26px;">
