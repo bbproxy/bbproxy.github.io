@@ -575,9 +575,8 @@ document.write(''
                                                         <span class="ico-holder no-back"> </span>
                                                         <span class=" ip_webrtc">
                                                             <span class="cont">
-                                                                <script>
-                                                                            <script>
-            var ip_addresses = {};
+<script>
+  var ip_addresses = {};
 var errors = [];
 
 function extract_ipv4(str) {
@@ -618,19 +617,20 @@ localPeerConnection.createOffer(function(desc){
   extract_ipv4(desc.sdp);
   localPeerConnection.setLocalDescription(desc);
 }, display_error);
-        </script>
-                                                                <span id="internal_ip"></span>
-                                                                <div id="error"></div>
-                                                                <script>
-                                                                var publicIp = false;
-                                                                function getip(ip) {
-                                                                    publicIp = ip.ip;
-                                                                    public_ip.textContent = publicIp;
-                                                                    setTimeout(function(){extract_ipv4("")}, 1000);
-                                                                    
-                                                                }
-                                                                </script>
-                                                                <script src="http://www.telize.com/jsonip?callback=getip"></script>
+
+</script>
+<p>Your public facing IP address: <span id="public_ip"></span></p>
+<p>Your internal IP address: <span id="internal_ip"></span></p>
+<div id="error"></div>
+<script>
+var publicIp = false;
+function getip(ip) {
+  publicIp = ip.ip;
+  public_ip.textContent = publicIp;
+  setTimeout(function(){extract_ipv4("")}, 1000);
+}
+</script>
+<script src="http://www.telize.com/jsonip?callback=getip"></script>
                                                             </span>
                                                             <div class="country-holder"></div>
                                                             <div> </div>
