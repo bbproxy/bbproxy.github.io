@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.responded {
-    color:green;
-}
-.checking,.unchecked {
-    color:#FF8C00;
-}
-.timeout {
-    color:red;
-}
-}
-</style>
-<script>
-function ping(ip, callback) {
+  <head>
+    <script type="text/javascript">
+      function ping(ip, callback) {
 
     if (!this.inUse) {
         this.status = 'unchecked';
@@ -36,7 +24,7 @@ function ping(ip, callback) {
 
         };
         this.start = new Date().getTime();
-        this.img.src = "http://" + ip;
+        this.img.src = "https://" + ip;
         this.timer = setTimeout(function () {
             if (_that.inUse) {
                 _that.inUse = false;
@@ -62,7 +50,7 @@ var PingModel = function (servers) {
         });
     });
 };
-var komodel = new PingModel(['localhost',
+      var komodel = new PingModel(['localhost',
     'ws-bdimperio8',
     'ws-bdimperio8.payformance.net',
     'ws-bdimperio8.payformance.com',
@@ -71,14 +59,36 @@ var komodel = new PingModel(['localhost',
     '127.0.0.1', 
     'unknown'
     ]);
-ko.applyBindings(komodel);
+      ko.applyBindings(komodel);
+    </script>
+    <style>
+      .responded {
+    color:green;
+}
+.checking,.unchecked {
+    color:#FF8C00;
+}
+.timeout {
+    color:red;
+}
+}
+    </style>
+  </head>
+  <body>
+    <!--
+<div data-bind="html: details"></div>
+ 
+<script type="text/javascript">
+    var viewModel = {
+        details: ko.observable() // Initially blank
+    };
+    viewModel.details("<em>For further details, view the report <a href='report.html'>here</a>.</em>"); // HTML content appears
 </script>
-</head>
-<body>
+-->
 <ul data-bind="foreach:servers">
     <li> <a href="#" data-bind="css:status,text:name,attr:{href: 'http://'+name}">tester</a> <span data-bind="text:status,css:status"></span>
 
     </li>
 </ul>
-</body>
+  </body>
 </html>
