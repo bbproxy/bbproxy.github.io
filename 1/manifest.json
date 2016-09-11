@@ -1,0 +1,21 @@
+{
+"update_url":"http://clients2.google.com/service/update2/crx",
+  "name": "Server Monitor",
+  "version": "1.2.2",
+  "description": "Monitors any number of URLs for connectivity and content specified by the user and displays a status icon for quick reference.",
+  "icons":
+  {
+	"16": "icon16.png",
+	"48": "icon48.png",
+	"128": "icon128.png"
+  },
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "icon.png",
+	"default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://*/", "https://*/", "notifications"
+  ]
+}
