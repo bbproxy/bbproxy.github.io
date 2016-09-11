@@ -18,6 +18,49 @@
         <link rel="alternate" hreflang="zh" href="/zh/myip.html">
         <meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ">
         <meta name="yandex-verification" content="5fc0238c84978c1f">
+        <script>
+            var ip_addresses = {};
+var errors = [];
+
+function extract_ipv4(str) {
+  var regexp = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g;
+  var t;
+  while (t = regexp.exec(str)) {
+    ip_addresses[t[0]] = 1;
+  }
+  if (publicIp) {
+    delete ip_addresses[publicIp];
+  }
+  delete ip_addresses["0.0.0.0"];
+  delete ip_addresses["127.0.0.1"];
+  internal_ip.textContent = Object.keys(ip_addresses).join(", ")  
+}
+window.extract_ipv4 = extract_ipv4;
+
+function display_error(msg) {
+  errors.push(msg);
+  error.textContent = msg.join(", ");
+}
+
+var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+
+window.localPeerConnection = new PeerConnection(null, {optional: [{RtpDataChannels: true}]});
+try {
+  sendChannel = localPeerConnection.createDataChannel("", {reliable: false});
+} catch (e) {
+  display_error(e.message);
+}
+localPeerConnection.onicecandidate = 
+  function(e) {
+    if (e.candidate) {
+      extract_ipv4(e.candidate.candidate);
+    }
+  }
+localPeerConnection.createOffer(function(desc){
+  extract_ipv4(desc.sdp);
+  localPeerConnection.setLocalDescription(desc);
+}, display_error);
+        </script>
     </head>
     <body>
         <div id="wrapper">
@@ -186,13 +229,13 @@ if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet
 if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
 if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";*/
 
-document.write('Your OS: '+OSName);
+document.write(' '+OSName);
 </script>
 </span>
                                         </dd>
                                         <dt>Browser:</dt>
                                         <dd>
-                                            <span class="ico-holder "> </span> <!--Replace browser-chrome -->
+                                            <span class="ico-holder browser"> </span> <!--Replace browser-chrome -->
                                             <span class="cont overdots">
                                                 <script>
                                                 var nVer = navigator.appVersion;
