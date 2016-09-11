@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript">
-      function ping(ip, callback) {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+    <script type="text/javascript" src="/js/linkstatus.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/linkstatus.css">
+    <!--
+    <script type="">
+function ping(ip, callback) {
 
     if (!this.inUse) {
         this.status = 'unchecked';
@@ -24,7 +28,7 @@
 
         };
         this.start = new Date().getTime();
-        this.img.src = "https://" + ip;
+        this.img.src = "http://" + ip;
         this.timer = setTimeout(function () {
             if (_that.inUse) {
                 _that.inUse = false;
@@ -50,7 +54,7 @@ var PingModel = function (servers) {
         });
     });
 };
-      var komodel = new PingModel(['localhost',
+var komodel = new PingModel(['localhost',
     'ws-bdimperio8',
     'ws-bdimperio8.payformance.net',
     'ws-bdimperio8.payformance.com',
@@ -59,7 +63,7 @@ var PingModel = function (servers) {
     '127.0.0.1', 
     'unknown'
     ]);
-      ko.applyBindings(komodel);
+ko.applyBindings(komodel);
     </script>
     <style>
       .responded {
@@ -73,6 +77,7 @@ var PingModel = function (servers) {
 }
 }
     </style>
+-->
   </head>
   <body>
     <!--
