@@ -159,7 +159,7 @@ $(".btn-ping").on('click', function() {
     params['host'] = $('input[name=host]').val();
 
     check_who_is('#internal-who-is-block',
-                 '/checkwhois.html',
+                 '/checkwhois',
                 params);
     return false;
 })
