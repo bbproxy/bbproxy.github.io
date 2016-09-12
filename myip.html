@@ -271,10 +271,10 @@ document.write(' '+OSName);
                                 </div>
                                 <div class="column-right">
                                     <div class="score-godless" id="anonym_level">
-                                        <a class="title" onclick="$('#hidden-images img').reveal('fadeIn', 500);" href="#" rel="popup[hide_control_popup]">Your anonymity: N/A</a>
-                                        <span class="description">
-                                            <span class="disabled">N/A</span>
-                                            </span>
+                                        <a class="title" onclick="$('#hidden-images img').reveal('fadeIn', 500);" href="#" rel="popup[hide_control_popup]">
+                                            <span>Your anonymity: 20%</span>
+                                        </a>
+                                        <span class="description">Knock knock Neo...</span>
                                     </div>
                                     <dl class="ping">
                                         <dt>
@@ -283,10 +283,10 @@ document.write(' '+OSName);
                                         </dt>
                                         <dd>
                                             <span class="ico-holder ico-dns-net"> </span>
-                                            <span class="cont dns_br_ip max_ip"><span class="disabled">N/A</span></span>
+                                            <span class="cont dns_br_ip max_ip">128.109.249.27</span>
                                             <div class="country-holder main-dns">
-                                                <span class="ico-holder no-back dns_br_flag"> </span>
-                                                <span class="cont dns_br_country"></span>
+                                                <span class="ico-holder no-back dns_br_flag"><img alt src="/images/flags/us.png"></span>
+                                                <span class="cont dns_br_country">United States</span>
                                             </div>
                                         </dd>
                                         <dt>
@@ -294,9 +294,10 @@ document.write(' '+OSName);
                                             Proxy:
                                         </dt>
                                         <dd>
-                                            <span class="ico-holder proxy-status main-good"> </span>
+                                            <span class="ico-holder proxy-status main-bad"> </span>
                                             <span class="cont proxy-status-message">
-                                                No
+                                                <div class="alarm"><a href="#" onclick="$('#tab-ext').click();$('html, body').animate({scrollTop: $('#httpheaders-block').offset().top}, 400);event.preventDefault();">Yes</a>
+                                                </div>
                                             </span>
                                         </dd>
                                         <dt>
@@ -305,9 +306,7 @@ document.write(' '+OSName);
                                         </dt>
                                         <dd>
                                             <span class="ico-holder main-good"> </span>
-                                            <span class="cont">
-                                                No
-                                            </span>
+                                            <span class="cont">No</span>
                                         </dd>
                                         <dt>
                                             <span class="ico-holder anonymizer"> </span>
@@ -315,11 +314,7 @@ document.write(' '+OSName);
                                         </dt>
                                         <dd>
                                             <span class="ico-holder anonymizer-status main-good"> </span>
-                                        <span class="cont overdots">
-                                            <span id="using-anonymizer" class="">
-                                                No
-                                            </span>
-                                            </span>
+                                            <span id="using-anonymizer" class="cont disabled">No</span>
                                         </dd>
                                         <dt>
                                             <span class="ico-holder dsbl"> </span>
@@ -327,9 +322,7 @@ document.write(' '+OSName);
                                         </dt>
                                         <dd>
                                             <span class="ico-holder main-good"> </span>
-                                            <span class="cont">
-                                                No
-                                            </span>
+                                            <span class="cont">No</span>
                                         </dd>
                                     </dl>
                                 </div>
@@ -361,61 +354,54 @@ document.write(' '+OSName);
                                                     <dt>Country</dt>
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder no-back">
-                                                            <img alt="iso" src="/images/flags/us.png">
+                                                            <img src="/images/flags/us.png">
                                                         </span>
                                                         <div class="country-holder">
-                                                            <span class="cont">
-                                                                United States (US)
-                                                            </span>
+                                                            <span class="cont">United States (US)</span>
                                                         </div>
                                                     </dd>
                                                     <dt>Region:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder region"> </span>
-                                                        <span class="cont">
-                                                            North Carolina (NC)
-                                                        </span>
+                                                        <span class="cont">North Carolina (NC)</span>
                                                     </dd>
                                                     <dt>City:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder city"> </span>
-                                                        <span class="cont">
-                                                            Greensboro
-                                                        </span>
+                                                        <span class="cont">Greensboro</span>
                                                     </dd>
                                                     <dt>ZIP:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-zip"> </span>
-                                                        <span class="cont">
-                                                            27407
-                                                        </span>
+                                                        <span class="cont">27407</span>
                                                     </dd>
                                                     <dt>Hostname:</dt>
-                                                    <dd>
-                                                        <a href="#" class="btn whois-show" title="Show whois data for the resouce" data-url="/whois" data-host="ncren.net" rel="popup[whoishide_popup]"><span>Whois</span></a>
+                                                    <dd style="min-height: 26px;">
+                                                        <a href="#" class="btn whois-show" title="Show whois data for the resouce" data-url="/whois.html" data-host="ncren.net" rel="popup[whoishide_popup]">
+                                                            <span>Whois</span>
+                                                        </a>
                                                         <span class="ico-holder ico-hostname"> </span>
                                                         <span class="cont overdots long_hostname">proxy-c2-7b3.rtp.zs.ncren.net</span>
                                                     </dd>
                                                     <dt>Reversed:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px">
                                                         <span class="ico-holder ico-hostname"> </span>
-                                                        <!--<span class="disabled">N/A</span>-->
                                                         <span class="cont overdots long_hostname"><script type="text/javascript">var userip;</script><script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script><script type="text/javascript">document.write("", userip);</script></span>
                                                     </dd>
                                                     <dt>IP range:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder range"> </span>
                                                         <span class="cont">
                                                             <span class="cont">152.26.177.0 - 152.26.177.255</span>
                                                         </span>
                                                     </dd>
                                                     <dt>ISP:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder isp overdots"> </span>
                                                         <span class="cont">North Carolina Research and Education Network</span>
                                                     </dd>
                                                     <dt>Organization</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder org overdots"> </span>
                                                         <span class="cont">North Carolina Research and Education Network</span>
                                                     </dd>
@@ -427,8 +413,8 @@ document.write(' '+OSName);
                                                 <span class="ico-holder language"> </span>
                                                 <span class="title">Language</span>
                                                 <span class="cont lang-img">
-                                                    <!--<img src="/images/flags/us.png">
-                                                    us-->
+                                                    <img src="/images/flags/us.png">
+                                                    us
                                                 </span>
                                             </div>
                                         </div>
@@ -440,20 +426,19 @@ document.write(' '+OSName);
                                             <div class="item">
                                                 <dl class="myip-list">
                                                     <dt>Zone:</dt>
-                                                    <dd class="w-bg first time-diff">
+                                                    <dd class="w-bg first time-diff" style="min-height: 26px;">
                                                         <span class="ico-holder ico-timezone"> </span>
                                                         <span class="cont">America/New_York</span>
                                                     </dd>
                                                     <dt>Local:</dt>
-                                                    <dd class="w-bg middle time-diff">
+                                                    <dd class="w-bg middle time-diff" style="min-height: 26px;">
                                                         <span class="ico-holder ico-timelocal"> </span>
                                                         <span class="cont">Wed Mar 30 2016 22:29:59 GMT-0400 (EDT)</span>
                                                     </dd>
                                                     <dt>System:</dt>
-                                                    <dd class="w-bg time-diff">
+                                                    <dd class="w-bg time-diff" style="min-height: 26px;">
                                                         <span class="ico-holder ico-timesystem"> </span>
-                                                        <!--<span class="cont js-time">Wed Mar 30 2016 22:32:01 GMT-0400 (EDT)</span>-->
-                                                        <span class="cont js-time">N/A</span>
+                                                        <span class="cont js-time">Wed Mar 30 2016 22:32:01 GMT-0400 (EDT)</span>
                                                     </dd>
                                                 </dl>
                                             </div>
@@ -468,7 +453,7 @@ document.write(' '+OSName);
                                             <div class="item">
                                                 <dl class="myip-list">
                                                     <dt>Headers:</dt>
-                                                    <dd class="w-bg  diff-ua-headers first">
+                                                    <dd class="w-bg  diff-ua-headers first" style="min-height: 26px;">
                                                         <span class="ico-holder browser-ua"> </span>
                                                         <span class="cont browser-ua-headers">
                                                             <script>
@@ -537,10 +522,9 @@ document.write(''
                                                         </span>
                                                     </dd>
                                                     <dt>JavaScript:</dt>
-                                                    <dd class="w-bg  diff-ua-headers">
+                                                    <dd class="w-bg  diff-ua-headers" style="min-height: 26px;">
                                                         <span class="ico-holder js-ua"> </span>
-                                                        <!--<span class="js-ua-headers cont">Mozilla/5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</span>-->
-                                                        <span class="js-ua-headers cont disabled">N/A</span>
+                                                        <span class="js-ua-headers cont">Mozilla/5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</span>
                                                     </dd>
                                                 </dl>
                                             </div>
@@ -549,16 +533,16 @@ document.write(''
                                             <div class="heading">
                                                 <span class="ico-holder javascript"> </span>
                                                 <span class="title">Javascript</span>
-                                                <span class="ico-holder js-status-icon disabled"> </span>
-                                                <span class="cont js-status disabled">disabled</span>
+                                                <span class="ico-holder js-status-icon disabled enabled"> </span>
+                                                <span class="cont js-status">enabled</span>
                                             </div>
                                         </div>
                                         <div class="expand-block non-ex">
                                             <div class="heading">
                                                 <span class="ico-holder flash"> </span>
                                                 <span class="title">Flash</span>
-                                                <span class="ico-holder flash-status-icon disabled"> </span>
-                                                <span class="cont flash-status disabled">disabled</span>
+                                                <span class="ico-holder flash-status-icon disabled enabled"> </span>
+                                                <span class="cont flash-status">enabled</span>
                                             </div>
                                         </div>
                                         <div class="expand-block non-ex">
@@ -581,16 +565,16 @@ document.write(''
                                             <div class="heading">
                                                 <span class="ico-holder webrtc"> </span>
                                                 <span class="title">WebRTC</span>
-                                                <span class="ico-holder webrtc-status-icon disabled"> </span>
-                                                <span class="cont webrtc-status disabled">disabled</span>
+                                                <span class="ico-holder webrtc-status-icon disabled enabled"> </span>
+                                                <span class="cont webrtc-status">enabled</span>
                                             </div>
-                                            <div class="item" style="display: none">
+                                            <div class="item" style>
                                                 <dl class="myip-list">
                                                     <dt>IP addresses:</dt>
-                                                    <dd class="w-bg ip_webrtc_diff first">
+                                                    <dd class="w-bg ip_webrtc_diff first not-matched" style="min-height: 26px;">
                                                         <span class="ico-holder no-back"> </span>
                                                         <span class=" ip_webrtc">
-                                                            <!--<span class="disabled">N/A</span>-->
+                                                            <span class="cont">
 <script>
   var ip_addresses = {};
 var errors = [];
@@ -646,6 +630,7 @@ function getip(ip) {
 }
 </script>
 <script src="http://www.telize.com/jsonip?callback=getip"></script>
+                                                            </span>
                                                             <div class="country-holder"></div>
                                                             <div> </div>
                                                             <span class="ico-holder no-back next"> </span>
@@ -664,7 +649,7 @@ function getip(ip) {
                                                         </span>
                                                     </dd>
                                                     <dt> &nbsp;</dt>
-                                                    <dd class="w-bg ip_webrtc_diff" style="height: 0px !important; min-height: 26px;"></dd>
+                                                    <dd class="w-bg ip_webrtc_diff not-matched" style="height: 0px !important; min-height: 26px;"></dd>
                                                 </dl>
                                             </div>
                                         </div>
@@ -762,18 +747,20 @@ function getip(ip) {
                                                         </span>
                                                     </dd>
                                                     <dt>Flash</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-flash"> </span>
-                                                        <span class="cont" id="ip_flash_ip"><span class="disabled">N/A</span></span>
+                                                        <span class="cont" id="ip_flash_ip">
+                                                            <span class="disabled">N/A</span>
+                                                        </span>
                                                         <div class="country-holder">
                                                             <span class="ico-holder no-back" id="ip_flash_flag"> </span>
                                                             <span class="cont" id="ip_flash_country"></span>
                                                         </div>
                                                     </dd>
                                                     <dt>WebRTC</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-webrtc"> </span>
-                                                        <span class="ip_webrtc"><!--<span class="disabled">N/A</span>-->
+                                                        <span class="ip_webrtc">
                                                             <span class="cont">
                                                                 <span id="internal_ip"></span>
                                                                 <div id="error"></div>
@@ -793,7 +780,7 @@ function getip(ip) {
                                                         </span>
                                                     </dd>
                                                     <dt>Java (TCP)</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-java"> </span>
                                                         <span class="cont" id="ip_java_tcp_ip">
                                                             <span class="disabled">N/A</span>
@@ -804,7 +791,7 @@ function getip(ip) {
                                                         </div>
                                                     </dd>
                                                     <dt>Java (UDP)</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-java"> </span>
                                                         <span class="cont" id="ip_java_udp_ip">
                                                             <span class="disabled">N/A</span>
@@ -815,7 +802,7 @@ function getip(ip) {
                                                         </div>
                                                     </dd>
                                                     <dt>Java (system)</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-java"> </span>
                                                         <span id="ip_java_system">
                                                             <span class="disabled">N/A</span>
@@ -825,16 +812,18 @@ function getip(ip) {
                                                 <strong class="myip-list-heading">DNS</strong>
                                                 <dl class="myip-list">
                                                     <dt>Browser</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-dns-br"> </span>
-                                                        <span class="cont dns_br_ip disabled">N/A</span>
+                                                        <span class="cont dns_br_ip">128.109.249.27</span>
                                                         <div class="country-holder">
-                                                            <span class="ico-holder no-back dns_br_flag"> </span>
-                                                            <span class="cont dns_br_country"> </span>
+                                                            <span class="ico-holder no-back dns_br_flag">
+                                                                <img alt src="/images/flags/us.png">
+                                                            </span>
+                                                            <span class="cont dns_br_country">United States</span>
                                                         </div>
                                                     </dd>
                                                     <dt>Flash</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-59"> </span>
                                                         <span class="cont" id="dns_flash_ip">
                                                             <span class="disabled">N/A</span>
@@ -845,7 +834,7 @@ function getip(ip) {
                                                         </div>
                                                     </dd>
                                                     <dt>Java (request)</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-java"> </span>
                                                         <span class="cont" id="dns_java_resolve_ip">
                                                             <span class="disabled">N/A</span>
@@ -856,7 +845,7 @@ function getip(ip) {
                                                         </div>
                                                     </dd>
                                                     <dt>Java (system)</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-java"> </span>
                                                         <span id="dns_java_system">
                                                             <span class="disabled">N/A</span>
@@ -866,24 +855,24 @@ function getip(ip) {
                                                 <strong class="myip-list-heading">OS</strong>
                                                 <dl class="myip-list">
                                                     <dt>Headers:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-os-default"> </span>
                                                         <span class="cont">Chrome OS</span>
                                                     </dd>
                                                     <dt>Javascript:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-js-ua"> </span>
-                                                        <span class="cont" id="os_js"><span class="disabled">N/A</span></span>
+                                                        <span class="cont" id="os_js"> Linux x86_64</span>
                                                     </dd>
                                                     <dt>Flash:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-plugin-flash"> </span>
                                                         <span class="cont" id="os_flash">
                                                             <span class="disabled">N/A</span>
                                                         </span>
                                                     </dd>
                                                     <dt>Java:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-plugin-java"> </span>
                                                         <span class="cont">
                                                             <span id="os_java">
@@ -895,7 +884,7 @@ function getip(ip) {
                                                 <strong class="myip-list-heading">Language</strong>
                                                 <dl class="myip-list">
                                                     <dt>Headers:</dt>
-                                                    <dd>
+                                                    <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-32 browser-ua"> </span>
                                                         <span class="cont">
                                                             <img src="/images/flags/us.png">
