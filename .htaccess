@@ -14,5 +14,6 @@
 </Files>
 ErrorDocument 404 /notfound.html
 Access-Control-Allow-Origin: http://underget.com
+Access-Control-Allow-Origin: http://whoer.net
 Access-Control-Allow-Methods: GET, POST, PUT
 Access-Control-Allow-Headers: Content-Type
