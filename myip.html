@@ -18,6 +18,14 @@
         <link rel="alternate" hreflang="zh" href="/zh/myip.html">
         <meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ">
         <meta name="yandex-verification" content="5fc0238c84978c1f">
+        <!-- appCodeName -->
+        <script>
+    var txt = "";
+    txt += "<p>" + navigator.appCodeName + "</p>";
+    
+    document.getElementById("appCodeName").innerHTML = txt;
+    </script>
+    <!-- End appCodeName -->
     </head>
     <body>
         <div id="wrapper">
@@ -1479,7 +1487,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>Mozilla</span>
+                                                                <div id="appCodeName"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
