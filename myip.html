@@ -178,8 +178,144 @@
     
     document.getElementById("mimeTypes").innerHTML = txt;
     </script>
-    <!-- End mimeTypes
+    <!-- End mimeTypes -- >
+    <!-- Begin webkitTemporaryStorage -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.webkitTemporaryStorage + "</p>";
     
+    document.getElementById("webkitTemporaryStorage").innerHTML = txt;
+    </script>
+     <!-- End webkitTemporaryStorage -->
+     <!-- Begin webkitPersistentStorage -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.webkitPersistentStorage + "</p>";
+    
+    document.getElementById("webkitPersistentStorage").innerHTML = txt;
+    </script>
+     <!-- End webkitPersistentStorage -->
+     <!-- Begin serviceWorker -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.serviceWorker + "</p>";
+    
+    document.getElementById("serviceWorker").innerHTML = txt;
+    </script>
+     <!-- End serviceWorker -->
+     <!-- Begin getBattery -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.getBattery + "</p>";
+    
+    document.getElementById("getBattery").innerHTML = txt;
+    </script>
+     <!-- End getBattery -->
+     <!-- Begin sendBeacon -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.sendBeacon + "</p>";
+    
+    document.getElementById("sendBeacon").innerHTML = txt;
+    </script>
+     <!-- End beginBeacon -->
+     <!-- Begin requestedMediaKeySystemAccess -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.requestMediaKeySystemAccess + "</p>";
+    
+    document.getElementById("requestMediaKeySystemAccess").innerHTML = txt;
+    </script>
+        <!-- End requestMediaKeySystemAccess -->
+    <!-- Begin getGamepads -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.getGamepads + "</p>";
+    
+    document.getElementById("getGamepads").innerHTML = txt;
+    </script>
+        <!-- End getGamepads -->
+        <!-- Begin webkitGetUserMedia -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.webkitGetUserMedia + "</p>";
+    
+    document.getElementById("webkitGetUserMedia").innerHTML = txt;
+    </script>
+        <!-- End webkitGetUserMedia -->
+        <!-- Begin javaEnabled -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.javaEnabled + "</p>";
+    
+    document.getElementById("javaEnabled").innerHTML = txt;
+    </script>
+        <!-- End javaEnabled -->
+        <!-- Begin vibrate -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.vibrate + "</p>";
+    
+    document.getElementById("vibrate").innerHTML = txt;
+    </script>
+        <!-- End vibrate -->
+        <!-- Begin requestMIDIAccess -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.requestMIDIAccess + "</p>";
+    
+    document.getElementById("requestMIDIAccess").innerHTML = txt;
+    </script>
+        <!-- End requestMIDIAccess -->
+        <!-- Begin mediaDevices -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.mediaDevices + "</p>";
+    
+    document.getElementById("mediaDevices").innerHTML = txt;
+    </script>
+        <!-- End mediaDevices -->
+        <!-- Begin connection -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.connection + "</p>";
+    
+    document.getElementById("connection").innerHTML = txt;
+    </script>
+        <!-- End connection -->
+        <!-- Begin Permissions -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.permissions + "</p>";
+    
+    document.getElementById("permissions").innerHTML = txt;
+    </script>
+        <!-- End Permissions -->
+        <!-- Begin presentation -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.presentation + "</p>";
+    
+    document.getElementById("presentation").innerHTML = txt;
+    </script>
+        <!-- End presentation -->
+        <!-- Begin registerProtocolHandler -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.registerProtocolHandler + "</p>";
+    
+    document.getElementById("registerProtocolHandler").innerHTML = txt;
+    </script>
+        <!-- End registerProtocolHandler -->
+        <!-- Begin unregisterProtocolHandler -->
+        <script>
+    var txt = "";
+  txt += "<p>" + navigator.unregisterProtocolHandler + "</p>";
+    
+    document.getElementById("unregisterProtocolHandler").innerHTML = txt;
+    </script>
+        <!-- End unregisterProtocolHandler-->
+        
     </head>
     <body>
         <div id="wrapper">
@@ -331,7 +467,6 @@
 // "Linux"      for all versions of Linux
 // "UNIX"       for all other UNIX flavors 
 // "Unknown OS" indicates failure to detect the OS
-
 var OSName="Unknown OS";
 if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
 if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
@@ -347,7 +482,6 @@ if (navigator.appVersion.indexOf("Samsung Galaxy S3")!=-1) OSName="Android (Andr
 if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
 if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
 if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";*/
-
 document.write(' '+OSName);
 </script>
 </span>
@@ -624,7 +758,6 @@ var browserName  = navigator.appName;
 var fullVersion  = ''+parseFloat(navigator.appVersion); 
 var majorVersion = parseInt(navigator.appVersion,10);
 var nameOffset,verOffset,ix;
-
 // In Opera, the true version is after "Opera" or after "Version"
 if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
  browserName = "Opera";
@@ -669,13 +802,11 @@ if ((ix=fullVersion.indexOf(".2"))!=-1)
    fullVersion=fullVersion.substring(0,ix);
 if ((ix=fullVersion.indexOf(" "))!=-1)
    fullVersion=fullVersion.substring(0,ix);
-
 majorVersion = parseInt(''+fullVersion,10);
 if (isNaN(majorVersion)) {
  fullVersion  = ''+parseFloat(navigator.appVersion); 
  majorVersion = parseInt(navigator.appVersion,10);
 }
-
 document.write(''
  +''+navigator.userAgent+''
 )
@@ -739,7 +870,6 @@ document.write(''
 <script>
   var ip_addresses = {};
 var errors = [];
-
 function extract_ipv4(str) {
   var regexp = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g;
   var t;
@@ -754,14 +884,11 @@ function extract_ipv4(str) {
   internal_ip.textContent = Object.keys(ip_addresses).join(", ")  
 }
 window.extract_ipv4 = extract_ipv4;
-
 function display_error(msg) {
   errors.push(msg);
   error.textContent = msg.join(", ");
 }
-
 var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-
 window.localPeerConnection = new PeerConnection(null, {optional: [{RtpDataChannels: true}]});
 try {
   sendChannel = localPeerConnection.createDataChannel("", {reliable: false});
@@ -778,7 +905,6 @@ localPeerConnection.createOffer(function(desc){
   extract_ipv4(desc.sdp);
   localPeerConnection.setLocalDescription(desc);
 }, display_error);
-
 </script>
 <span id="internal_ip"></span>
 <div id="error"></div>
@@ -835,7 +961,7 @@ function getip(ip) {
                                                 <dl class="myip-list">
                                                     <dt>Hostname:</dt>
                                                     <dd style="min-height: 26px;">
-                                                        <a href="#" class="btn whois-show" title="Show whois data for the resouce" data-url="/whois.html" data-host="ncren.net" rel="popup[whoishide_popup]">
+                                                        <a href="#" class="btn whois-show" title="Show whois data for the resouce" data-url="/whois" data-host="ncren.net" rel="popup[whoishide_popup]">
                                                             <span>Whois</span>
                                                         </a>
                                                         <span class="ico-holder ico-hostname"> </span>
@@ -1018,12 +1144,37 @@ function getip(ip) {
                                                     <dt>Headers:</dt>
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-os-default"> </span>
-                                                        <span class="cont">Chrome OS</span>
+                                                        <span class="cont">
+                                                        <script>
+                                                            // This script sets OSName variable as follows:
+                                                            // "Windows"    for all versions of Windows
+                                                            // "MacOS"      for all versions of Macintosh OS
+                                                            // "Linux"      for all versions of Linux
+                                                            // "UNIX"       for all other UNIX flavors 
+                                                            // "Unknown OS" indicates failure to detect the OS
+                                                            var OSName="Unknown OS";
+                                                            if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+                                                            if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+                                                            if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+                                                            if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+                                                            if (navigator.appVersion.indexOf("iPod")!=-1) OSName="iOS (iPod)";
+                                                            if (navigator.appVersion.indexOf("iPad")!=-1) OSName="iOS (iPad)";
+                                                            if (navigator.appVersion.indexOf("iPhone")!=-1) OSName="iOS (iPhone)";
+                                                            if (navigator.appVersion.indexOf("Chrome")!=-1) OSName="Chrome OS";
+                                                            if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
+                                                            if (navigator.appVersion.indexOf("Samsung Galaxy S3")!=-1) OSName="Android (Android (GT-I9300))";
+                                                            /*if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
+                                                            if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
+                                                            if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";
+                                                            if (navigator.appVersion.indexOf("Nexus 7")!=-1) OSName="Android (Android tablet (Nexus 7))";*/
+                                                            document.write(' '+OSName);
+                                                            </script>
+                                                        </span>
                                                     </dd>
                                                     <dt>Javascript:</dt>
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-js-ua"> </span>
-                                                        <span class="cont" id="os_js"> Linux x86_64</span>
+                                                        <div class="cont" id="os_js platform"></div>
                                                     </dd>
                                                     <dt>Flash:</dt>
                                                     <dd style="min-height: 26px;">
@@ -1159,7 +1310,7 @@ function getip(ip) {
                                                     </dd>
                                                     <dt>HTTP_ACCEPT_LANGUAGE</dt>
                                                     <dd style="min-height: 26px;">
-                                                        <div class="cont">en-US,en;q=0.8</div>
+                                                        <div class="cont" id="languages"></div>q=0.8
                                                     </dd>
                                                     <dt>
                                                         <div class="maybehead">HTTP_COOKIE</div>
@@ -1189,7 +1340,7 @@ function getip(ip) {
                                                     </dd>
                                                     <dt>HTTP_USER_AGENT</dt>
                                                     <dd style="min-height: 26px;">
-                                                        <div class="cont">Mozilla/5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</div>
+                                                        <div class="cont" id="userAgent"></div>
                                                     </dd>
                                                     <dt>
                                                         <div class="alarmhead">HTTP_X_FORWARDED_FOR</div>
@@ -1750,7 +1901,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object DeprecatedStorageQuota]</span>
+                                                                <div id="webkitTemporaryStorage"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1758,7 +1909,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object DeprecatedStorageQuota]</span>
+                                                                <div id="webkitPersistentStorage"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1766,7 +1917,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object ServiceWorkerContainer]</span>
+                                                                <div id="serviceWorker"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1774,7 +1925,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function getBattery() { [native code] }</span>
+                                                                <div id="getBattery"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1782,7 +1933,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function sendBeacon() { [native code] }</span>
+                                                                <div id="sendBeacon"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1790,7 +1941,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function getGamepads() { [native code] }</span>
+                                                                <div id="getGamepads"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1798,7 +1949,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function webkitGetUserMedia() { [native code] }</span>
+                                                                <div id="webkitGetUserMedia"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1806,7 +1957,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function javaEnabled() { [native code] }</span>
+                                                                <div id="javaEnabled"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1814,7 +1965,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function vibrate() { [native code] }</span>
+                                                                <div id="vibrate"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1822,7 +1973,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function requestMIDIAccess() { [native code] }</span>
+                                                                <div id="requestMIDIAccess"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1830,7 +1981,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object MediaDevices]</span>
+                                                                <div id="mediaDevices"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1838,7 +1989,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object NetworkInformation]</span>
+                                                                <div id="connection"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1846,7 +1997,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object Permissions]</span>
+                                                                <div id="permissions"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1854,7 +2005,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object Presentation]</span>
+                                                                <div id="presentation"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1862,7 +2013,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function requestMediaKeySystemAccess() { [native code] }</span>
+                                                                <div id="requestMediaKeySystemAccess"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1870,7 +2021,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function registerProtocolHandler() { [native code] }</span>
+                                                                <div id="registerProtocolHandler"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1878,7 +2029,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>function unregisterProtocolHandler() { [native code] }</span>
+                                                                <div id="unregisterProtocolHandler"></div>
                                                             </span>
                                                         </dd>
                                                     </dl>
