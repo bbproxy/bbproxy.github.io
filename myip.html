@@ -18,6 +18,7 @@
         <link rel="alternate" hreflang="zh" href="/zh/myip.html">
         <meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ">
         <meta name="yandex-verification" content="5fc0238c84978c1f">
+        <!-- Navigator Section Javascript -->
         <!-- appCodeName -->
         <script>
     var txt = "";
@@ -26,6 +27,159 @@
     document.getElementById("appCodeName").innerHTML = txt;
     </script>
     <!-- End appCodeName -->
+    <!-- Begin appName -->
+    <script>
+    var txt = "";
+    txt += "<p>" + navigator.appName + "</p>";
+    
+    document.getElementById("appName").innerHTML = txt;
+    </script>
+    <!-- End appName -->
+    <!-- appVersion -->
+    <script>
+    var txt = "";
+    txt += "<p>" + navigator.appVersion + "</p>";
+    
+    document.getElementById("appVersion").innerHTML = txt;
+    </script>
+    <!-- End appVersion -->
+    <!-- Begin cookieEnabled -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.cookieEnabled + "</p>";
+    
+    document.getElementById("cookieEnabled").innerHTML = txt;
+    </script>
+    <!-- End cookieEnabled -->
+    <!-- Begin language -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.language + "</p>";
+    
+    document.getElementById("language").innerHTML = txt;
+    </script>
+    <!-- End language -->
+    <!-- Begin vendorSub -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.vendorSub + "</p>";
+    
+    document.getElementById("vendorSub").innerHTML = txt;
+    </script>
+    <!-- End vendorSub -->
+    <!-- Begin productSub -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.productSub + "</p>";
+    
+    document.getElementById("productSub").innerHTML = txt;
+    </script>
+    <!-- End productSub -->
+    <!-- Begin vendor -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.vendor + "</p>";
+    
+    document.getElementById("vendor").innerHTML = txt;
+    </script>
+    <!-- End vendor -->
+    <!-- Begin maxTouchPoints -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.maxTouchPoints + "</p>";
+    
+    document.getElementById("maxTouchPoints").innerHTML = txt;
+    </script>
+    <!-- End maxTouchPoints -->
+    <!-- Begin hardwareConcurrency -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.hardwareConcurrency + "</p>";
+    
+    document.getElementById("hardwareConcurrency").innerHTML = txt;
+    </script>
+    <!-- End hardwareConcurrency -->
+    <!-- Begin platform -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.platform + "</p>";
+    
+    document.getElementById("platform").innerHTML = txt;
+    </script>
+    <!-- End platform -->
+    <!-- Begin product -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.product + "</p>";
+    
+    document.getElementById("product").innerHTML = txt;
+    </script>
+    <!-- end product -->
+    <!-- Begin userAgent -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.userAgent + "</p>";
+    
+    document.getElementById("userAgent").innerHTML = txt;
+    </script>
+    <!-- End userAgent -->
+    <!-- Begin language -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.language + "</p>";
+    
+    document.getElementById("language").innerHTML = txt;
+    </script>
+    <!-- End language -->
+    <!-- Begin languages -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.languages + "</p>";
+    
+    document.getElementById("languages").innerHTML = txt;
+    </script>
+    <!-- End languages -->
+    <!-- Begin onLine -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.onLine + "</p>";
+    
+    document.getElementById("onLine").innerHTML = txt;
+    </script>
+    <!-- End onLine -->
+    <!-- Begin doNotTrack -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.doNotTrack + "</p>";
+    
+    document.getElementById("doNotTrack").innerHTML = txt;
+    </script>
+    <!-- End doNotTrack -->
+    <!-- Begin geolocation -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.geolocation + "</p>";
+    
+    document.getElementById("geolocation").innerHTML = txt;
+    </script>
+    <!-- End geolocation -->
+    <!-- Begin plugins -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.plugins + "</p>";
+    
+    document.getElementById("plugins").innerHTML = txt;
+    </script>
+    <!-- End plugins -->
+    <!-- Begin mimeTypes -->
+    <script>
+    var txt = "";
+  txt += "<p>" + navigator.mimeTypes + "</p>";
+    
+    document.getElementById("mimeTypes").innerHTML = txt;
+    </script>
+    <!-- End mimeTypes
+    
     </head>
     <body>
         <div id="wrapper">
@@ -531,7 +685,7 @@ document.write(''
                                                     <dt>JavaScript:</dt>
                                                     <dd class="w-bg  diff-ua-headers" style="min-height: 26px;">
                                                         <span class="ico-holder js-ua"> </span>
-                                                        <span class="js-ua-headers cont">Mozilla/5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</span>
+                                                        <div id="appVersion" class="js-ua-headers cont"></div>
                                                     </dd>
                                                 </dl>
                                             </div>
@@ -895,18 +1049,15 @@ function getip(ip) {
                                                         <span class="ico-holder ico-32 browser-ua"> </span>
                                                         <span class="cont">
                                                             <img src="/images/flags/us.png">
-                                                            us (en-US,en;q=0.8
-                                                            <span class="js_language"> | en-US</span>
-                                                            )
+                                                            <div class="js_language" id="languages"></div>
                                                         </span>
                                                     </dd>
                                                     <dt>JavaScript:</dt>
                                                     <dd style="min-height: 26px;">
                                                         <span class="ico-holder ico-js-ua"> </span>
-                                                        <span class="cont" id="lang_js_ext">
+                                                        <div class="cont" id="lang_js_ext language">
                                                             <img alt src="/images/flags/us.png">
-                                                             en-US
-                                                        </span>
+                                                        </div>
                                                     </dd>
                                                     <dt>Flash:</dt>
                                                     <dd style="min-height: 26px;">
@@ -1447,15 +1598,15 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class></span>
+                                                                <div id="vendorSub"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
-                                                            <span class>productSub</span>
+                                                            <div id="productSub">productSub</div>
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>20030107</span>
+                                                                <div id="productSub"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1463,7 +1614,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>Google Inc.</span>
+                                                                <div id="vendor"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1471,7 +1622,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>0</span>
+                                                                <div id="maxTouchPoints"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1479,7 +1630,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>2</span>
+                                                                <div id="hardwareConcurrency"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1495,7 +1646,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>Netscape</span>
+                                                                <div id="appName"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1503,7 +1654,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</span>
+                                                                <div id="appVersion"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1511,7 +1662,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>Linux x86_64</span>
+                                                                <div id="platform"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1519,7 +1670,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>Gecko</span>
+                                                                <div id="product"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1527,7 +1678,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>Mozilla/5.0 (X11; CrOS x86_64 7834.60.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.95 Safari/537.36</span>
+                                                                <div id="userAgent"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1535,7 +1686,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>en-US</span>
+                                                                <div id="language"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1543,7 +1694,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>en-US,en</span>
+                                                                <div id="languages"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1551,7 +1702,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>true</span>
+                                                                <div id="onLine"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1559,7 +1710,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>true</span>
+                                                                <div id="cookieEnabled"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1567,7 +1718,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>1</span>
+                                                                <div id="doNotTrack"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1575,7 +1726,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object Geolocation]</span>
+                                                                <div id="geolocation"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1583,7 +1734,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object PluginArray]</span>
+                                                                <div id="plugins"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
@@ -1591,7 +1742,7 @@ function getip(ip) {
                                                         </dt>
                                                         <dd style="min-height: 26px;">
                                                             <span class="cont">
-                                                                <span class>[object MimeTypeArray]</span>
+                                                                <div id="mimeTypes"></div>
                                                             </span>
                                                         </dd>
                                                         <dt>
