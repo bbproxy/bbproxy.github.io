@@ -315,6 +315,22 @@
     document.getElementById("unregisterProtocolHandler").innerHTML = txt;
     </script>
         <!-- End unregisterProtocolHandler-->
+        <!-- Get Local Time -->
+        <script type="text/javascript"> 
+        function display_c(){  //add a letter in the function display_c for example function display_C(){ --> function display_c1(){ to stop auto updating
+            var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct()',refresh)
+        }
+        
+        function display_ct() {
+            var strcount
+        var x = new Date()
+        document.getElementById('ct').innerHTML = x;
+        tt=display_c();
+            
+        }
+        </script>
+        <!-- End Local Time -->
         
     </head>
     <body>
@@ -728,7 +744,7 @@ document.write(' '+OSName);
                                                     <dt>Local:</dt>
                                                     <dd class="w-bg middle time-diff">
                                                         <span class="ico-holder ico-timelocal"> </span>
-                                                        <span class="cont">Wed Mar 30 2016 22:29:59 GMT-0400 (EDT)</span>
+                                                        <span class="cont"><body onload=display_ct();><span id='ct' ></span></body></span>
                                                     </dd>
                                                     <dt>System:</dt>
                                                     <dd class="w-bg time-diff">
