@@ -7,6 +7,21 @@
 	<title>Whoer Anonymizer</title>
 	<link rel="stylesheet" href="http://bannerbombproxy.github.io/home287/css/style.css?6" type="text/css" />
 	<!-- <script type="text/javascript" src="http://bannerbombproxy.github.io/home287/js/autoscaling-menu.js"></script> -->
+	<script>
+	server: {
+    middleware: [
+        function (req, res, next) {
+            // You might want to adjust this url, maybe "*.jsp"
+            if (req.url === "/") {
+                // Set MIME type for .jsp
+                res.setHeader("Content-Type", "text/html; charset=utf-8");
+            }
+
+            next();
+        }
+    ]
+}
+</script>
 
 
 </head>
