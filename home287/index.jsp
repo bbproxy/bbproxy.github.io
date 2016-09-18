@@ -15,7 +15,7 @@
 
 <script type="text/javascript">
 	var ROOT_DOMAIN='https://bannerbombproxy.github.io';
-	var REAL_PROXY_HOST='https://bannerbombproxy.github.io';
+	var REAL_PROXY_HOST='bannerbombproxy.github.io';
 	var PROXY_MODE='URL_ENCRYPT';
 	var REAL_URL='';
 	var PRX_MODE='general';
