@@ -1,24 +1,4 @@
-gulp.task('browser-sync', function browserSyncGulp() {
-    browserSync.init({
-        server: {
-            baseDir: './home287/',
-            index: 'index.html'
-        }
-    });
-});
-server: {
-    middleware: [
-        function (req, res, next) {
-            // You might want to adjust this url, maybe "*.jsp"
-            if (req.url === "/") {
-                // Set MIME type for .jsp
-                res.setHeader("Content-Type", "text/html; charset=utf-8");
-            }
-
-            next();
-        }
-    ]
-}
+<%@ page language="java" pageEncoding="UTF-8" session="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
