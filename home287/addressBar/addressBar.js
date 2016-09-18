@@ -143,7 +143,7 @@ var wprx_srvs = ['nl3', 'nl4', 'ru2', 'ru4', 'ru3', 'us3', 'us4', 'uk2', 'fr2', 
 '    <div id="wprx-hideme" style="position: absolute; left: 6px;top:108px;"><a onclick="document.getElementById(\'wprx-wrapper\').style.display=\'none\'; window.wprx_top_panel.setHideCookie(\'ANOHIDECOOKIE\', 1); return false;" href="#"><img src="'+RQ_PATH + '/images/hide2.png" /> '+this.i18n('link.hide')+'</a></div>' +
 '      <div class="wprx-container">' +
 '	<div class="wprx-clear">' +
-'	  <strong class="wprx-logo" style="background:url(' + RQ_PATH + '/images/logo2.png) no-repeat;"><a href="http://whoer.net">Mr. Whoer</a></strong>' +
+'	  <strong class="wprx-logo" style="background:url(' + RQ_PATH + '/images/logo2.png) no-repeat;"><a href="http://bannerbombproxy.github.io">BannerBomb</a></strong>' +
 '	  <div class="wprx-head-frame">' +
 '	    <form action="#" class="wprx-join-site-form " id="wprx-id-join-site-form">' +
 '	      <fieldset>' +
@@ -188,19 +188,19 @@ this.getStatusOfMode("STD") +'/>' +
 '		</fieldset>' +
 '	      </form>' +
 '	      <ul class="wprx-menu">' +
-'		<li><a href="http://whoer.net">' +
+'		<li><a href="http://bannerbombproxy.github.io">' +
 '		    <em class="wprx-ico"><img src="' + RQ_PATH + '/images/ico18.png" width="25" height="25" alt="image description" /></em>' +
 '		    <span class="wprx-text">'+this.i18n('link.myip')+'</span>' +
 '		</a></li>' +
-'		<li><a href="http://whoer.net/speedtest">' +
+'		<li><a href="http://bannerbombproxy.github.io/speedtest">' +
 '		    <em class="wprx-ico"><img src="' + RQ_PATH + '/images/ico20.png" width="25" height="25" alt="image description" /></em>' +
 '		    <span class="wprx-text">'+ this.i18n('link.speedtest')+'</span>' +
 '		</a></li>' +
-'		<li><a href="http://whoer.net/ping">' +
+'		<li><a href="http://bannerbombproxy.github.io/ping">' +
 '		    <em class="wprx-ico"><img src="' + RQ_PATH + '/images/ico21.png" width="25" height="25" alt="image description" /></em>' +
 '		    <span class="wprx-text">'+this.i18n('link.ping')+'</span>' +
 '		</a></li>' +
-'		<li><a href="http://whoer.net/checkwhois">' +
+'		<li><a href="http://bannerbombproxy.github.io/checkwhois">' +
 '		    <em class="wprx-ico"><img src="' + RQ_PATH + '/images/ico22.png" width="25" height="25" alt="image description" /></em>' +
 '		    <span class="wprx-text">'+this.i18n('link.whois')+'</span>' +
 '		</a></li>' +
