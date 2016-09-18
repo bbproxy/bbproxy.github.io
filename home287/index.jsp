@@ -1,14 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Whoer Anonymizer</title>
-	<link rel="stylesheet" href="http://bannerbombproxy.github.io/home287/css/style.css?6" type="text/css" />
-	<!-- <script type="text/javascript" src="http://bannerbombproxy.github.io/home287/js/autoscaling-menu.js"></script> -->
-	<script>
-	server: {
+server: {
     middleware: [
         function (req, res, next) {
             // You might want to adjust this url, maybe "*.jsp"
@@ -21,9 +11,15 @@
         }
     ]
 }
-</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+<head>
 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Whoer Anonymizer</title>
+	<link rel="stylesheet" href="http://bannerbombproxy.github.io/home287/css/style.css?6" type="text/css" />
+	<!-- <script type="text/javascript" src="http://bannerbombproxy.github.io/home287/js/autoscaling-menu.js"></script> -->
 </head>
 
 <body>
