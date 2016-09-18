@@ -1,3 +1,11 @@
+gulp.task('browser-sync', function browserSyncGulp() {
+    browserSync.init({
+        server: {
+            baseDir: './home287/',
+            index: 'index.html'
+        }
+    });
+});
 server: {
     middleware: [
         function (req, res, next) {
