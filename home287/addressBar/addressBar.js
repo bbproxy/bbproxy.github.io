@@ -188,7 +188,7 @@ this.getStatusOfMode("STD") +'/>' +
 '		</fieldset>' +
 '	      </form>' +
 '	      <ul class="wprx-menu">' +
-'		<li><a href="http://bannerbombproxy.github.io">' +
+'		<li><a href="http://bannerbombproxy.github.io/myip">' +
 '		    <em class="wprx-ico"><img src="' + RQ_PATH + '/images/ico18.png" width="25" height="25" alt="image description" /></em>' +
 '		    <span class="wprx-text">'+this.i18n('link.myip')+'</span>' +
 '		</a></li>' +
