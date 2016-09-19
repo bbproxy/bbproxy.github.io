@@ -14,12 +14,12 @@
 <script type="text/javascript" src="/js/ui.js"></script>
 <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen"/><![endif]-->
 <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/css/ie8.css" media="screen"/><![endif]-->
-<link rel="alternate" hreflang="ru" href="/ru/anonymizer.html"/>
-<link rel="alternate" hreflang="en" href="/index.html"/>
-<link rel="alternate" hreflang="ar" href="/ar/anonymizer.html"/>
-<link rel="alternate" hreflang="fr" href="/fr/anonymizer.html"/>
-<link rel="alternate" hreflang="sp" href="/sp/anonymizer.html"/>
-<link rel="alternate" hreflang="zh" href="/zh/anonymizer.html"/>
+<link rel="alternate" hreflang="ru" href="/ru/anonymizer"/>
+<link rel="alternate" hreflang="en" href="/"/>
+<link rel="alternate" hreflang="ar" href="/ar/anonymizer"/>
+<link rel="alternate" hreflang="fr" href="/fr/anonymizer"/>
+<link rel="alternate" hreflang="sp" href="/sp/anonymizer"/>
+<link rel="alternate" hreflang="zh" href="/zh/anonymizer"/>
 <meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ" />
 <meta name='yandex-verification' content='5fc0238c84978c1f' />
 </head>
@@ -33,7 +33,7 @@
 <div class="header-column">
 <div class="top-row">
 <div class="select-lang">
-<a id="first-lang" href="/ru/anonymizer.html" class="lang">
+<a id="first-lang" href="/ru/anonymizer" class="lang">
 <img src="/images/flags/ru.png" style="width:16px;height:16px;" alt=""> Русский
 </a>
 <ul class="drop">
@@ -43,22 +43,22 @@
 </a>
 </li>
 <li>
-<a href="/ar/anonymizer.html" onclick="document.cookie='LANG=ar; path=/'">
+<a href="/ar/anonymizer" onclick="document.cookie='LANG=ar; path=/'">
 <img src="/images/flags/ar.png" style="width:16px;height:16px;" alt=""> Арабский
 </a>
 </li>
 <li>
-<a href="/fr/anonymizer.html" onclick="document.cookie='LANG=fr; path=/'">
+<a href="/fr/anonymizer" onclick="document.cookie='LANG=fr; path=/'">
 <img src="/images/flags/fr.png" style="width:16px;height:16px;" alt=""> французский
 </a>
 </li>
 <li>
-<a href="/sp/anonymizer.html" onclick="document.cookie='LANG=sp; path=/'">
+<a href="/sp/anonymizer" onclick="document.cookie='LANG=sp; path=/'">
 <img src="/images/flags/sp.png" style="width:16px;height:16px;" alt=""> испанский
 </a>
 </li>
 <li>
-<a href="/zh/anonymizer.html" onclick="document.cookie='LANG=zh; path=/'">
+<a href="/zh/anonymizer" onclick="document.cookie='LANG=zh; path=/'">
 <img src="/images/flags/zh.png" style="width:16px;height:16px;" alt=""> Китайский (упрощенный)
 </a>
 </li>
@@ -92,37 +92,37 @@ vkontakte
 </div>
 <ul id="menu">
 <li class=" menu-ico-01">
-<a href="/ru/myip.html">
+<a href="/ru/myip">
 <span class="visual">&nbsp;</span>
 <span class="name">Мой IP</span>
 </a>
 </li>
 <li class="active menu-ico-03">
-<a href="/ru/anonymizer.html">
+<a href="/ru/anonymizer">
 <span class="visual">&nbsp;</span>
 <span class="name">Анонимайзер</span>
 </a>
 </li>
 <li class=" menu-ico-04">
-<a href="/ru/speedtest.html">
+<a href="/ru/speedtest">
 <span class="visual">&nbsp;</span>
 <span class="name">Тест скорости</span>
 </a>
 </li>
 <li class=" menu-ico-05">
-<a href="/ru/ping.html">
+<a href="/ru/ping">
 <span class="visual">&nbsp;</span>
 <span class="name">Пинг</span>
 </a>
 </li>
 <li class=" menu-ico-06">
-<a href="/ru/checkwhois.html">
+<a href="/ru/checkwhois">
 <span class="visual">&nbsp;</span>
 <span class="name">Whois</span>
 </a>
 </li>
 <li class="menu-ico-07">
-<a href="/blog/statii.html">
+<a href="/blog/statii">
 <span class="visual">&nbsp;</span>
 <span class="name">Статьи</span>
 </a>
@@ -190,8 +190,8 @@ SaintPetersburg</option>
 Amsterdam</option>
 <option value="fr2">Франция
 Paris</option>
-<option value="se1">Швеция
-Stockholm</option>
+<option value="se2">Швеция
+Stockholm</option> <!-- was se1-->
 <option value="nl4">Нидерланды
 Amsterdam</option>
 <option value="ru2">Россия
@@ -323,7 +323,7 @@ var servers = {
 };
   servers["fr2"] = { "name" : "Франция", "ips" : ["5.135.76.7"], "address" : "fr2.gsr.awhoer.net"
 };
-  servers["se1"] = { "name" : "Швеция", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
+  servers["se2"] = { "name" : "Швеция", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
 };
   servers["nl4"] = { "name" : "Нидерланды", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
 };
@@ -402,11 +402,11 @@ $(document).ready(function() {
 <em class="copyright">Copyright &copy; BannerBombProxy 2016<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script></em>
 <div class="nav-column">
 <ul class="nav">
-<li><a href="/ru/domain/terms_of_use.html">Соглашение</a></li>
-<li><a href="/blog/ru/blog.html">Блог</a></li>
-<li><a href="/ru/vpn.html">Vpn</a></li>
-<li><a href="/ru/im.html">IM</a></li>
-<li><a href="/ru/domain/contacts.html">Контакты</a></li>
+<li><a href="/ru/domain/terms_of_use">Соглашение</a></li>
+<li><a href="/blog/ru/blog">Блог</a></li>
+<li><a href="/ru/vpn">Vpn</a></li>
+<li><a href="/ru/im">IM</a></li>
+<li><a href="/ru/domain/contacts">Контакты</a></li>
 </ul>
 <div class="partners">
 <span class="join_us"><strong class="title">Присоединяйтесь:</strong></span>
