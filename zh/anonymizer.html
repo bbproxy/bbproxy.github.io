@@ -30,12 +30,12 @@
 <script type="text/javascript" src="/js/ui.js"></SCRIPT>
  <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen"/><![endif]-->
  <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/css/ie8.css" media="screen"/><![endif]-->
-<link rel="alternate" hreflang="zh" href="/zh/anonymizer.html"/>
-<link rel="alternate" hreflang="en" href="../"/>
-<link rel="alternate" hreflang="ru" href="/ru/anonymizer.html"/>
-<link rel="alternate" hreflang="ar" href="/ar/anonymizer.html"/>
-<link rel="alternate" hreflang="fr" href="/fr/anonymizer.html"/>
-<link rel="alternate" hreflang="sp" href="/sp/anonymizer.html"/>
+<link rel="alternate" hreflang="zh" href="/zh/anonymizer"/>
+<link rel="alternate" hreflang="en" href="/"/>
+<link rel="alternate" hreflang="ru" href="/ru/anonymizer"/>
+<link rel="alternate" hreflang="ar" href="/ar/anonymizer"/>
+<link rel="alternate" hreflang="fr" href="/fr/anonymizer"/>
+<link rel="alternate" hreflang="sp" href="/sp/anonymizer"/>
 <meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ" />
 <meta name='yandex-verification' content='5fc0238c84978c1f' />
 </head>
@@ -45,31 +45,31 @@
 <div class="w2 ">
 <div class="w3">
 <div id="header">
-<strong class="logo"><a href="/zh/anonymizer.html">Bannerbombproxy github中的io。</a></strong>
+<strong class="logo"><a href="/zh/anonymizer">Bannerbombproxy github中的io。</a></strong>
 <div class="header-column">
 <div class="top-row">
 <div class="select-lang">
-<a id="first-lang" href="/zh/anonymizer.html" class="lang">
+<a id="first-lang" href="/zh/anonymizer" class="lang">
 <img src="/images/flags/zh.png" style="width:16px;height:16px;" alt=""> 中文(简体)
 </a>
 <ul class="drop">
 <li>
-<a href="/ru/anonymizer.html" onclick="document.cookie='LANG=ru; path=/'">
+<a href="/ru/anonymizer" onclick="document.cookie='LANG=ru; path=/'">
 <img src="/images/flags/ru.png" style="width:16px;height:16px;" alt=""> 俄罗斯
 </a>
 </li>
 <li>
-<a href="/ar/anonymizer.html" onclick="document.cookie='LANG=ar; path=/'">
+<a href="/ar/anonymizer" onclick="document.cookie='LANG=ar; path=/'">
 <img src="/images/flags/ar.png" style="width:16px;height:16px;" alt=""> 阿拉伯文
 </a>
 </li>
 <li>
-<a href="/fr/anonymizer.html" onclick="document.cookie='LANG=fr; path=/'">
+<a href="/fr/anonymizer" onclick="document.cookie='LANG=fr; path=/'">
 <img src="/images/flags/fr.png" style="width:16px;height:16px;" alt=""> 法国
 </a>
 </li>
 <li>
-<a href="/sp/anonymizer.html" onclick="document.cookie='LANG=sp; path=/'">
+<a href="/sp/anonymizer" onclick="document.cookie='LANG=sp; path=/'">
 <img src="/images/flags/sp.png" style="width:16px;height:16px;" alt=""> 西班牙文
 </a>
 </li>
@@ -111,37 +111,37 @@ Vkontakte
 </div>
 <ul id="menu">
 <li class=" menu-ico-01">
-<a href="/zh/myip.html">
+<a href="/zh/myip">
 <span class="visual">&nbsp;</span>
 <span class="name">我的IP </span>
 </a>
 </li>
 <li class="active menu-ico-03">
-<a href="../">
+<a href="/">
 <span class="/zh/visual">&nbsp;</span>
 <span class="name">万维网代理 </span>
 </a>
 </li>
 <li class=" menu-ico-04">
-<a href="/zh/speedtest.html">
+<a href="/zh/speedtest">
 <span class="visual">&nbsp;</span>
 <span class="name">速度测试 </span>
 </a>
 </li>
 <li class=" menu-ico-05">
-<a href="/zh/ping.html">
+<a href="/zh/ping">
 <span class="visual">&nbsp;</span>
 <span class="name">坪 </span>
 </a>
 </li>
 <li class=" menu-ico-06">
-<a href="/zh/checkwhois.html">
+<a href="/zh/checkwhois">
 <span class="visual">&nbsp;</span>
 <span class="name">Whois </span>
 </a>
 </li>
 <li class="menu-ico-07">
-<a href="/blog/zh/articles.html">
+<a href="/blog/zh/articles">
 <span class="visual">&nbsp;</span>
 <span class="name">第 </span>
 </a>
@@ -180,7 +180,7 @@ Vkontakte
 圣彼得堡 </option>
 <option value="ru4">俄罗斯
 莫斯科 </option>
-<option value="se1">瑞典斯德哥尔摩
+<option value="se2">瑞典斯德哥尔摩
 </option>
 <option value="uk2">联合王国,
 伦敦 </option>
@@ -219,7 +219,7 @@ SaintPetersburg </option>
 巴黎 </option>
 <option value="nl4">荷兰
 阿姆斯特丹 </option>
-<option value="se1">瑞典
+<option value="se2">瑞典
 斯德哥尔摩 </option>
 </select>
 </div>
@@ -354,7 +354,7 @@ var servers = {
 };
   servers["nl4"] = { "name" : "Netherlands", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
 };
-  servers["se1"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
+  servers["se2"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se2.gsr.awhoer.net"
 };
 
 $('#server').on('change', function() {
