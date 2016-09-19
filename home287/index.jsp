@@ -23,7 +23,9 @@
 </script>
 <script type="text/javascript" src="http://bannerbombproxy.github.io/home287/jquery/jquery.min.js?1"></script>
 <script type="text/javascript" src="http://bannerbombproxy.github.io/home287/addressBar/addressBar.js?13"></script>
-
+<script type="text/javascript" src="//us4.gsr.awhoer.net/home287/notice/vknotice.js"></script>
+<script type="text/javascript" src="//us4.gsr.awhoer.net/home287/bookmark/bookmark.js"></script>
+<script type="text/javascript" src="//us4.gsr.awhoer.net/home287/webPageParser/parser.js"></script>
 
 
 <!--	<script type="text/javascript" src="http://bannerbombproxy.github.io/home287/jquery/jquery.min.js"></script> -->
