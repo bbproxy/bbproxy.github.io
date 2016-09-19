@@ -643,12 +643,12 @@ document.write(' '+OSName);
                         <div class="myip-tabset">
                             <ul class="tab-control" id="version-switcher">
                                 <li id="tab-lite" class="active">
-                                    <a href="#lite">
+                                    <a href="&#35;lite">
                                         <span>Lite</span>
                                     </a>
                                 </li>
-                                <li id="tab-ext" class>
-                                    <a href="#extended">
+                                <li id="tab-ext" class="">
+                                    <a href="&#35;extended">
                                         <span>Extended version</span>
                                     </a>
                                 </li>
@@ -959,7 +959,7 @@ function getip(ip) {
                                 </div>
                                 <div class="btn-holder">
                                     <span class="title">Want to know more?</span>
-                                    <a href="#extended" onclick="$('#tab-ext').click(); $('html, body').animate({scrollTop: $('#tab-lite').offset().top}, 400);event.preventDefault();" class="btn-more">
+                                    <a href="#" onclick="$('#tab-ext').click(); $('html, body').animate({scrollTop: $('#tab-lite').offset().top}, 400);event.preventDefault();" class="btn-more">
                                         <span>Use extended version</span>
                                     </a>
                                 </div>
@@ -2082,7 +2082,7 @@ function getip(ip) {
                                 </div>
                                 <i>
                                     <div class="btn-holder">
-                                        <a href="#lite" onclick="$('#tab-lite').click(); $('html, body').animate({scrollTop: $('#tab-ext').offset().top}, 400);event.preventDefault();" class="btn-more">
+                                        <a href="#" onclick="$('#tab-lite').click(); $('html, body').animate({scrollTop: $('#tab-ext').offset().top}, 400);event.preventDefault();" class="btn-more">
                                             <span>Use lite version</span>
                                         </a>
                                     </div>
