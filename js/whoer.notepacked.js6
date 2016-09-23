@@ -17,10 +17,10 @@ var webrtc_ips = [];
 var languages = 'aa aa-dj aa-er aa-et af am ar ar-ae ar-bh ar-dz ar-eg ar-in ar-iq ar-jo ar-kw ar-lb ar-ly ar-ma ar-mr ar-om ar-ps ar-qa ar-sa ar-sd ar-so ar-sy ar-td ar-tn ar-ye az be bg bm bn bn-bd bs ca ch ch-mp cs da da-de da-dk' + ' da-fo da-gl de de-at de-be de-ch de-de de-dk de-fr de-hu de-it de-li de-lu de-pl dv dz el el-cy el-gr en en-ag en-ai en-as en-au en-bb en-be en-bm en-bn en-bs en-bw en-bz en-ca en-ck en-cm en-dm en-er en-et en-fj en-fk en-fm en-gb en-gd' + ' en-gh en-gi en-gm en-gu en-gy en-hk en-ie en-il en-in en-io en-jm en-ke en-ki en-kn en-ky en-lc en-lr en-ls en-mh en-mp en-ms en-mt en-mu en-mw en-na en-nf en-ng en-nr en-nu en-nz en-pg en-ph en-pk en-pr en-pw en-rw' + ' en-sb en-sc en-sg en-sl en-so en-sz en-tk en-to en-tt en-ug en-um en-us en-vc en-vg en-vu en-ws en-za en-zm en-zv es es-ar es-bo es-cl es-co es-cr es-cu es-do es-ec es-es es-gq es-gt es-hn es-mx es-ni es-pa es-pe' + ' es-pr es-py es-sv es-uy es-ve et fa fa-ir fi fi-fi fi-se fj fo fr fr-ad fr-bi fr-bj fr-ca fr-cd fr-cf fr-cg fr-ch fr-ci fr-cm fr-dj fr-fr fr-ga fr-gb fr-gn fr-gp fr-ht fr-it fr-km fr-lb fr-lu fr-mc fr-mg fr-ml fr-mq fr-nc' + ' fr-ne fr-pf fr-rw fr-sc fr-sn fr-td fr-tg fr-vu fr-yt ga ga-ie gn ha he he-il hi ho hr hr-ba hr-hr ht hu hu-hu hu-sl hy id is it it-ch it-it it-sl it-sm ja jv ka kg kk km ko ko-kr ku ky lb lg lo lt lv mg mh mk mn mo mo-mo ms ms-my' + ' ms-sg mt my my-my na nb-no ne ne-ne nl nl-an nl-aw nl-be nl-nl nl-sr nn-NO no no-no pl pl-pl ps pt-ao pt-br pt-cv pt-gw pt-mz pt-pt pt-st pt-tl qu ro ro-ro ru ru-ru ru-ua rw rw-rw sd sd-pk sg si sk sk-sk sl sm sn so so-so' + ' sq sr sr-ba ss ss-sz sv sv-fi sv-se sw sw-tz ta ta-sg tg th tk tl to to-to tr tr-tr tw uk ur ur-pk uz uz-uz vi yi zh-cn zh-hk zh-mo zh-sg zh-tw zu';
 var lang_array = languages.split(' ');
 var ua_lang = [];
-for (var lid in lang_array)
+for (lid in lang_array)
     ua_lang[lang_array[lid]] = 1;
 var entity_to_code = {
-    proto: null ,
+    __proto__: null ,
     apos: 0x0027,
     quot: 0x0022,
     amp: 0x0026,
@@ -286,7 +286,7 @@ function e_e(str) {
         return char_to_entity[z] ? '&' + char_to_entity[z] + ';' : z;
     });
 }
-function calc_anonym() {
+;function calc_anonym() {
     var sections = {
         "primary": 0,
         "secondary": 0
@@ -299,9 +299,8 @@ function calc_anonym() {
             var src = list[i];
             if (src == "dns" || src == "ips") {
                 for (var i = 0; i < pub[src].length; i++) {
-                    if (pub[src][i]["iso"] == "-" || pub[src][i]["iso"] === "" || pub["ip_plain"]["iso"] === "")
-                        continue;
-                    if ((pub[src][i]["iso"].toLowerCase() != pub["ip_plain"]["iso"]) || (src == "ips" && pub[src][i]["ip"] != pub["ip_plain"]["ip"])) {
+                    if (pub[src][i]["iso"] == "-" || pub[src][i]["iso"] == "" || pub["ip_plain"]["iso"] == "")
+                        continue;if ((pub[src][i]["iso"].toLowerCase() != pub["ip_plain"]["iso"]) || (src == "ips" && pub[src][i]["ip"] != pub["ip_plain"]["ip"])) {
                         result += scores[src][0];
                         sections[scores[src][1]]++;
                         failed_anon.push(src);
@@ -330,9 +329,10 @@ function calc_anonym() {
             }
         }
     } catch (e) {
+        ;
     }
     var factor = 1;
-    if (sections["primary"] == 1 && sections["secondary"] === 0) {
+    if (sections["primary"] == 1 && sections["secondary"] == 0) {
         factor = 1.5;
     } else if (sections["primary"] > 0 && (sections["primary"] + sections["secondary"]) == 2) {
         factor = 1.2;
@@ -362,9 +362,9 @@ function calc_anonym() {
     }
 }
 function get_language_full() {
-    var result = '',
-      lang_app = '',
-      lang_ua = '';
+    var result = ''
+      , lang_app = ''
+      , lang_ua = '';
     var lang_names = ["language", "browserLanguage", "userLanguage", "systemLanguage"];
     for (var i in lang_names) {
         try {
@@ -372,17 +372,18 @@ function get_language_full() {
                 continue;result += window.navigator[lang_names[i]] + " | ";
             pub["lang_js"].push(window.navigator[lang_names[i]]);
         } catch (e) {}
+        ;
     }
     result = result.replace(/ \| $/, '');
     if (typeof (window.navigator['userAgent']) != "undefined")
         try {
             lang_ua = detect_lang_from_header(window.navigator['userAgent']);
         } catch (e) {}
-    if (typeof (window.navigator['appVersion']) != "undefined")
+    ;if (typeof (window.navigator['appVersion']) != "undefined")
         try {
             lang_app = detect_lang_from_header(window.navigator['appVersion']);
         } catch (e) {}
-    if ((lang_ua === '' && lang_app === '') || (lang_ua !== '' && lang_app !== '')) {
+    ;if ((lang_ua == '' && lang_app == '') || (lang_ua != '' && lang_app != '')) {
         result = result ? result + " | " + lang_ua : lang_ua;
     } else {
         var separator = result ? " | " : '';
@@ -408,7 +409,7 @@ function detect_lang_from_header(ua) {
         result = 'en';
     } else {
         var chunks = ua.toLowerCase().split(/;|\)/);
-        for (var i in chunks) {
+        for (i in chunks) {
             chunks[i] = chunks[i].replace('_', '-');
             if (/^[ \w\-,]{0,} (\w\w|\w\w-\w\w)$/.test(chunks[i].toLowerCase())) {
                 if (ua_lang[RegExp.$1]) {
@@ -422,11 +423,11 @@ function detect_lang_from_header(ua) {
     return result;
 }
 function get_os_full() {
-    var os_full = '',
-      os_cpu = '',
-      os_platform = '',
-      os_ua = '',
-      os_app = '';
+    var os_full = ''
+      , os_cpu = ''
+      , os_platform = ''
+      , os_ua = ''
+      , os_app = '';
     var os_container = [];
     if (typeof (window.navigator['platform']) != "undefined")
         os_container.push(window.navigator['platform']);
@@ -436,30 +437,30 @@ function get_os_full() {
         try {
             os_container.push(detect_os_from_header(window.navigator['userAgent']));
         } catch (e) {}
-    if (typeof (window.navigator['appVersion']) != "undefined")
+    ;if (typeof (window.navigator['appVersion']) != "undefined")
         try {
             os_container.push(detect_os_from_header(window.navigator['appVersion']));
         } catch (e) {}
-    os_container.sort();
+    ;os_container.sort();
     for (var i = 1; i < os_container.length; i++) {
-        if (os_container[i - 1] == os_container[i] || os_container[i] === '') {
+        if (os_container[i - 1] == os_container[i] || os_container[i] == '') {
             os_container.splice(i, 1);
             i -= 1;
         }
     }
     os_full = os_container.join(' | ');
-    if (os_full === '')
+    if (os_full == '')
         os_full = iloc('Unknown');
     os_full = os_full.replace(/(^\s?\|| \|\s?$)/, '');
     return os_full;
 }
 function get_chunk_from_user_agent(ua, ozez) {
     var result = '';
-    for (var os in ozez) {
+    for (os in ozez) {
         var re = new RegExp(ozez[os],'i');
         if (re.test(ua.toLowerCase())) {
             var chunks = ua.split(';');
-            for (var chid in chunks) {
+            for (chid in chunks) {
                 chunks[chid] = chunks[chid].replace(/^\s+/, '');
                 chunks[chid] = chunks[chid].replace(/\s+$/, '');
                 if (re.test(chunks[chid].toLowerCase())) {
@@ -475,8 +476,8 @@ function get_chunk_from_user_agent(ua, ozez) {
 function detect_os_from_header(ua) {
     var ua_orig = ua;
     var result = '';
-    var windows = 0;
-      macintosh = 0;
+    var windows = 0
+      , macintosh = 0;
     if (/^.*?(\(|\( )Macintosh;/i.test(ua.toLowerCase())) {
         macintosh = 1;
         ua = ua.replace(/^.*?\(Macintosh;/i, '');
@@ -491,16 +492,16 @@ function detect_os_from_header(ua) {
         result = result.replace(/\)$/, '');
     result = (!result && macintosh == 1) ? 'Macintosh' : result;
     result = (!result && windows == 1) ? 'Windows' : result;
-    var mobile_detected = 0;
-      in_result = 0;
-    for (var mid in mobiles) {
+    var mobile_detected = 0
+      , in_result = 0;
+    for (mid in mobiles) {
         var re = new RegExp(mobiles[mid],'i');
         if (re.test(ua.toLowerCase()))
             mobile_detected = 1;
         if (re.test(result.toLowerCase()))
             in_result = 1;
     }
-    if (mobile_detected && (result === '' || !in_result)) {
+    if (mobile_detected && (result == '' || !in_result)) {
         var mobile = get_chunk_from_user_agent(ua, mobiles);
         if (mobile)
             result += (result ? ', ' + mobile : mobile);
@@ -512,7 +513,7 @@ function detect_os_from_header(ua) {
         result = RegExp.$1;
     return result;
 }
-var inters = new Array([]);
+var inters = new Array;
 inters['ru'] = [];
 inters['de'] = [];
 inters['fr'] = [];
@@ -541,7 +542,7 @@ function iloc(phrase) {
     } else {
         var result = "";
         result = inters[lang][phrase];
-        if (result === undefined) {
+        if (result == undefined) {
             return phrase;
         } else {
             return result;
@@ -562,7 +563,7 @@ function check_time_difference(opts) {
     var mismatched = 0;
     try {
         var zonez = /(GMT|UTC)([+-]\d\d\d\d)/g.exec(zt);
-        if (zonez !== null ) {
+        if (zonez != null ) {
             if (local_zone == 'GMT' && zonez[2] == '+0000') {
                 local_zone = 'GMT+0000';
             }
