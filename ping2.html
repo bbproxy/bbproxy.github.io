@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Ping test checker</title>
+<meta name="description" content="Easy online ping test (pingtest) checker. Now you can check your IP address, website, or server from different places."/>
+<link rel="stylesheet" href="css/all253b.css?1468581252" type="text/css" async />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/whoer.notpackedf9c5.js?1472289759"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/clear-form-fields.js"></script>
+<link rel="stylesheet" href="css/new1831.css?1455717124" type="text/css"/>
+<script type="text/javascript" src="js/jquery-ui.min19f4.js?1.9.2"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen"/><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/css/ie8.css" media="screen"/><![endif]-->
+<link rel="alternate" hreflang="en" href="ping.html"/>
+<link rel="alternate" hreflang="ru" href="ru/ping.html"/>
+<link rel="alternate" hreflang="de" href="de/ping.html"/>
+<link rel="alternate" hreflang="fr" href="fr/ping.html"/>
+<meta name="google-site-verification" content="hpqD4A3XBmfYlpu69cOGPgqBEU9u6_YIQAAvN5h2-ec"/>
+<meta name='yandex-verification' content='4499c8d1539e0ccc'/>
+</head>
+<body>
+<div id="wrapper">
+<div class="w1">
+<div class="w2 ">
+<div class="w3">
+<div id="header">
+<strong class="logo"><a href="index.html">Whoer.net</a></strong>
+<div class="header-column">
+<div class="top-row">
+<div class="select-lang">
+<a id="first-lang" href="ping.html" class="lang">
+<img src="images/flags/en.png" style="width:16px;height:16px;" alt="en"> English
+</a>
+<ul class="drop">
+<li>
+<a href="ru/ping.html" onclick="document.cookie='LANG=ru; path=/'">
+<img src="images/flags/ru.png" style="width:16px;height:16px;" alt="ru"> Russian
+</a>
+</li>
+<li>
+<a href="de/ping.html" onclick="document.cookie='LANG=de; path=/'">
+<img src="images/flags/de.png" style="width:16px;height:16px;" alt="de"> German
+</a>
+</li>
+<li>
+<a href="fr/ping.html" onclick="document.cookie='LANG=fr; path=/'">
+<img src="images/flags/fr.png" style="width:16px;height:16px;" alt="fr"> French
+</a>
+</li>
+</ul>
+</div>
+ 
+<a rel="nofollow" href="https://twitter.com/WhoerNet" class="btn-twitter" target="_blank">
+<span>Follow us on Twitter</span></a>
+</div>
+<ul id="menu">
+<li class=" menu-ico-01">
+<a href="index.html">
+<span class="visual">&nbsp;</span>
+<span class="name">My IP</span>
+</a>
+</li>
+<li class=" menu-ico-03">
+<a href="webproxy.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Web proxy</span>
+</a>
+</li>
+<li class=" menu-ico-04">
+<a href="speedtest.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Speed test</span>
+</a>
+</li>
+<li class="active menu-ico-05">
+<a href="ping.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Ping</span>
+</a>
+</li>
+<li class=" menu-ico-06">
+<a href="checkwhois.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Whois</span>
+</a>
+</li>
+<li class="menu-ico-07">
+<a href="blog/articles/index.html">
+<span class="visual">&nbsp;</span>
+<span class="name">Articles</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="content">
+<script type="text/javascript" src="js/ping.js"></script>
+<div class="proxy-box">
+<div class="proxy-box-holder">
+<h1 class="slim"><strong class="proxy-title">Ping test checker</strong></h1>
+<p>
+Ping test is the server response time. Now you can check your IP address, the website or the server from a few locations worldwide. Enter the IP address or name of the website, click on "Check Ping" and get the result for several countries. The result is specified in RRT (milliseconds).
+</p>
+<form class="ping-form" action='https://whoer.net/ping'>
+<fieldset>
+<div class="text-holder">
+<input type="text" name="pingit" class="text" value="" autofocus placeholder="IP address or hostname"/>
+</div>
+<input type="submit" value="Check Ping" class="btn-ping"/>
+</fieldset>
+</form>
+<div id="internal-ping-block">
+<div class="table-holder ping-table">
+<table class="table-heading">
+<tbody>
+<tr>
+<td class="first">Location</td>
+<td class="second">Result</td>
+<td class="third">Min. rrt</td>
+<td class="forth">Avg. rrt</td>
+<td class="fifth">Max. rrt</td>
+<td class="six">IP</td>
+</tr>
+</tbody>
+</table>
+<strong class="table-title">Europe</strong>
+<table class="table-content">
+<tbody>
+<tr id="srv_de1">
+<td class="first" id="srv_de1_country">
+<img alt="de" src="images/flags24/de.png">
+Germany, Munich
+</td>
+<td class="second" id="srv_de1_res"></td>
+<td class="third" id="srv_de1_min"></td>
+<td class="forth" id="srv_de1_avg"></td>
+<td class="fifth" id="srv_de1_max"></td>
+<td class="six" id="srv_de1_ip"></td>
+</tr>
+<tr id="srv_fr1">
+<td class="first" id="srv_fr1_country">
+<img alt="fr" src="images/flags24/fr.png">
+France, Roubaix
+</td>
+<td class="second" id="srv_fr1_res"></td>
+<td class="third" id="srv_fr1_min"></td>
+<td class="forth" id="srv_fr1_avg"></td>
+<td class="fifth" id="srv_fr1_max"></td>
+<td class="six" id="srv_fr1_ip"></td>
+</tr>
+<tr id="srv_it1">
+<td class="first" id="srv_it1_country">
+<img alt="it" src="images/flags24/it.png">
+Italy, Milan
+</td>
+<td class="second" id="srv_it1_res"></td>
+<td class="third" id="srv_it1_min"></td>
+<td class="forth" id="srv_it1_avg"></td>
+<td class="fifth" id="srv_it1_max"></td>
+<td class="six" id="srv_it1_ip"></td>
+</tr>
+<tr id="srv_nl1">
+<td class="first" id="srv_nl1_country">
+<img alt="nl" src="images/flags24/nl.png">
+Netherlands, Amsterdam
+</td>
+<td class="second" id="srv_nl1_res"></td>
+<td class="third" id="srv_nl1_min"></td>
+<td class="forth" id="srv_nl1_avg"></td>
+<td class="fifth" id="srv_nl1_max"></td>
+<td class="six" id="srv_nl1_ip"></td>
+</tr>
+<tr id="srv_ru1">
+<td class="first" id="srv_ru1_country">
+<img alt="ru" src="images/flags24/ru.png">
+Russia, Moscow
+</td>
+<td class="second" id="srv_ru1_res"></td>
+<td class="third" id="srv_ru1_min"></td>
+<td class="forth" id="srv_ru1_avg"></td>
+<td class="fifth" id="srv_ru1_max"></td>
+<td class="six" id="srv_ru1_ip"></td>
+</tr>
+<tr id="srv_uk1">
+<td class="first" id="srv_uk1_country">
+<img alt="uk" src="images/flags24/uk.png">
+United Kingdom, London
+</td>
+<td class="second" id="srv_uk1_res"></td>
+<td class="third" id="srv_uk1_min"></td>
+<td class="forth" id="srv_uk1_avg"></td>
+<td class="fifth" id="srv_uk1_max"></td>
+<td class="six" id="srv_uk1_ip"></td>
+</tr>
+</tbody>
+</table>
+<strong class="table-title">North America</strong>
+<table class="table-content">
+<tbody>
+<tr id="srv_ca1">
+<td class="first" id="srv_ca1_country">
+<img alt="ca" src="images/flags24/ca.png">
+Canada, Quebec
+</td>
+<td class="second" id="srv_ca1_res"></td>
+<td class="third" id="srv_ca1_min"></td>
+<td class="forth" id="srv_ca1_avg"></td>
+<td class="fifth" id="srv_ca1_max"></td>
+<td class="six" id="srv_ca1_ip"></td>
+</tr>
+<tr id="srv_us1">
+<td class="first" id="srv_us1_country">
+<img alt="us" src="images/flags24/us.png">
+USA, Georgia
+</td>
+<td class="second" id="srv_us1_res"></td>
+<td class="third" id="srv_us1_min"></td>
+<td class="forth" id="srv_us1_avg"></td>
+<td class="fifth" id="srv_us1_max"></td>
+<td class="six" id="srv_us1_ip"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<script>
+$(".btn-ping").on('click', function() {
+    if (! $('input[name=pingit]').val()) return false;
+
+    var params = {};
+    params['partial'] = 1;
+    params['pingit'] = $('input[name=pingit]').val();
+
+    check_ping('#internal-ping-block',
+               '/ping',
+               params);
+    return false;
+})
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="footer-holder">
+<em class="copyright">Copyright © whoer.net 2008-2016</em>
+<div class="nav-column">
+<ul class="nav">
+<li><a href="domain/terms_of_use.html">Terms of use</a></li>
+<li><a href="blog/index.html">Blog</a></li>
+<li><a href="vpn.html">Vpn</a></li>
+<li><a href="im.html">IM</a></li>
+<li><a href="domain/contacts.html">Contacts</a></li>
+</ul>
+<div class="partners">
+<span class="join_us"><strong class="title">Join us:</strong></span>
+<a target="_blank" href="https://www.facebook.com/whoergroup/"><img alt="fb" src="images/joinus/fb2.png"></a>
+<a target="_blank" href="https://twitter.com/WhoerNet"><img alt="tw" src="images/joinus/tw.png"></a>
+<a target="_blank" href="https://vk.com/whoernet"><img alt="vk" src="images/joinus/vk.png"></a>
+<a target="_blank" href="https://www.instagram.com/whoer_net/"><img alt="ig" src="images/joinus/ig.png"></a>
+<a target="_blank" href="https://www.youtube.com/channel/UC27FoXl1nXiSkiZR0vHkF8Q"><img alt="yt" src="images/joinus/yt.png"></a>
+</div>
+</div>
+</div>
+</div>
+<script defer type="text/javascript" src="js/jquery.mainaef8.js?1450273008"></script>
+<script>
+$(document).ready(function() {
+    $('.select-lang #first-lang').click(function(event) {
+        if ($('.select-lang .drop').is(':visible')) {
+            $('.select-lang .drop').hide();
+        } else {
+            $('.select-lang .drop').css('display', 'block'); 
+        }
+        return false;
+    });
+});
+</script>
+<div id="bugform-btn">
+<a href="#" id="bugform_show" rel="popup[bugform_popup]"><img src="images/bugform-enc4ca.png?1" alt="bugform"></a>
+</div>
+<div class="popup-holder" id="bugform_popup">
+<div class="bg"></div>
+<div class="popup">
+<div class="heading">
+<strong class="title">Feedback</strong>
+<a href="#" class="btn-close">x</a>
+</div>
+<div class="bug-container">
+<p class="complete skip">Your message has been sent!</p>
+<p class="sending skip"><img src="images/big-preloader.gif" alt="preloader"/></p>
+<p class="alarmhead error skip">Your message has not been sent. Wait 10 seconds before the next try.</p>
+<form class="question-form new" action="https://whoer.net/bug">
+<fieldset>
+<p class="alarmhead"> </p>
+<div class="text-holder mail">
+<input name="email" type="email" class="text" placeholder="E-mail" required>
+</div>
+<div class="text-holder area">
+<textarea name="msg" placeholder="Message" required></textarea>
+</div>
+<div class="btn-holder">
+<input name="send" type="submit" class="submit" value="Send"/>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+ 
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-59809509-1']);
+      _gaq.push(['_setDomainName', 'whoer.net']);
+      _gaq.push(['_setAllowHash', 'false']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+ 
+ 
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21087886 = new Ya.Metrika({
+                    id:21087886,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "../mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/21087886" style="position:absolute; left:-9999px;" alt="ym"></div></noscript>
+ 
+</body>
+</html>
