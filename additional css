@@ -1,0 +1,20 @@
+<!--Blurry Text-->
+<html>
+<head>
+<style>
+.blurry-text {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.textshadow .blurry-text {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+</style>
+</head>
+<body>
+<span class="blurry-text">All indicators are available only in the private webservice or standalone version</span>
+</body>
+</html>
+<!--End Blurry Text-->
