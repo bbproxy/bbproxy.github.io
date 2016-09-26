@@ -443,6 +443,18 @@
                     </div>
                     <div id="content">
                         <iframe id="iframe" sandbox="allow-same-origin" style="display: none"></iframe>
+                        <p>New Stuff</p>
+                        <style>
+                            $(el).append((i?'<span class="ico-holder no-back next"> </span>':' ')+'<span class="cont">'+ ip+'</span><div class="country-holder">'
++(is_local?'':'<span class="ico-holder no-back">'+'<img alt="" src="/images/flags/'+ data["ips"][id]['iso']+'.png">'+' </span><span class="cont">'+(country=='-'?iloc('Unknown'):country)+'</span>')
++'</div><div> </div> ');pub["ips"].push(data["ips"][id]);i++;}
+calc_anonym();}}
+                        </style>
+                        <p>New 2</p>
+                        <div class="country-holder"> </div>
+                        <p>New 3</p>
+                        <img alt="" src="/images/flags/%s.png">
+                        <p>End</p>
                         <div class="main-box">
                             <div class="ip-columns">
                                 <div class="column">
