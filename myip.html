@@ -476,7 +476,9 @@
                                         <dt>OS: </dt>
                                         <dd>
                                             <span class="ico-holder os-chromeos"> </span>
-                                            <span class="cont overdots">
+                                            <span class="cont overdots" id="os_java"> </span>
+                                        </dd>
+                                                <!--
 <script>
 // This script sets OSName variable as follows:
 // "Windows"    for all versions of Windows
@@ -503,6 +505,7 @@ document.write(' '+OSName);
 </script>
 </span>
                                         </dd>
+-->
                                         <dt>Browser:</dt>
                                         <dd>
                                             <span class="ico-holder browser-chrome"> </span> <!--Replace browser-chrome -->
@@ -725,8 +728,8 @@ document.write(' '+OSName);
                                                 <span class="ico-holder language"> </span>
                                                 <span class="title">Language</span>
                                                 <span class="cont lang-img">
-                                                    <img src="/images/flags/us.png">
-                                                    us
+                                                    <img alt="iso" src="/images/flags/mx.png"> mx
+                                                    <img alt="iso" src="/images/flags/us.png"> us
                                                 </span>
                                             </div>
                                         </div>
@@ -1210,10 +1213,10 @@ function getip(ip) {
                                                     <dd>
                                                         <span class="ico-holder ico-32 browser-ua"> </span>
                                                         <span class="cont">
-                                                            <!--<img alt="iso" src="/images/flags/mx.png"> mx-->
+                                                            <img alt="iso" src="/images/flags/mx.png"> mx
                                                             <img alt="iso" src="/images/flags/us.png"> us
-                                                            <!--(en-US,en;q=0.8,es;q=0.6,es-MX;q=0.4,es-US;q=0.2-->
-                                                            us (en-US,en;q=0.8
+                                                            (en-US,en;q=0.8,es;q=0.6,es-MX;q=0.4,es-US;q=0.2
+                                                            <!--us (en-US,en;q=0.8-->
                                                             <span class="js_language">| <span class="disabled">N/A</span></span>)
                                                         </span>
                                                     </dd>
@@ -1320,7 +1323,7 @@ function getip(ip) {
                                                     </dd>
                                                     <dt>HTTP_ACCEPT_LANGUAGE</dt>
                                                     <dd>
-                                                        <div class="cont">en-US,en;q=0.8</div>
+                                                        <div class="cont">en-US,en;q=0.8,es;q=0.6,es-MX;q=0.4,es-US;q=0.2</div>
                                                     </dd>
                                                     <dt>
                                                         <div class="maybehead">HTTP_COOKIE</div>
@@ -1671,7 +1674,7 @@ function getip(ip) {
                                                 <div class="item">
                                                     <dl class="myip-list">
                                                         <dt>Zone:</dt>
-                                                        <dd class="w-bg first time-diff" style="min-height: 26px;">
+                                                        <dd class="w-bg first time-diff">
                                                             <span class="ico-holder ico-timezone"> </span>
                                                             <span class="cont">America/New_York</span>
                                                         </dd>
@@ -1686,27 +1689,27 @@ function getip(ip) {
                                                             <span class="cont js-time disabled">N/A</span>
                                                         </dd>
                                                         <dt>UTC:</dt>
-                                                        <dd style="min-height: 26px;">
+                                                        <dd>
                                                             <span class="ico-holder ico-timeutc"> </span>
                                                             <span class="cont">Thu Mar 31 2016 02:29:59 UTC</span>
                                                         </dd>
                                                         <dt>GMT:</dt>
-                                                        <dd style="min-height: 26px;">
+                                                        <dd>
                                                             <span class="ico-holder ico-timegmt"> </span>
                                                             <span class="cont">Thu Mar 31 2016 02:29:59 GMT</span>
                                                         </dd>
                                                         <dt>DST:</dt>
-                                                        <dd style="min-height: 26px;">
+                                                        <dd>
                                                             <span class="ico-holder ico-dst"> </span>
                                                             <span class="cont">Yes</span>
                                                         </dd>
                                                         <dt>Sunrise:</dt>
-                                                        <dd style="min-height: 26px;">
+                                                        <dd>
                                                             <span class="ico-holder ico-sunrise"> </span>
                                                             <span class="cont">07:07:34</span>
                                                         </dd>
                                                         <dt>Sunset:</dt>
-                                                        <dd style="min-height: 26px;">
+                                                        <dd>
                                                             <span class="ico-holder ico-sunset"> </span>
                                                             <span class="cont">19:39:56</span>
                                                         </dd>
