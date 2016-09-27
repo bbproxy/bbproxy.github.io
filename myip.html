@@ -583,7 +583,7 @@ document.write(' '+OSName);
                                     </dl>
                                 </div>
                                 <div class="column-right">
-                                    <div class="score-godless" id="anonym_level">
+                                    <div class="heading score-default" id="anonym_level"> <!--Class was "score-godless"-->
                                         <a class="title" onclick="$('#hidden-images img').reveal('fadeIn', 500);" href="#" rel="popup[hide_control_popup]">N/A</a>
                                         <span class="description">
                                             <span class="disabled">N/A</span>
@@ -596,12 +596,25 @@ document.write(' '+OSName);
                                         </dt>
                                         <dd>
                                             <span class="ico-holder ico-dns-net"> </span>
+                                            <span class="cont dns_br_ip max_ip">
+                                                <span class="disabled">N/A</span>
+                                            </span>
+                                            <div class="country-holder main-dns">
+                                                <span class="ico-holder no-back dns_br_flag"> </span>
+                                                <span class="cont dns_br_country"></span>
+                                            </div>
+                                        </dd>
+                                        <!--Original Code-->
+                                        <!--
+                                        <dd>
+                                            <span class="ico-holder ico-dns-net"> </span>
                                             <span class="cont dns_br_ip max_ip">128.109.249.27</span>
                                             <div class="country-holder main-dns">
                                                 <span class="ico-holder no-back dns_br_flag"><img alt src="/images/flags/us.png"></span>
                                                 <span class="cont dns_br_country">United States</span>
                                             </div>
                                         </dd>
+    	    	    	    	    	 -->
                                         <dt>
                                             <span class="ico-holder proxy"> </span>
                                             Proxy:
@@ -626,7 +639,7 @@ document.write(' '+OSName);
                                         </dt>
                                         <dd>
                                             <span class="ico-holder anonymizer-status main-good"> </span>
-                                            <span id="using-anonymizer" class="cont disabled">No</span>
+                                            <span id="using-anonymizer" class="cont">No</span> <!--Had disable in class-->
                                         </dd>
                                         <dt>
                                             <span class="ico-holder dsbl"> </span>
