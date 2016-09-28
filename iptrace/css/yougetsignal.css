@@ -55,7 +55,7 @@ div#content ul#navigation li {
 	width: 2em;
 	margin: 0;
 	padding: 0;
-	background: url("/img/link_bg_standard.gif") no-repeat;
+	background: url("/iptrace/img/link_bg_standard.gif") no-repeat;
 }
 
 /* Home page
@@ -170,14 +170,14 @@ div#footer {
 	
 /* Curved Borders
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.curvedBorderTop { background: url("/img/bg_dot.gif") 0 0 repeat-x; }
-.curvedBorderBottom { background: url("/img/bg_dot.gif") 0 100% repeat-x}
-.curvedBorderLeft { background: url("/img/bg_dot.gif") 0 0 repeat-y}
-.curvedBorderRight { background: url("/img/bg_dot.gif") 100% 0 repeat-y}
-.curvedBorderBottomLeft { background: url("/img/bg_bl.gif") 0 100% no-repeat}
-.curvedBorderBottomRight { background: url("/img/bg_br.gif") 100% 100% no-repeat}
-.curvedBorderTopLeft { background: url("/img/bg_tl.gif") 0 0 no-repeat}
-.curvedBorderTopRight { background: url("/img/bg_tr.gif") 100% 0 no-repeat; }
+.curvedBorderTop { background: url("/iptrace/img/bg_dot.gif") 0 0 repeat-x; }
+.curvedBorderBottom { background: url("/iptrace/img/bg_dot.gif") 0 100% repeat-x}
+.curvedBorderLeft { background: url("/iptrace/img/bg_dot.gif") 0 0 repeat-y}
+.curvedBorderRight { background: url("/iptrace/img/bg_dot.gif") 100% 0 repeat-y}
+.curvedBorderBottomLeft { background: url("/iptrace/img/bg_bl.gif") 0 100% no-repeat}
+.curvedBorderBottomRight { background: url("/iptrace/img/bg_br.gif") 100% 100% no-repeat}
+.curvedBorderTopLeft { background: url("/iptrace/img/bg_tl.gif") 0 0 no-repeat}
+.curvedBorderTopRight { background: url("/iptrace/img/bg_tr.gif") 100% 0 no-repeat; }
 .curvedBorderBottomClear { clear: both; font-size: 0; }
 
 
