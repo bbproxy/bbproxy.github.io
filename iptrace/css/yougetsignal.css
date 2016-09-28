@@ -1,0 +1,246 @@
+/**
+  @author Kirk Ouimet
+  @filename yougetsignal.css
+  @website http://www.yougetsignal.com/
+  Main Stylesheet for YouGetSignal.com
+*/
+
+/* General
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+* html {
+	margin: 0;
+	padding: 0;
+}
+html, body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, a, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+}
+table {
+	border-collapse: collapse;
+}
+
+/* Wrapper
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+div#wrapper {
+}
+
+/* Container
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+div#container {
+	font-size: 76%/160%; /* Using the em unit */
+	font-family: "Arial", "Tahoma", "Helvetica", "Verdana", sans-serif;
+	width: 47.4em;
+	margin: 0 auto;
+	padding: .3em 3em .8em 3em;
+	position: relative;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+div#header {
+	color: #1B87DF;
+}
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+div#content ul#navigation {
+	position: absolute;
+	margin: 0 0 0 -2.75em;
+}
+div#content ul#navigation li {
+	list-style-type: none;
+	height: 2em;
+	width: 2em;
+	margin: 0;
+	padding: 0;
+	background: url("/img/link_bg_standard.gif") no-repeat;
+}
+
+/* Home page
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.homeItem {
+	height: 40px;
+	width: 720px;
+	margin-bottom: 6px;
+	margin-left: -6px;
+	display: block;
+}
+.homeItem img {
+	border: 1px solid #FFF;
+}
+.homeItem img:hover {
+	border-color: #999;
+}
+
+
+/* Content
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+div#content {
+	padding: 1em;
+	color: #666;
+	margin: .4em 0;
+} 
+	div#content .spacer {
+		clear: both;
+		height: 1em;
+	}	
+	div#content a {
+		color: #1B87DF;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	div#content a:hover {
+		color: #004F8F;
+		text-decoration: underline;
+	}	
+	div#content a:active {
+		color: #4BB63E;
+	}
+	div#content .myInput {
+		font-size: 1em;
+		font-family: "Arial", "Tahoma", "Helvetica", "Verdana", sans-serif;
+		color: #666;
+		border: 1px solid #666;		
+		padding: 0.125em;
+	}
+	div#content .myInput:focus {
+		border: 1px solid #1B87DF;
+		padding: 0.125em;
+	}
+	div#content .myButton {
+		font-size: 1em;
+	}	
+
+	div#content .leftContent {
+		float: left;
+		width: 34em;
+	}
+	div#content .rightContent {
+		float: left;
+		margin-left: .35em;
+		width: 10em;
+		color: #666;
+	}	
+		div#content .rightContent li span {
+			font-size: .8em;
+			padding-left: .4em;
+			cursor: pointer;
+		}
+		div#content .rightContent li b {
+			font-weight: normal;
+			color: #1B87DF;
+		}
+
+	div#networkInfo p {
+		margin-bottom: .35em;
+		width: 13em;
+	}
+	div#traceInfo {
+		width: 15.5em;
+		margin-bottom: .35em;
+		font-size: 0.75em;
+		line-height: 1.375em;		
+	}
+	div#traceInfo img {
+		float: left;
+		margin-top: .225em;
+		margin-right: .225em;
+	}	
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+div#footer {
+	color: #666;
+	margin: .3em auto 0 auto;
+	text-align: center;
+	font-size: .8em;
+	line-height: .8em;
+}
+	div#footer a {
+		color: #666;
+	}
+	div#footer a:active {
+		color: #1B87DF;
+	}
+	div#footer a:hover {
+		color: #1B87DF;
+	}
+	
+/* Curved Borders
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.curvedBorderTop { background: url("/img/bg_dot.gif") 0 0 repeat-x; }
+.curvedBorderBottom { background: url("/img/bg_dot.gif") 0 100% repeat-x}
+.curvedBorderLeft { background: url("/img/bg_dot.gif") 0 0 repeat-y}
+.curvedBorderRight { background: url("/img/bg_dot.gif") 100% 0 repeat-y}
+.curvedBorderBottomLeft { background: url("/img/bg_bl.gif") 0 100% no-repeat}
+.curvedBorderBottomRight { background: url("/img/bg_br.gif") 100% 100% no-repeat}
+.curvedBorderTopLeft { background: url("/img/bg_tl.gif") 0 0 no-repeat}
+.curvedBorderTopRight { background: url("/img/bg_tr.gif") 100% 0 no-repeat; }
+.curvedBorderBottomClear { clear: both; font-size: 0; }
+
+
+/* Curved Borders
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+div#moreToolInfo {
+}
+
+div#viralLinks {
+	margin-top: 1em;
+	height: 1.2em;
+}
+div#viralLinks ul, div#viralLinks li {
+	list-style: none;
+	display: inline;
+}
+div#viralLinks ul {
+}
+div#viralLinks ul li a:hover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+div#viralLinks ul li a {
+	opacity: .4;
+	-moz-opacity: .4;
+	filter: alpha(opacity=40);
+}
+
+.tla ul {
+    height: 2em;
+    margin: .5em 0 0 0;
+	text-align: center;
+}
+.tla ul li {
+	display: inline;
+}
+.tla ul li a {
+	color: #666;
+}
+
+
+/* ProtoTip
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+/* prototip.css : http://www.nickstakenburg.com/projects/prototip */
+.prototip { position: absolute; }
+.prototip .effectWrapper { position: relative; }
+.prototip .tooltip { position: relative; }
+.prototip .toolbar {
+	position: relative;
+	display: block;
+	}
+.prototip .toolbar .title {
+	display: block;
+	position: relative;
+	}
+.prototip .content {
+	clear: both;
+	_width: 28em; /* IE 6 and below */
+	border: 1px solid #999;	
+	background: white;
+	font-family: Tahoma;
+	height: 24px; font-size: .7em; font-weight: bold; line-height: 2em; color: #1B87DF; }
+
+/* End of Stylesheet */
