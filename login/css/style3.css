@@ -10,21 +10,21 @@
 /** fonts used for the icons **/ 
 @font-face {
     font-family: 'FontomasCustomRegular';
-    src: url('fonts/fontomas-webfont.eot');
-    src: url('fonts/fontomas-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/fontomas-webfont.woff') format('woff'),
-         url('fonts/fontomas-webfont.ttf') format('truetype'),
-         url('fonts/fontomas-webfont.svg#FontomasCustomRegular') format('svg');
+    src: url('/login/fonts/fontomas-webfont.eot');
+    src: url('/login/fonts/fontomas-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/login/fonts/fontomas-webfont.woff') format('woff'),
+         url('/login/fonts/fontomas-webfont.ttf') format('truetype'),
+         url('/login/fonts/fontomas-webfont.svg#FontomasCustomRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'FranchiseRegular';
-    src: url('fonts/franchise-bold-webfont.eot');
-    src: url('fonts/franchise-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/franchise-bold-webfont.woff') format('woff'),
-         url('fonts/franchise-bold-webfont.ttf') format('truetype'),
-         url('fonts/franchise-bold-webfont.svg#FranchiseRegular') format('svg');
+    src: url('/login/fonts/franchise-bold-webfont.eot');
+    src: url('/login/fonts/franchise-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/login/fonts/franchise-bold-webfont.woff') format('woff'),
+         url('/login/fonts/franchise-bold-webfont.ttf') format('truetype'),
+         url('/login/fonts/franchise-bold-webfont.svg#FranchiseRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
