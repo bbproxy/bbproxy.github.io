@@ -1,4 +1,4 @@
-$(function(){
+(function(){
 	
 	var pass1 = $('#password1'),
 		pass2 = $('#password2'),
