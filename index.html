@@ -32,8 +32,14 @@
   <link rel="alternate" hreflang="fr" href="/fr/anonymizer"/>
   <link rel="alternate" hreflang="sp" href="/sp/anonymizer"/>
   <link rel="alternate" hreflang="zh" href="/zh/anonymizer"/>
-<meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ" />
-<meta name='yandex-verification' content='5fc0238c84978c1f' />
+     <meta name="google-site-verification" content="YHL6nZBXxb24eVnvveP2ovvuZceK1o6FwgcHix3baWQ" />
+     <meta name='yandex-verification' content='5fc0238c84978c1f' />
+     <!--Prints Full Website URL-->
+     <script>
+         document.getElementById("fullurl").innerHTML =
+             "" + window.location.hostname;
+     </script>
+     <!--End Full Website URL Script-->
 </head>
 <body>
 <div id="wrapper">
@@ -41,11 +47,11 @@
 <div class="w2 ">
 <div class="w3">
 <div id="header">
-<strong class="logo"><a href="./">bannerbombproxy.github.io</a></strong>
+<strong class="logo"><a href="/"><p id="fullurl"></p></a></strong>
 <div class="header-column">
 <div class="top-row">
 <div class="select-lang">
-<a id="first-lang" href="./" class="lang">
+<a id="first-lang" href="/" class="lang">
 <img src="/images/flags/en.png" style="width:16px;height:16px;" alt> English
 </a>
 <ul class="drop">
@@ -416,7 +422,7 @@ $(document).ready(function() {
 <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-59809509-1']);
-      _gaq.push(['_setDomainName', 'bannerbombproxy.github.io']);
+      _gaq.push(['_setDomainName', '../']);
       _gaq.push(['_setAllowHash', 'false']);
       _gaq.push(['_trackPageview']);
 
