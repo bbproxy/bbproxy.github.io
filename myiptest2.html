@@ -170,9 +170,12 @@ Proxy:
 </dt>
 <dd>
  
-<span class="ico-holder proxy-status main-bad"> </span>
+<span class="ico-holder proxy-status 
+                                 main-bad"> </span>
 <span class="cont proxy-status-message">
-No
+<div class="alarm"><a href="#" class="dashed" onclick="$('#tab-ext').click();
+$('html, body').animate({scrollTop: $('#httpheaders-block').offset().top}, 400);
+event.preventDefault();">Yes</a></div>
 </span>
 </dd>
 <dt>
@@ -306,7 +309,10 @@ North Carolina Research and Education Network
 <span class="ico-holder language"> </span>
 <span class="title">Language</span>
  
-<span class="cont lang-img"> </span>
+<span class="cont lang-img">
+<img alt="iso" src="/images/flags/mx.png"> mx
+<img alt="iso" src="/images/flags/us.png"> us
+</span>
 </div> </div>
 <div class="expand-block">
 <div class="heading">
@@ -611,7 +617,9 @@ Chrome OS
 <dd>
 <span class="ico-holder ico-32 browser-ua"> </span>
 <span class="cont">
-(
+<img alt="iso" src="/images/flags/mx.png"> mx
+<img alt="iso" src="/images/flags/us.png"> us
+(en-US,en;q=0.8,es;q=0.6,es-MX;q=0.4,es-US;q=0.2
 <span class="js_language">| <span class="disabled">N/A</span></span>)
 </span>
 </dd>
@@ -933,10 +941,8 @@ US dollars
             var map = new google.maps.Map(document.getElementById("gmap"), myOptions);
             var marker = new google.maps.Marker({ map: map, position: position,title:"hello"});
           }
-
           function load_gmap() {
             if (gmap_loaded == 1) return;
-
             gmap_loaded = 1;
             var script  = document.createElement("script");
             script.type = "text/javascript";
@@ -959,7 +965,6 @@ $(this).html('Show');
 load_gmap();
 return false;
 });
-
 });
 </script>
 <a id="gmap_show" href="#">Show</a>
@@ -1285,34 +1290,27 @@ Your IP address is blacklisted. This is a bad signal. Learn how to fix it <a tar
 </div>
 </div>
 <script>
-
 var pub = { 
     ip_plain: {ip: "152.26.177.40", iso: "us"},
     ip_flash: {},
     ip_java_udp: {},
     ip_java_tcp: {},
-
     dns : [],
     ips : [],
-
     dns_br : {}, //?
     dns_flash : {}, //?
     dns_java_resolve : {},//?
     dns_java_system : {}, //?
-
     os_java : {},
     os_flash : {},
     os_javascript : {},
     os_tcpip : {},
-
     lang_br : '',
     lang_js : [],
     lang_java : '',
     lang_flash : '',
-
     time_mismatch: 0,
     ua_mismatch: 0,
-
     activex: 0,
     webrtc: 0,
     flash: 0,
@@ -1320,16 +1318,14 @@ var pub = {
     firebug: 0,
     vbscript: 0,
     adblock: 0,
-
     langs: ['mx','us' ],
     track : 0,
     anonymizer : 0,
     tor : 0,
     vpn_provider : 0,
-    proxy : "0",
+    proxy : "2",
     proxy_ports : 0,
     dsbl : 0
-
     // TODO: hostname end tld?,
     // TODO: os???
     // do-not-track
@@ -1338,7 +1334,6 @@ var pub = {
     // ipv6?
     
 };
-
 var scores = {
   // primary  [%, 
     "tor" : [30, 'primary'],
@@ -1363,7 +1358,6 @@ var scores = {
   // vbscript?
   // devtools?
 };
-
 var score_res = [
     [100, 101, "score-best", "Your anonymity measures are safe or you don&#39;t use them"], // green
     [90, 100, "score-good", "Minor remarks regarding your anonymity and security"], // light-green
@@ -1379,7 +1373,6 @@ var score_res = [
 async_req_timeout = 20000;
 preloaders_timeout = 25000;
 var isAdBlockEnabled = true;
-
 $(document).ready(function() {
     scripts.js('.js-status');
     pub["flash"] = scripts.flash('.flash-status');
@@ -1389,7 +1382,6 @@ $(document).ready(function() {
 //    pub["firebug"] = scripts.firebug('.firebug-status');
     pub["webrtc"] = scripts.webrtc('.webrtc-status');
     pub["adblock"] = scripts.adblock('.adblock-status');
-
 <!-- TODO: in another script tag -->
     pub["time_mismatch"] = 
       check_time_difference(
@@ -1397,44 +1389,31 @@ $(document).ready(function() {
           time_diff_container : '.time-diff',
           local_timestamp : '1475244877',
           local_timezone : 'GMT-0400' });
-
     pub["ua_mismatch"] = scripts.jsua( '.js-ua-headers', '.browser-ua-headers', '.diff-ua-headers');
-
-
     pub["anonymizer"] = scripts.anonymizer( 'bannerproxy'+ '.' +'github'+ '.' +'io', '#using-anonymizer');
-
     scripts.languages('.js_language');
     
     set_lang_data('#lang_js_ext', pub['lang_js'], 'js');
-
     scripts.os('#os_js');
     scripts.screen('#browser-screen');
     scripts.navigator('#browser-navigator');
     display_plugins('#plugins');
-
-
 // fix height of dd's
 $('dl.myip-list dd').each(function(i){
 var _pH = $(this).prev().height();
 $(this).css('min-height', _pH);
 });
-
     calc_anonym();
-
-
     try {
         run_webrtc_check(function(ip) { webrtc_ips.push(ip); set_webrtc_ips(); });
     } catch (e) {};
-
 });
 </script>
 <script>
-
 function run_java_ext_applet() {
     if (!window.navigator.javaEnabled()) {
         return;
     }
-
 var app = document.createElement('applet');
 var attributes = {
     code:'WhoerInteractiveDetection',
@@ -1447,50 +1426,37 @@ var attributes = {
     for (var attribute in attributes) {
         app.setAttribute(attribute,attributes[attribute]);
     }
-
 var parameters = {
     init_preloaders: "init_ajax_preloaders",
     ids_list: "#ip_java_system,#dns_java_system,#os_java,#version_java,#lang_java,#ip_java_tcp_ip,#ip_java_udp_ip,#dns_java_resolve_ip",
-
     os_id: "#os_java",
     callback_for_os: "set_os_data",
-
     dns_sys_id: "#dns_java_system",
     dns_sys_request: "/ips2country?ips=",
-
     dns_resolve_id: "#dns_java_resolve",
     unique_domain: "sfxee1475259.jv.whrq.net",
     dns_request: "/dns?domain=sfxee1475259.jv",
     callback_for_dns: "async_req",
-
     callback_for_version: "set_version_data",
     version_id: "#version_java",
-
     callback_for_lang: "set_lang_data",
     language_id: "#lang_java",
-
     tcp_host: "../",
     udp_host: "ns8.whdn.net",
     tcp_port: "80",
     udp_port: "53",
     request: "/ip_json",
     timeout: "9000",
-
     not_available: "N/A",
-
     udp_message: "qmhco1475259.ud",
     udp_result_request: "/dns?domain=qmhco1475259.ud",
-
     callback_for_udp: "async_req",
     udp_ip_id: "#ip_java_udp",
-
     callback_for_ip:"set_ip_data",
     tcp_ip_id: "#ip_java_tcp",
-
     callback_for_network_system: "set_java_network",
     ip_system_id: "#ip_java_system"
 };
-
     if (parameters != 'undefined' && parameters != null) {
         for (var parameter in parameters) {
             var param = document.createElement("param");
@@ -1505,20 +1471,16 @@ var parameters = {
  
 <script>
 var flash_obj ='<object width="1" height="1">   <param name="movie" value="/flash/WhoerDetection.swf?1475259277">   <param name="menu" value="false">   <param name="allowScriptAccess" value="always">   <param name="bgcolor" value="#ffffff">   <param name="flashVars"          value="callback_for_dns=async_req&dns_request=/dns?domain=mfche1475259.fl&unique_domain=mfche1475259.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  <embed     src="/flash/WhoerDetection.swf?1475259277" width="1" height="1"     menu="false"     loop="false"     allowScriptAccess="always"     flashVars="callback_for_dns=async_req&dns_request=/dns?domain=mfche1475259.fl&unique_domain=mfche1475259.fl.whrq.net&callback_for_version=set_version_data&host=ns8.whdn.net&port=843&send_msg=Love&os_id=#os_flash&ver_id=#version_flash&lang_id=#lang_flash&ip_id=#ip_flash&dns_id=#dns_flash&ids_list=#version_flash,#lang_flash,#os_flash,#dns_flash_ip,#ip_flash_ip&init_preloaders=init_ajax_preloaders&callback_for_os=set_os_data&callback_for_lang=set_lang_data&callback_for_ip=set_ip_data">  </embed></object>';
-
 $("#run_interactive").on('click', function() {
         $(this).addClass("done");
         //$(this).prop("disabled",true);
         $(this).html('Run');
-
         $('#flash_container').html(flash_obj);
         run_java_ext_applet();
-
 //event.stopPropagation();
 //event.preventDefault();
     return false;
 });
-
 </script>
 <script type="text/javascript" src="/js/advert.js" async></script>
 <script>
@@ -1527,7 +1489,6 @@ $(document).ready(function() {
 // async_req('#os_tcpip', '/os', 'tcpip');
 });
 $.ajax({url: "https://cepfv1475259.bl.whrq.net/css/null.css", cache: false, async: true, timeout: 500});
-
 new Clipboard('.your-ip');
 </script>
 <script>
@@ -1606,14 +1567,13 @@ $(document).ready(function() {
 </div>
 </div>
 </div>
- 
+ </div>
 <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-59809509-1']);
       _gaq.push(['_setDomainName', '../']);
       _gaq.push(['_setAllowHash', 'false']);
       _gaq.push(['_trackPageview']);
-
       (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -1634,14 +1594,12 @@ $(document).ready(function() {
                 });
             } catch(e) { }
         });
-
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
             f = function () { n.parentNode.insertBefore(s, n); };
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
-
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
