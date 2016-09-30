@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>VPN провайдер без логов</title>
+<meta name="description" content="Whoer VPN — это VPN без логов, анонимность в Интернете. Вы можете выбрать любой VPN client. Купить VPN на год, месяц, неделю или попробовать VPN бесплатно."/>
+<link rel="stylesheet" href="/css/all.css?1475065198" type="text/css" async />
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/js/whoer.notpacked.js?1475080246"></script>
+<script type="text/javascript" src="/js/form.js"></script>
+<script type="text/javascript" src="/js/clear-form-fields.js"></script>
+<link rel="stylesheet" href="/css/new.css?1455717124" type="text/css"/>
+<script type="text/javascript" src="/js/jquery-ui.min.js?1.9.2"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+<script type="text/javascript" src="/js/vpn.js?1474985721"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Condensed:400,400italic,700,700italic&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen"/><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/css/ie8.css" media="screen"/><![endif]-->
+<link rel="alternate" hreflang="en" href="/vpn"/>
+<link rel="alternate" hreflang="ru" href="/ru/vpn"/>
+<link rel="alternate" hreflang="de" href="/de/vpn"/>
+<link rel="alternate" hreflang="fr" href="/fr/vpn"/>
+<meta name="google-site-verification" content="hpqD4A3XBmfYlpu69cOGPgqBEU9u6_YIQAAvN5h2-ec"/>
+<meta name='yandex-verification' content='4499c8d1539e0ccc'/>
+<script>
+document.getElementById("fullurl").innerHTML =
+"" + window.location.hostname;
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div class="w1">
+<div class="w2 ">
+<div class="w3">
+<div id="header">
+<strong class="logo"><a href="/ru"><p id="fullurl"></p></a></strong>
+<div class="header-column">
+<div class="top-row">
+<div class="select-lang">
+<a id="first-lang" href="/ru/vpn" class="lang">
+<img src="/images/flags/ru.png" style="width:16px;height:16px;" alt="ru"> Русский
+</a>
+<ul class="drop">
+<li>
+<a href="/vpn" onclick="document.cookie='LANG=en; path=/'">
+<img src="/images/flags/en.png" style="width:16px;height:16px;" alt="en"> Английский
+</a>
+</li>
+<li>
+<a href="/de/vpn" onclick="document.cookie='LANG=de; path=/'">
+<img src="/images/flags/de.png" style="width:16px;height:16px;" alt="de"> Немецкий
+</a>
+</li>
+<li>
+<a href="/fr/vpn" onclick="document.cookie='LANG=fr; path=/'">
+<img src="/images/flags/fr.png" style="width:16px;height:16px;" alt="fr"> Французский
+</a>
+</li>
+</ul>
+</div>
+ 
+<a rel="nofollow" href="https://twitter.com/WhoerNet" class="btn-twitter" target="_blank">
+<span>Следуйте за нами в Twitter</span></a>
+</div>
+<ul id="menu">
+<li class=" menu-ico-01">
+<a href="/ru">
+<span class="visual">&nbsp;</span>
+<span class="name">Мой IP</span>
+</a>
+</li>
+<li class=" menu-ico-03">
+<a href="/ru/anonymizer">
+<span class="visual">&nbsp;</span>
+<span class="name">Анонимайзер</span>
+</a>
+</li>
+<li class=" menu-ico-04">
+<a href="/ru/speedtest">
+<span class="visual">&nbsp;</span>
+<span class="name">Тест скорости</span>
+</a>
+</li>
+<li class=" menu-ico-05">
+<a href="/ru/ping">
+<span class="visual">&nbsp;</span>
+<span class="name">Пинг</span>
+</a>
+</li>
+<li class=" menu-ico-06">
+<a href="/ru/checkwhois">
+<span class="visual">&nbsp;</span>
+<span class="name">Whois</span>
+</a>
+</li>
+<li class="menu-ico-07">
+<a href="/blog/statii">
+<span class="visual">&nbsp;</span>
+<span class="name">Статьи</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="content">
+ 
+ 
+<div class="promo-tabset2">
+<div class="tab-control-holder">
+<ul class="tab-control">
+<li id="buy" class="active"><a class="vpn-promo-tab" href="#"><span>VPN <sup>beta</sup></span></a></li>
+<li id="faq"><a class="vpn-simple-tab" href="#"><span>Ваши вопросы</span></a></li>
+<li id="download"><a class="vpn-simple-tab" href="#"><span>Скачать софт</span></a></li>
+</ul>
+<script>
+  $( ".vpn-simple-tab" ).on( "click", function() {
+    $(".vpn-promo-block").hide();
+    $(".promo-tabset2 .tab-holder").css("width", "990px");
+  });
+
+  $( ".vpn-promo-tab" ).on( "click", function() {
+    $(".vpn-promo-block").show();
+    $(".promo-tabset2 .tab-holder").css("width", "660px");
+  });
+  	$(document).ready(function()
+       {
+	   
+
+	   f=window.location.search;
+	   fDate=f.split('=')
+		console.log(
+f.indexOf('download')
+
+);
+	if( f.indexOf('download')!=-1)
+	{
+	$(".promo-tabset2 .tab-holder .tab:eq(2)").addClass('active');
+	$(".promo-tabset2 .tab-holder").css("width", "990px");
+	}
+	else
+	{
+	if(f.indexOf('faq')!=-1)
+	{
+	$(".promo-tabset2 .tab-holder .tab:eq(1)").addClass('active');
+	$(".promo-tabset2 .tab-holder").css("width", "990px");
+	  }
+	  	  else
+{
+    $(".promo-tabset2 .tab-holder .tab:first-child").addClass('active');
+  $(".vpn-promo-block").show();
+}
+  }
+
+	});
+</script>
+</div>
+<div class="tab-holder">
+<div class="tab active">
+<div class="tab-gallery main playing">
+<ul style="margin: 2px -8px">
+<li class="active" style="display: list-item;  list-style:none !important;">
+<div class="youtube-block" style="background: #eee">
+<iframe width="658" height="370" src="https://www.youtube.com/embed/39krfoMHosk?rel=0&showinfo=0#hqthumb=1" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="tab">
+<div class="additional">
+<div id="tabs2">
+<div class="question-heading">
+<h1>Ваши вопросы</h1>
+<ul class="question-control">
+ 
+ 
+ 
+</ul>
+</div>
+<div id="tabs-1">
+<ul class="question-list">
+<li id="question-1">
+<span class="title">Как выбрать самый быстрый сервер?</span>
+<span class="ansver">Как правило, самым быстрым сервером будет тот, который находится ближе всего к вам географически. Это общее правило верно в 99,99% случаев. Можно также выбрать сервер расположенный там, где находятся те сайты/сервисы/игры, с которыми Вы планируете работать. <br> Проверить скорость работы для вас того или иного сервера можно на странице проверки скорости.</span>
+</li>
+<li id="question-2">
+<span class="title">Влияет ли подключения к VPN на скорость соединения?</span>
+<span class="ansver">Обычно после подключения к VPN северу, пользователь не замечает никаких проблем со скоростью, важно подключаться к серверу наиболее близкому к вам географически, и важно понимать, что чем дальше от вас находится сервер Whoer VPN, тем сильнее будут потери в скорости и пинге.</span>
+</li>
+<li id="question-3">
+<span class="title">Вам можно доверять?</span>
+<span class="ansver">В современном мире, доверие - не позволительная роскошь, доверия среди партнеров, а мы с вами именно партнеры - не существует, существует взаимная выгода, на которой и базируется доверие. Нам крайне важно, чтобы Вы нам доверяли, но мы не имеем права Вас об этом просить, хотя и с 2007 года мы не давали вам возможности в этом усомниться. <br><br> Мы не совсем типичный сервис, мы действительно не ведем логов, но ровно до того момента, пока Вы не заставили нас, не доверять Вам. Наша цель - взаимовыгодное сотрудничество и мы надеемся, что оно будет продуктивным для нас вместе.</span>
+</li>
+<li id="question-4">
+<span class="title">Где вы находитесь и где вы зарегистрированы?</span>
+<span class="ansver">Наша компания официально находится и зарегистрирована на Кипре, при этом юридические вопросы и споры, согласно пользовательскому соглашению и общим положения сервиса, регулируются законодательным правом Каймановых островов.</span>
+</li>
+<li id="question-5">
+<span class="title">Вы ведете логи?</span>
+<span class="ansver">Политика сервиса заключена в абсолютной анонимности, мы не ведем логов, вплоть до полного отсутствия статистики подключений и переданного Вами трафика. Мы не просим Вас, доверять нам, мы прежде всего стараемся - доверять Вам. С другой стороны, если вы систематически нарушаете правила сервиса и создаете проблемы другим клиентам, по получению ряда жалоб, мы будем вынужденны включить логирование на отдельном взятом сервере, и если вы намеренно и систематически нарушали правила сервиса, например рассылами спам, мы заблокируем ваш аккаунт. Поэтому мы настоятельно и весьма убедительно просим - давайте дружить и быть равными партнерами. Только наша честность по отношению друг к другу, способна сформировать ауру взаимопонимания и доверительных отношений.</span>
+</li>
+<li id="question-7">
+<span class="title">Чем отличается VPN от прокси?</span>
+<span class="ansver">Главное отличие прокси сервера от VPN заключается в том, что весь трафик передаваемый через прокси никак не шифруется, а сама прокси хранит истории о клиентах подключавшихся к ней. <br><br> Важно понимать, что VPN никак не исключает использование прокси после соединения, но использовании только прокси без VPN крайне неразумно и никак не гарантирует вашей безопасности.</span>
+</li>
+<li id="question-8">
+<span class="title">Я смогу получить доступ ко всем сайтам, которые заблокированы моим провайдером?</span>
+<span class="ansver">Подключившись к нам, Вы получите доступ ко всем страницам, которые заблокированы провайдером или администратором, а так же вы сможете получить доступ к игровым серверам, которые закрыты по географическому положению. Кроме того, вы сможете бесплатно переключаться между серверами по всему миру, что гарантирует полный и свободный интернет для Вас.</span>
+</li>
+<li id="question-9">
+<span class="title">На ваших серверах есть ограничения по скорости или трафику? Если есть ограничения, то какие?</span>
+<span class="ansver">На наших серверах нет ограничений по скорости и трафику. Единственные ограничения существующие на наших серверах - это правила использования и мы настоятельно советуем не пренебрегать ими.</span>
+</li>
+<li id="question-11">
+<span class="title">Что запрещено делать через VPN?</span>
+<span class="ansver">На наших серверах запрещены: <ul><li>Спам (включая спам по форумам, блогам, гостевым и др.) и любая активность, которая может привести к попаданию IP-адреса в черные списки (BlockList.de, SpamHaus, SpamCop и др.).</li><li>Взлом сайтов и поиск их уязвимостей (включая SQL-injection и сканирование портов).</li><li>Подбор паролей методом брутфорс</li><li>Создание фишинг сайтов на любом порту.</li><li>Мошеннические действия, клевета, обман, угрозы и оскорбления.</li><li>Распространение вредоносных программ (любым способом).</li><li>Нарушение законов страны, в которой располагается используемый сервер.</li></ul><p>Наш сервис существует ради вашего удобства, безопасности и анонимности, а так же ради наличия у вас постоянного IP-адреса во внешней сети Интернет, но он не служит цели противоправных действий по отношению к третьим лицам.</span>
+</li>
+<li id="question-13">
+<span class="title">На каких устройствах я могу использовать VPN-подключение?</span>
+<span class="ansver">Вы можете использовать VPN-подключение как на стационарных устройствах (домашний, рабочий компьютер, ноутбук), так и на мобильных платформах (смартфоны, планшеты). Подробно о настройке подключения Вы можете прочитать в разделе "Настройки" выбрав необходимую операционную систему.</span>
+</li>
+<li id="question-14">
+<span class="title">Я могу использовать услугу одновременно на нескольких устройствах от одной учетной записи?</span>
+<span class="ansver">Одновременно по вашей учетной записи может быть подключено до трех устройств.</span>
+</li>
+<li id="question-15">
+<span class="title">Я смогу скачивать или раздавать файлы через ваши серверы с помощью torrent?</span>
+<span class="ansver">Torrent’ы разрешены на серверах Нидерландов, России и Украины.</span>
+</li>
+</ul>
+</div>
+ 
+</div>
+<form class="question-form" method="post" action="/ru/domain/contacts">
+<fieldset>
+<strong class="title">Не нашли ответ на свой вопрос?</strong>
+<div class="text-holder name">
+<input id="text-01" name="name" type="text" class="text" placeholder="Ваше имя..."/>
+</div>
+<div class="text-holder mail">
+<input id="text-01" name="email" type="text" class="text" placeholder="Ваш e-mail..."/>
+</div>
+<div class="text-holder area">
+<input value="FAQ" type="hidden" name="subject"/>
+<textarea name="msg" onfocus="if ($(this).val() == 'Ваш вопрос...') { $(this).val('') }">Ваш вопрос...</textarea>
+</div>
+<div class="btn-holder">
+<input name="send" type="submit" class="submit" value="Отправить вопрос"/>
+</div>
+</fieldset>
+</form>
+<script>
+  $(document).ready(function(){
+    $("#tabs2").tabs();
+  });
+</script>
+</div>
+</div>
+<div class="tab">
+<div class="additional">
+<div id="tabs3">
+ 
+<h1 class="download-title">Скачать VPN-клиент</h1>
+<ul class="download-list">
+<li id="0">
+<div class="top">
+<div class="holder">
+<div class="ico">
+<img src="/images/ico-109.png" alt="image description" width="43" height="43">
+</div>
+<span class="sistem_name">Windows</span>
+</div>
+</div>
+<div class="frame">
+<span class="sistem_description">Windows 10, 8, 7,<br>Vista & XP</span>
+<a href="#tabs-1" data-download="/download/whoer.exe" class="btn-download btn-download-file"><span><em>Скачать</em></span></a>
+</div>
+</li>
+<li id="1">
+<div class="top">
+<div class="holder">
+<div class="ico">
+<img src="/images/ico-111.png" alt="image description" width="43" height="43">
+</div>
+<span class="sistem_name">Linux</span>
+</div>
+</div>
+<div class="frame">
+<span class="sistem_description">Ubuntu, CentOS, <br>Debian</span>
+<a href="#tabs-2" class="btn-download"><span><em>Прочитать</em></span></a>
+</div>
+</li>
+<li id="3" style="display: none">
+<div class="top">
+<div class="holder">
+<div class="ico">
+<img src="/images/ico-112.png" alt="image description" width="43" height="43">
+</div>
+<span class="sistem_name">iOS</span>
+</div>
+</div>
+<div class="frame">
+<span class="sistem_description">iOS 6+ <br> &nbsp;</span>
+<a href="#tabs-4" class="btn-download"><span><em>Прочитать</em></span></a>
+</div>
+</li>
+<li id="4" style="display: none">
+<div class="top">
+<div class="holder">
+<div class="ico">
+<img src="/images/ico-113.png" alt="image description" width="43" height="43">
+</div>
+<span class="sistem_name">Android</span>
+</div>
+</div>
+<div class="frame">
+<span class="sistem_description">Android 4+ <br> &nbsp;</span>
+<a href="#tabs-5" class="btn-download"><span><em>Прочитать</em></span></a>
+</div>
+</li>
+</ul>
+<div class="tune-description-block">
+<div id="tabs-1" class="">
+<div class="tune-tab active" style="display:block">
+<h2>Установка Whoer для Windows</h2>
+ 
+<ul class="tune-description">
+<li>
+<span class="step-num">1</span>
+<span class="content">Загрузите установочный файл с нашего сайта на свой компьютер. Найдите его у себя на компьютере и запустите. После запуска первое, что нужно сделать, – это выбрать язык. Можете выбрать русский (Russian), нажать ОК:
+<p><img src="/images/guides/whoerapp-win-ru-1.png"/></p>
+<p>
+Откроется мастер установки. Здесь просто нажмите кнопку «Далее»:
+<p><img src="/images/guides/whoerapp-win-ru-2.png"/></p>
+</span>
+</li>
+<li>
+<span class="step-num">2</span>
+<span class="content">На следующем этапе необходимо принять лицензионное соглашение, нажав кнопку «Принимаю». В противном случае вы не сможете работать с программой.
+<p>
+Затем выберите папку для установки – ее можно оставить по умолчанию. Также удостоверьтесь, что на выбранном жестком диске достаточно свободного места – эти параметры показаны здесь же. Если все хорошо, смело нажимайте «Установить»:
+<p><img src="/images/guides/whoerapp-win-ru-3.png"/></p>
+</span>
+</li>
+<li>
+<span class="step-num">3</span>
+<span class="content">Начнется копирование файлов. В этом процессе программа может попросить вас установить драйвер. Это делается автоматически, просто подтвердите нажатием кнопки «Установить». Желательно при этом поставить галочку “Всегда доверять программному обеспечению OpenVPN Technologies, Inc.”»:
+<p><img src="/images/guides/whoerapp-win-ru-4.png"/></p>
+<p>
+Все, установка завершена! Нажмите на кнопку «Готово», не снимая галочку, и можно сразу приступать к работе.
+<p><img src="/images/guides/whoerapp-win-ru-5.png"/></p>
+</span>
+</li>
+<li>
+<span class="step-num">4</span>
+<span class="content">
+Важно помнить, что для корректной работы программа должна запускаться с правами администратора, поэтому не пугайтесь, если перед запуском вас попросят ввести пароль от учетной записи администратора или просто подтвердить права (в зависимости от настроек системы).
+<p>После запуска программа сразу минимизируется в системную панель (трей), поэтому ее необходимо активировать двойным левым щелчком.
+<p>Теперь необходимо в открывшемся окне ввести код доступа, который вы получили по электронной почте после оплаты сервиса:
+<p><img src="/images/guides/whoerapp-win-ru-6.png"/></p>
+<p>
+Поставьте галочку «Запомнить код», чтобы не вводить код доступа при повторных входах в программу. Также можно отметить «Автоподключение», чтобы сэкономить еще больше времени, заставив программу автоматически подключаться к VPN-сервису при входе. При этом страна подключения по умолчанию будет выбрана та, которая стоит первой в списке.
+<p>Поздравляем, программа запущена и работает! Проверьте наличие соединения: в
+строке «Состояние» должно значиться «подключено», а внизу должна быть
+большая красная кнопка «Отключить». Здесь же указан выбранный сервер, срок
+подписки, ваш внешний IP-адрес, объем полученного и отправленного трафика и
+текущая скорость передачи данных:
+<p><img src="/images/guides/whoerapp-win-ru-7.png"/></p>
+</span>
+</li>
+<li>
+<span class="step-num">5</span>
+<span class="content">
+Зайдем на BannerBombProxy, чтобы удостовериться, что система работает корректно и сторонние сайты распознают нас именно так, как нам нужно:
+<p><img src="/images/guides/whoerapp-win-ru-8.png"/></p>
+<p>
+Перейдя на вкладку настроек, можно выбрать несколько других полезных опций. Например, можно установить запуск программы вместе с Windows, чтобы не пришлось запускать ее вручную, а также автоматическую проверку обновлений Whoer:
+<p><img src="/images/guides/whoerapp-win-ru-9.png"/></p>
+<p>На этой же вкладке можно при необходимости изменить настройки DNS. По умолчанию клиент использует DNS-серверы Whoer, к которым вы подключаетесь. Это обеспечивает лучшую анонимность.
+<p>Также здесь можно выбрать тип соединения по UDP. По умолчанию используется протокол TCP. UDP обладает лучшим быстродействием, но на некоторых типах соединений с Интернетом может работать некорректно.</p>
+<p>Еще одна полезная опция – маскировка использования VPN. Whoer – единственный клиент, позволяющий скрывать использование VPN от различных проверок. Замаскировать соединение можно под обычное (настольное), либо мобильное.
+<p>Если вам нужна помощь, нажмите «Техническая поддержка», и вы сразу попадете в чат, где сможете решить любые вопросы с нашим специалистом.
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div id="tabs-2">
+<div class="tune-tab active" style="display:block">
+<h2>Использование Whoer VPN под Linux</h2>
+<span class="description">
+Мы работаем над созданием собственного клиента для Linux, на данный момент вы можете использовать openvpn для подключения к серверам Whoer VPN.
+</span>
+<ul class="tune-description">
+<li>
+<span class="step-num">1</span>
+<span class="content">Установите необходимые пакеты через консоль:
+<code>
+<pre>
+# для Ubuntu/Debian
+sudo apt-get install openvpn unzip
+# для Fedora / RedHat
+sudo yum install openvpn unzip
+</pre>
+</code>
+</span>
+</li>
+<li>
+<span class="step-num">2</span>
+<span class="content">Загрузите на компьютер архив <i>whoer-configs.zip</i>,
+который вы получили на почту. Разархивируйте данный файл и перейдите в директорию <i>whoerconfigs</i>:
+<code><pre>
+unzip whoerconfigs.zip -d ~/
+cd ~/whoerconfigs
+</pre></code>
+</span>
+</li>
+<li>
+<span class="step-num">3</span>
+<span class="content">Запустите openvpn, указав в --config путь до файла
+конфигурации необходимого сервера. Например:
+<code><pre>
+sudo openvpn --config ./Whoer_Netherlands_nl.ovpn
+</pre></code>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+       $(document).ready(function(){
+               $("#tabs3").tabs({
+                       active : false, 
+                       show: { effect: "fadeIn", duration: 500  },
+
+               });
+               $('.download-list li').removeClass('ui-tabs-active');
+               $('.download-list li').removeClass('ui-state-active');
+               $('.download-list li').mouseout(function(){
+                       $('.download-list li').removeClass('ui-tabs-active');
+                       $('.download-list li').removeClass('ui-state-active');
+               });
+               $('.tune-description-block').hide();
+
+            $('.download-list li#0').click();
+            $('.tune-description-block').show();
+       });
+</script>
+</div>
+</div>
+</div>
+<div class="aside-menu2 vpn-promo-block">
+<strong class="title">VPN от Whoer это:</strong>
+<ul class="add-menu">
+<li><div class="ico"><img src="/images/ico-97.png" width="30" height="30" alt="image description"></div><span>Анонимность</span></li>
+<li><div class="ico"><img src="/images/ico-98.png" width="30" height="30" alt="image description"></div><span>Публичный Wi-Fi</span></li>
+<li><div class="ico"><img src="/images/ico-99.png" width="30" height="30" alt="image description"></div><span>Торренты</span></li>
+<li><div class="ico"><img src="/images/ico-100.png" width="30" height="30" alt="image description"></div><span>Трейдинг</span></li>
+<li><div class="ico"><img src="/images/ico-101.png" width="30" height="30" alt="image description"></div><span>Электронные валюты</span></li>
+<li><div class="ico"><img src="/images/ico-102.png" width="30" height="30" alt="image description"></div><span>Банковские переводы</span></li>
+<li><div class="ico"><img src="/images/ico-103.png" width="30" height="30" alt="image description"></div><span>Защита от провайдера</span></li>
+</ul>
+</div>
+</div>
+<div class="try-btn-row vpn-promo-block">
+<a rel="popup[payment-popup]" href="#" class="btn-buy" onclick="amount = 0; plan_period = 7; is_trial=true; 
+$('.payment-tipe-list a.holder').removeClass('active');
+$('li.item-01 a').addClass('active');
+$('#payment-popup .popup').css('top', $(document).scrollTop() + 220);
+createOrderForm();">
+Попробовать VPN бесплатно
+</a>
+</div>
+<div class="description-box vpn-promo-block">
+<div class="block title">
+<div class="frame titleBlok">
+<h2 class="title">Зачем вам Whoer VPN?</h2>
+</div>
+</div>
+<div class="block">
+<div class="visual">
+<img src="/images/img/lis-1.png" height="237" alt="image description">
+</div>
+<div class="frame">
+<h2 class="title"><span class="title-cifra">1.</span>Whoer VPN - это самые надежные, защищенные каналы связи по всему миру.</h2>
+</div>
+</div>
+<div class="block">
+<div class="frame">
+<h2 class="title"><span class="title-cifra">2.</span>Безопасное использование публичных wi-fi, цифровых валют, осуществление банковских переводов.</h2>
+</div>
+<div class="visual right">
+<img src="/images/img/lis-2.png" height="235" alt="image description">
+</div>
+</div>
+<div class="block">
+<div class="visual">
+<img src="/images/img/lis-3.png" height="238" alt="image description">
+</div>
+<div class="frame">
+<h2 class="title"><span class="title-cifra">3.</span>Ваш провайдер не знает, какие вы сайты посещаете, а сайты не знают кто их в действительности посетил.</h2>
+</div>
+</div>
+<div class="block">
+<div class="frame">
+<h2 class="title"><span class="title-cifra">4.</span>Вы пользуетесь интернетом также как и резиденты любой другой страны. Получая доступ ко множеству сервисов.</h2>
+</div>
+<div class="visual right">
+<img src="/images/img/lis-4.png" height="235" alt="image description">
+</div>
+</div>
+<div class="block">
+<div class="visual">
+<img src="/images/img/lis-5.png" height="235" alt="image description">
+</div>
+<div class="frame">
+<h2 class="title"><span class="title-cifra">5.</span>Никто не сможет связать вашу активность в интернете с вашим реальным адресом. Посещайте сеть инкогнито.</h2>
+</div>
+</div>
+</div>
+<div class="reviews-columns description-box vpn-promo-block logo ">
+<div class="review-holder block ">
+<div class="frame">
+<h2 class="title">Гарантированный доступ:</h2>
+</div>
+<div class="block-gallery">
+<div class="gallery-holder">
+<ul>
+<li>
+<img src="/images/img/logo-1.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-2.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-3.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-4.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-5.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-4.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-1.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+<li>
+<img src="/images/img/logo-2.png" width="150" height="50" alt="image description">
+<span class="title-gallery">
+</span>
+</li>
+</ul>
+</div>
+<a href="#" class="prev">prev</a>
+<a href="#" class="next"></a>
+</div>
+</div>
+</div>
+<div class="popup-holder" id="payment-popup" style="display: none;">
+<div class="bg">&nbsp;</div>
+<div class="popup" style="margin-top: -328.5px;">
+<a href="#" class="btn-close">close</a>
+<div class="heading">
+<strong class="title">Оформить заказ</strong>
+</div>
+<div id="checkout-page" style="display: none"> </div>
+<form class="order-form order-form2" action="">
+<fieldset>
+<div class="two-columns">
+<div class="col">
+<div class="row">
+<div class="ico">
+<img src="/images/ico-81.png" width="48" height="48" alt="image description">
+</div>
+<div class="order-countries default-hidden no-in-trial">
+<span class="num">11</span>
+<span class="description">стран<br>включено</span>
+</div>
+<div class="order-countries order-countries-free default-hidden in-trial-only">
+<span class="num">11</span>
+<span class="description">страны<br>включены</span>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="row ">
+<div class="ico">
+<img src="/images/ico-84.png" width="48" height="48" alt="image description">
+</div>
+<div class="text-holder whide">
+<input name="email" class="text" type="text" placeholder="Укажите Ваш e-mail..."/>
+<input name="hidden_captcha" type="hidden" value="d022f0e4491b8c185e7a2a15481aa552288c2ecd8f823d86395804281206f71c"/>
+</div>
+</div>
+</div>
+<div style="clear: both"></div>
+<div>  
+<div id="order-error" class="error-field" style="display: none">
+<span id="invalid-email" class="order-errors">Неверный email</span>
+<span id="internal-error" class="order-errors">Внутренняя ошибка. Попробуйте еще раз позже или обратитесь в службу поддержки.</span>
+<span id="serverside-error" class="order-errors"></span>
+</div>
+<div id="order-in-progress" class="processing-field" style="display: none">
+<img src="/images/preloader.gif"/>
+<strong>Пожалуйста, подождите... Формируется заказ.</strong>
+</div>
+</div>
+</div>
+<div class="bottom-row" id="order-buttons">
+<span class="payment-sum">Всего к оплате: <strong>$<span id="amount">0.00</span></strong></span>
+<input onclick="makeOrderRequest(); return false;" class="no-in-trial btn-pay" type="submit" name="pay" value="Оплатить"/>
+<input onclick="makeOrderRequest(); return false;" class="in-trial-only btn-pay" type="submit" name="pay" value="Попробовать"/>
+<a class="btn-trable accessRecover">Восстановить<br> доступ</a>
+</div>
+</fieldset>
+</form>
+<div class="recoverBlock">
+<form class="ping-form" method="POST" action="/ru/vpn/recovery">
+<fieldset class=" ">
+<div class="text-holder">
+<input type="text" name="email" class="text " value="" autofocus="" placeholder="E-mail">
+</div>
+<input type="submit" value="Восстановить" class="btn-ping">
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class="proxy-box">
+<div class="proxy-box-holder">
+<div class="varticle">
+<h1><strong class="proxy-title">Кому и зачем нужен VPN?</strong></h1>
+<ul class="articles-list">
+<li>
+<p align="justify">
+VPN, или виртуальная частная сеть, является одним из самых надежных методов защиты конфиденциальности пользователя при работе в Интернете. VPN-сервисы бывают платные и бесплатные, качественные и не очень, но так или иначе они очень помогают защитить свои данные и свою анонимность.
+</p>
+<br>
+<p align="justify">
+Отчасти популяризации VPN-сервисов сыграли СМИ, которые последнее время все чаще пишут о различных громких разоблачениях и скандалах. Люди стали чаще задумываться о том, как защититься от слежки, и это привело к росту популярности информации о том, <b>как пользоваться VPN</b>.
+</p>
+<br>
+<p> <strong class="article-title">VPN без логов</strong></p>
+<p align="justify">
+Многие пользователи сегодня наслышаны о том, что такое IP-адрес. Это своего рода уникальный идентификатор, который позволяет однозначно определить любого пользователя Всемирной паутины, включая его географическое местоположение. Подвох в том, что каждый раз, когда вы заходите на какой-нибудь сайт, пусть даже с телефона, вы оставляете на нем свой IP-адрес. Теперь этот сайт знает, что вы на нем были, и может, например, продать эту информацию рекламодателю. Подобного рода информацию еще называют логами.
+</p>
+<br>
+<p>
+Здесь может выручить <b>VPN-провайдер</b>, позволяющий скрыть ваш IP-адрес и заблокировать запись любых логов о вашем поведении на сайтах и в Интернете в целом. В результате ни один сайт не сможет определить, что вы на нем были. Более того, провайдер зашифрует весь ваш трафик, так что его никто не сможет перехватить. Whoer VPN предоставляет именно такую услугу – <b>VPN-безопасность</b> высшего уровня.
+</p>
+<br>
+<p> <strong class="article-title">Купить VPN или пользоваться бесплатно?</strong></p>
+<p align="justify">
+Бесплатные VPN-сервисы существуют, но обычно это лишь видимость защиты. В них может не быть шифрования, поддержки серверов в других странах или каких-то других важных функций. Чтобы <b>купить ВПН</b> с действительно высоким уровнем защиты, не нужно иметь много денег – даже очень качественные сервисы обычно стоят очень разумные деньги, какие-то считанные доллары в месяц, при этом часто предлагаются скидки. При покупке <b>VPN на год</b> можно получить максимальную скидку. Но это очень полезно для всех, кто занимается бизнесом в Интернете, регулярно переписывается с кем-либо, активно пользуется социальными сетями.
+</p>
+<br>
+<p align="justify">
+Сервис <b>ВПН для компьютера</b> тщательно скроет и очистит все следы вашего присутствия в Интернете. Вы получите непередаваемое ощущение свободы и защищенности, вам больше не придется беспокоиться о сохранности своих данных. При этом вы сможете посещать заблокированные или недоступные в вашей стране сайты благодаря перенаправлению трафика через другую страну.
+</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="footer-holder">
+<em class="copyright">Copyright &copy; BannerBombProxy 2016<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script></em>
+<div class="nav-column">
+<ul class="nav">
+<li><a href="/ru/domain/terms_of_use">Соглашение</a></li>
+<li><a href="/blog/ru/">Блог</a></li>
+<li><a href="/ru/vpn">Vpn</a></li>
+<li><a href="/ru/im">IM</a></li>
+<li><a href="/ru/domain/contacts">Контакты</a></li>
+</ul>
+<div class="partners">
+<span class="join_us"><strong class="title">Присоединяйтесь:</strong></span>
+<a target="_blank" href="https://www.facebook.com/BannerBomb/"><img alt="fb" src="/images/joinus/fb2.png"></a>
+<a target="_blank" href="https://twitter.com/BannerBomb_1"><img alt="tw" src="/images/joinus/tw.png"></a>
+<a target="_blank" href="https://vk.com/BannerBomb"><img alt="vk" src="/images/joinus/vk.png"></a>
+<a target="_blank" href="https://www.instagram.com/BannerBomb1/"><img alt="ig" src="/images/joinus/ig.png"></a>
+<a target="_blank" href="https://www.youtube.com/channel/UCinpqmUtvCExGTBXZ3wCXyA"><img alt="yt" src="/images/joinus/yt.png"></a>
+</div>
+</div>
+</div>
+</div>
+<script defer type="text/javascript" src="/js/jquery.main.js?1450273008"></script>
+<script>
+$(document).ready(function() {
+    $('.select-lang #first-lang').click(function(event) {
+        if ($('.select-lang .drop').is(':visible')) {
+            $('.select-lang .drop').hide();
+        } else {
+            $('.select-lang .drop').css('display', 'block'); 
+        }
+        return false;
+    });
+});
+</script>
+  <script type='text/javascript'>
+(function(){ var widget_id = '1kHPmnmlj1';var d=document;var w=window;function
+l(){ var s = document.createElement('script'); s.type = 'text/javascript';
+s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss
+= document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s,
+ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+ 
+ 
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-59809509-1']);
+      _gaq.push(['_setDomainName', '../']);
+      _gaq.push(['_setAllowHash', 'false']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+ 
+ 
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21087886 = new Ya.Metrika({
+                    id:21087886,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/21087886" style="position:absolute; left:-9999px;" alt="ym"></div></noscript>
+ 
+</body>
+</html>
