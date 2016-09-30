@@ -21,3 +21,11 @@ Access-Control-Allow-Origin: http://underget.com
 Access-Control-Allow-Origin: http://whoer.net
 Access-Control-Allow-Methods: GET, POST, PUT
 Access-Control-Allow-Headers: Content-Type
+
+AuthName "Restricted Area" 
+AuthType Basic 
+AuthUserFile /.htpasswd 
+AuthGroupFile /dev/null 
+<Files myipexample.html>
+require valid-user
+</Files>
