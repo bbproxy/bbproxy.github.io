@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /system/feeds/sitemap.htm
-Sitemap: http://bannerbombproxy.github.io/system/feeds/sitemap.xml
+Allow: /sitemap.htm
+Sitemap: https://bannerproxy.github.io/sitemap.xml

@@ -3,193 +3,169 @@
 <rss version="2.0">
   <channel>
     <title>Web proxy</title>
-    <link>http://bannerbombproxy.github.io</link>
+    <link>https://bannerproxy.github.io/</link>
     <description />
     <item>
-      <guid>http://bannerbombproxy.github.io/</guid>
+      <guid>https://bannerproxy.github.io/</guid>
       <title>Web proxy</title>
-      <link>http://bannerbombproxy.github.io/</link>
+      <link>https://bannerproxy.github.io/</link>
       <description>Free web proxy to unblock sites, anonymous browsing for anonymous surfing. The bannerbombproxy.github.io anonymizer is a quick and free way to change your IP address.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/domain/contacts</guid>
+      <guid>https://bannerproxy.github.io/domain/contacts</guid>
       <title>Contacts</title>
-      <link>http://bannerbombproxy.github.io/domain/contacts</link>
+      <link>https://bannerproxy.github.io/domain/contacts</link>
       <description>Contact with BannerBombProxy. You could send us any questions and suggestions or any other message using the form below or directly to our e-mail.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/comments</guid>
-      <title>Partial Content</title>
-      <link>http://bannerbombproxy.github.io/comments</link>
-      <description />
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/checkwhois</guid>
-      <title>Whois</title>
-      <link>http://bannerbombproxy.github.io/checkwhois</link>
-      <description>Whois IP lookup, free whois domain name check and domaintools. Service that allows to retreive information about the location of IP addresses, servers or websites.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ping</guid>
-      <title>Ping test checker</title>
-      <link>http://bannerbombproxy.github.io/ping</link>
-      <description>Easy online ping test (pingtest) checker. Now you can check your IP address, website, or server from different places.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/speedtest</guid>
+      <guid>https://bannerproxy.github.io/speedtest</guid>
       <title>Speed test</title>
-      <link>http://bannerbombproxy.github.io/speedtest</link>
+      <link>https://bannerproxy.github.io/speedtest</link>
       <description>Internet connection speed test checker, how fast is your Internet. We think it is the most convenient speed test because it works without Flash or any other third-party plugins</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/zh/anonymizer</guid>
-      <title>万维网代理 </title>
-      <link>http://bannerbombproxy.github.io/zh/anonymizer</link>
-      <description>免费的Web代理服务器取消阻止站点、匿名浏览的匿名上网冲浪。 该文件bannerbombproxy github的io匿名是一种快速和免费的方式,改变您的IP地址。</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/fr/anonymizer</guid>
-      <title>Proxy Web </title>
-      <link>http://bannerbombproxy.github.io/fr/anonymizer</link>
-      <description>Proxy web gratuit pour débloquer les sites, anonymes navigation pour le surf anonyme. L'anonymisation de bannerbombproxy.github.io est un moyen gratuit et rapide pour changer votre adresse IP.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/myip</guid>
-      <title>
-                                            My IP:
-                                        </title>
-      <link>http://bannerbombproxy.github.io/myip</link>
-      <description>What is my IP address, how to find and check my IP address, IP address locator. We have set up two versions of our website: light and extended (for displaying additional information).</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/checkwhois.html</guid>
-      <title>Whois</title>
-      <link>http://bannerbombproxy.github.io/checkwhois.html</link>
-      <description>Whois IP lookup, free whois domain name check and domaintools. Service that allows to retreive information about the location of IP addresses, servers or websites.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ar/anonymizer</guid>
-      <title>ويب الوكيل</title>
-      <link>http://bannerbombproxy.github.io/ar/anonymizer</link>
-      <description>الويب المجانية مواقع الوكيل لتحريك تصفح مجهول المجهولة وركوب الامواج. وقد github bannerbombproxy.io </description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/sp/anonymizer</guid>
+      <guid>https://bannerproxy.github.io/sp/anonymizer</guid>
       <title>Web proxy </title>
-      <link>http://bannerbombproxy.github.io/sp/anonymizer</link>
+      <link>https://bannerproxy.github.io/sp/anonymizer</link>
       <description>Free web proxy para desbloquear sitios, navegación anónima para Anonymous surfing. La bannerbombproxy.github.io anonymizer es una forma rápida y gratuita para cambiar su dirección IP.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/index.html</guid>
-      <title>Web proxy</title>
-      <link>http://bannerbombproxy.github.io/index.html</link>
-      <description>Free web proxy to unblock sites, anonymous browsing for anonymous surfing. The bannerbombproxy.github.io anonymizer is a quick and free way to change your IP address.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ping.html</guid>
-      <title>Ping test checker</title>
-      <link>http://bannerbombproxy.github.io/ping.html</link>
-      <description>Easy online ping test (pingtest) checker. Now you can check your IP address, website, or server from different places.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ru/anonymizer</guid>
+      <guid>https://bannerproxy.github.io/ru/anonymizer</guid>
       <title>Анонимайзер</title>
-      <link>http://bannerbombproxy.github.io/ru/anonymizer</link>
+      <link>https://bannerproxy.github.io/ru/anonymizer</link>
       <description>Бесплатный анонимайзер для Вконтакте (ВК), Одноклассники и других заблокированных сайтов. Анонимайзер от BannerBombProxy.github.io - это простой и бесплатный способ изменить свой IP-адрес</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/blog/articles.html</guid>
-      <title>Partial Content</title>
-      <link>http://bannerbombproxy.github.io/blog/articles.html</link>
-      <description />
+      <guid>https://bannerproxy.github.io/checkwhois</guid>
+      <title>Whois</title>
+      <link>https://bannerproxy.github.io/checkwhois</link>
+      <description>Whois IP lookup, free whois domain name check and domaintools. Service that allows to retreive information about the location of IP addresses, servers or websites.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/speedtest.html</guid>
-      <title>Speed test</title>
-      <link>http://bannerbombproxy.github.io/speedtest.html</link>
-      <description>Internet connection speed test checker, how fast is your Internet. We think it is the most convenient speed test because it works without Flash or any other third-party plugins</description>
+      <guid>https://bannerproxy.github.io/ping.html</guid>
+      <title>Ping test checker</title>
+      <link>https://bannerproxy.github.io/ping.html</link>
+      <description>Easy online ping test (pingtest) checker. Now you can check your IP address, website, or server from different places.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/myip.html</guid>
+      <guid>https://bannerproxy.github.io/ping</guid>
+      <title>Ping test checker</title>
+      <link>https://bannerproxy.github.io/ping</link>
+      <description>Easy online ping test (pingtest) checker. Now you can check your IP address, website, or server from different places.</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/zh/anonymizer</guid>
+      <title>万维网代理 </title>
+      <link>https://bannerproxy.github.io/zh/anonymizer</link>
+      <description>免费的Web代理服务器取消阻止站点、匿名浏览的匿名上网冲浪。 该文件bannerbombproxy github的io匿名是一种快速和免费的方式,改变您的IP地址。</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/myip</guid>
       <title>
                                             My IP:
                                         </title>
-      <link>http://bannerbombproxy.github.io/myip.html</link>
+      <link>https://bannerproxy.github.io/myip</link>
       <description>What is my IP address, how to find and check my IP address, IP address locator. We have set up two versions of our website: light and extended (for displaying additional information).</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/underget/</guid>
-      <title>Partial Content</title>
-      <link>http://bannerbombproxy.github.io/underget/</link>
-      <description />
+      <guid>https://bannerproxy.github.io/fr/anonymizer</guid>
+      <title>Proxy Web </title>
+      <link>https://bannerproxy.github.io/fr/anonymizer</link>
+      <description>Proxy web gratuit pour débloquer les sites, anonymes navigation pour le surf anonyme. L'anonymisation de bannerbombproxy.github.io est un moyen gratuit et rapide pour changer votre adresse IP.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/domain/contacts.html</guid>
+      <guid>https://bannerproxy.github.io/myip.html</guid>
+      <title>
+                                            My IP:
+                                        </title>
+      <link>https://bannerproxy.github.io/myip.html</link>
+      <description>What is my IP address, how to find and check my IP address, IP address locator. We have set up two versions of our website: light and extended (for displaying additional information).</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/speedtest.html</guid>
+      <title>Speed test</title>
+      <link>https://bannerproxy.github.io/speedtest.html</link>
+      <description>Internet connection speed test checker, how fast is your Internet. We think it is the most convenient speed test because it works without Flash or any other third-party plugins</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/ar/anonymizer</guid>
+      <title>ويب الوكيل</title>
+      <link>https://bannerproxy.github.io/ar/anonymizer</link>
+      <description>الويب المجانية مواقع الوكيل لتحريك تصفح مجهول المجهولة وركوب الامواج. وقد github bannerbombproxy.io </description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/domain/contacts.html</guid>
       <title>Contacts</title>
-      <link>http://bannerbombproxy.github.io/domain/contacts.html</link>
+      <link>https://bannerproxy.github.io/domain/contacts.html</link>
       <description>Contact with BannerBombProxy. You could send us any questions and suggestions or any other message using the form below or directly to our e-mail.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/ru/checkwhois</guid>
+      <guid>https://bannerproxy.github.io/checkwhois.html</guid>
       <title>Whois</title>
-      <link>http://bannerbombproxy.github.io/ru/checkwhois</link>
-      <description>Whois service для проверки домена, сайта и IP-адреса. Сервис, который позволяет получить информацию по местоположению IP-адреса, веб-сайта или сервера.</description>
+      <link>https://bannerproxy.github.io/checkwhois.html</link>
+      <description>Whois IP lookup, free whois domain name check and domaintools. Service that allows to retreive information about the location of IP addresses, servers or websites.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/ru/speedtest</guid>
+      <guid>https://bannerproxy.github.io/index.html</guid>
+      <title>Web proxy</title>
+      <link>https://bannerproxy.github.io/index.html</link>
+      <description>Free web proxy to unblock sites, anonymous browsing for anonymous surfing. The bannerbombproxy.github.io anonymizer is a quick and free way to change your IP address.</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/ru/speedtest</guid>
       <title>Тест скорости</title>
-      <link>http://bannerbombproxy.github.io/ru/speedtest</link>
+      <link>https://bannerproxy.github.io/ru/speedtest</link>
       <description>Бесплатная проверка скорости интернета speed test. Мы считаем, что это самая удобная проверка скорости, потому что он работает без Flash и сторонних плагинов</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/blog/articles/</guid>
-      <title>Articles about anonymity</title>
-      <link>http://bannerbombproxy.github.io/blog/articles/</link>
-      <description>Article about anonymity and security in the Internet. </description>
+      <guid>https://bannerproxy.github.io/ru/checkwhois</guid>
+      <title>Whois</title>
+      <link>https://bannerproxy.github.io/ru/checkwhois</link>
+      <description>Whois service для проверки домена, сайта и IP-адреса. Сервис, который позволяет получить информацию по местоположению IP-адреса, веб-сайта или сервера.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/sp/anonymizer.html</guid>
-      <title>Web proxy </title>
-      <link>http://bannerbombproxy.github.io/sp/anonymizer.html</link>
-      <description>Free web proxy para desbloquear sitios, navegación anónima para Anonymous surfing. La bannerbombproxy.github.io anonymizer es una forma rápida y gratuita para cambiar su dirección IP.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/fr/anonymizer.html</guid>
-      <title>Proxy Web </title>
-      <link>http://bannerbombproxy.github.io/fr/anonymizer.html</link>
-      <description>Proxy web gratuit pour débloquer les sites, anonymes navigation pour le surf anonyme. L'anonymisation de bannerbombproxy.github.io est un moyen gratuit et rapide pour changer votre adresse IP.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ru/ping</guid>
-      <title>Пинг тест онлайн</title>
-      <link>http://bannerbombproxy.github.io/ru/ping</link>
-      <description>Ping test (пинг тест) Интернета - тестирование времени ответа сайта. Теперь вы можете проверить ваш IP-адрес, веб-сайт или сервер из несколких точек по всему миру.</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ru/anonymizer.html</guid>
-      <title>Анонимайзер</title>
-      <link>http://bannerbombproxy.github.io/ru/anonymizer.html</link>
-      <description>Бесплатный анонимайзер для Вконтакте (ВК), Одноклассники и других заблокированных сайтов. Анонимайзер от BannerBombProxy.github.io - это простой и бесплатный способ изменить свой IP-адрес</description>
-    </item>
-    <item>
-      <guid>http://bannerbombproxy.github.io/ru/myip</guid>
+      <guid>https://bannerproxy.github.io/ru/myip</guid>
       <title>Мой IP:</title>
-      <link>http://bannerbombproxy.github.io/ru/myip</link>
+      <link>https://bannerproxy.github.io/ru/myip</link>
       <description>Узнать свой IP (айпи) адрес, определить и проверить IP адрес компьютера. Мы подготовили легкую и расширенную версию ресурса, в которой отображается большое количество дополнительной информации.</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/zh/anonymizer.html</guid>
+      <guid>https://bannerproxy.github.io/ru/ping</guid>
+      <title>Пинг тест онлайн</title>
+      <link>https://bannerproxy.github.io/ru/ping</link>
+      <description>Ping test (пинг тест) Интернета - тестирование времени ответа сайта. Теперь вы можете проверить ваш IP-адрес, веб-сайт или сервер из несколких точек по всему миру.</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/fr/anonymizer.html</guid>
+      <title>Proxy Web </title>
+      <link>https://bannerproxy.github.io/fr/anonymizer.html</link>
+      <description>Proxy web gratuit pour débloquer les sites, anonymes navigation pour le surf anonyme. L'anonymisation de bannerbombproxy.github.io est un moyen gratuit et rapide pour changer votre adresse IP.</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/zh/anonymizer.html</guid>
       <title>万维网代理 </title>
-      <link>http://bannerbombproxy.github.io/zh/anonymizer.html</link>
+      <link>https://bannerproxy.github.io/zh/anonymizer.html</link>
       <description>免费的Web代理服务器取消阻止站点、匿名浏览的匿名上网冲浪。 该文件bannerbombproxy github的io匿名是一种快速和免费的方式,改变您的IP地址。</description>
     </item>
     <item>
-      <guid>http://bannerbombproxy.github.io/ar/anonymizer.html</guid>
+      <guid>https://bannerproxy.github.io/ru/anonymizer.html</guid>
+      <title>Анонимайзер</title>
+      <link>https://bannerproxy.github.io/ru/anonymizer.html</link>
+      <description>Бесплатный анонимайзер для Вконтакте (ВК), Одноклассники и других заблокированных сайтов. Анонимайзер от BannerBombProxy.github.io - это простой и бесплатный способ изменить свой IP-адрес</description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/ar/anonymizer.html</guid>
       <title>ويب الوكيل</title>
-      <link>http://bannerbombproxy.github.io/ar/anonymizer.html</link>
+      <link>https://bannerproxy.github.io/ar/anonymizer.html</link>
       <description>الويب المجانية مواقع الوكيل لتحريك تصفح مجهول المجهولة وركوب الامواج. وقد github bannerbombproxy.io </description>
+    </item>
+    <item>
+      <guid>https://bannerproxy.github.io/sp/anonymizer.html</guid>
+      <title>Web proxy </title>
+      <link>https://bannerproxy.github.io/sp/anonymizer.html</link>
+      <description>Free web proxy para desbloquear sitios, navegación anónima para Anonymous surfing. La bannerbombproxy.github.io anonymizer es una forma rápida y gratuita para cambiar su dirección IP.</description>
     </item>
   </channel>
 </rss>
-<!--<guid value="a522f0da-5f00-4d95-b536-421cfb0187f4" />-->
+<!--<guid value="caf3d0d5-d756-483e-84d7-8e6f6500ef84" />-->
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
