@@ -3,12 +3,12 @@ function createOrderForm(){$('#order-error').hide();$('.order-errors').hide();$(
 $('.payment-tipe-list').show();disablePromoCodeField(is_trial);if(is_trial){$('.no-in-trial').hide();$('.in-trial-only').show();}
 else{$('.in-trial-only').hide();$('.no-in-trial').show();}
 $('.order-period').hide();$('.order-days-'+ plan_period).show();}
-function checkPromoCoupon(coupon){$.ajax({url:"https://whoer.net/vpn/payment/check_coupon",data:{"coupon":coupon},cache:false}).success(function(percent){if(amount<=0)
+function checkPromoCoupon(coupon){$.ajax({url:"/vpn/payment/check_coupon",data:{"coupon":coupon},cache:false}).success(function(percent){if(amount<=0)
 return;$("#discount").hide();$("#discount").html(percent);$("#discount").show(600);$("#amount").hide();$('#amount').html((amount-(amount*percent/100)).toFixed(2));$("#amount").show(600);});}
 function makeOrderRequest(){var promoCoupon=$('#promo-coupon').val();var email=$('.order-form input[name=email]').val();var paymentSystem=$('select[name=payment-system]').val();var hiddenCaptcha=$('.order-form input[name=hidden_captcha]').val();$('#order-error').hide();$('.order-errors').hide();if(is_trial)
 paymentSystem='free';if(!validateEmail(email)){$('#order-error').show();$('#invalid-email').show();return;}
 $('#order-in-progress').show();disablePaymentButton(true);var url_lang="/"+ page_lang;if(url_lang=="/en"){url_lang="";}
-$.ajax({url:url_lang+"https://whoer.net/vpn/payment/create/"+ paymentSystem,data:{"coupon":promoCoupon,"email":email,"plan":plan_period,"hidden_captcha":hiddenCaptcha},cache:false}).success(function(result){if(result["error"]==1){$('#serverside-error').html(result["error_msg"]);$('#order-error').show();$('#serverside-error').show();}
+$.ajax({url:url_lang+"/vpn/payment/create/"+ paymentSystem,data:{"coupon":promoCoupon,"email":email,"plan":plan_period,"hidden_captcha":hiddenCaptcha},cache:false}).success(function(result){if(result["error"]==1){$('#serverside-error').html(result["error_msg"]);$('#order-error').show();$('#serverside-error').show();}
 else{$('.order-form2').hide();$('#checkout-page').html(result["data"]);$('#checkout-page').show();if($('.payment-tipe-list').length)
 $('.payment-tipe-list').hide();}}).fail(function(){$('#order-error').show();$('#internal-error').show();}).complete(function(){$('#order-in-progress').hide();disablePaymentButton(false);});}
 function disablePaymentButton(is_disabled){$('input[name=pay]').prop("disabled",is_disabled);}
