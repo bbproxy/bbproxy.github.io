@@ -148,13 +148,13 @@ $("#help").live("click", function()
 $("#reorderServers").live("click", function()
 {
 	blockScreen();
-	$("body").append('<div id="popup"><h1>Reorder Servers</h1><ul id="serverList"></ul><button id="closePopup"><img src="img/accept.png" /> OK</button></div>');
+	$("body").append('<div id="popup"><h1>Reorder Servers</h1><ul id="serverList"></ul><button id="closePopup"><img src="/test-folder/img/accept.png" /> OK</button></div>');
 	center($("#popup"));
 	
 	var sitesToAdd = $("#servers fieldset");
 	for(i=0;i<sitesToAdd.length;i++)
 	{
-		$("#serverList").append("<li>" + $(sitesToAdd[i]).find(".nameField").val() + "<img src='img/up.png' alt='Move Up' title='Move Up' class='moveUp' /><img src='img/down.png' alt='Move Down' title='Move Down' class='moveDown' /></li>");
+		$("#serverList").append("<li>" + $(sitesToAdd[i]).find(".nameField").val() + "<img src='img/up.png' alt='Move Up' title='Move Up' class='moveUp' /><img src='/test-folder/img/down.png' alt='Move Down' title='Move Down' class='moveDown' /></li>");
 		$("#serverList li:last").data("name", $(sitesToAdd[i]).find(".nameField").val());
 	}
 });
