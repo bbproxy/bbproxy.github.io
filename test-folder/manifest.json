@@ -5,15 +5,15 @@
   "description": "Monitors any number of URLs for connectivity and content specified by the user and displays a status icon for quick reference.",
   "icons":
   {
-	"16": "icon16.png",
-	"48": "icon48.png",
-	"128": "icon128.png"
+	"16": "/test-folder/icon16.png",
+	"48": "/test-folder/icon48.png",
+	"128": "/test-folder/icon128.png"
   },
-  "background_page": "background.html",
-  "options_page": "options.html",
+  "background_page": "/test-folder/background.html",
+  "options_page": "/test-folder/options.html",
   "browser_action": {
-    "default_icon": "icon.png",
-	"default_popup": "popup.html"
+    "default_icon": "/test-folder/icon.png",
+	"default_popup": "/test-folder/popup.html"
   },
   "permissions": [
     "http://*/", "https://*/", "notifications"
