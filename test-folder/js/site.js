@@ -42,7 +42,7 @@ Site.prototype.updateStatus = function()
 				_this.setStatus(3);
 				if(_this.status != previousStatus && previousStatus != 0 && notifyOnRepair)
 				{
-					var notification = webkitNotifications.createNotification('img/ok.png', 'Server Restored', _this.name + ' has resumed normal function.');
+					var notification = webkitNotifications.createNotification('/test-folder/img/ok.png', 'Server Restored', _this.name + ' has resumed normal function.');
 					notification.show();
 					setTimeout(function() { notification.cancel(); }, 5000);
 				}
@@ -52,7 +52,7 @@ Site.prototype.updateStatus = function()
 				_this.setStatus(2);
 				if(_this.status != previousStatus && previousStatus != 0 && notifyOnWarning)
 				{
-					var notification = webkitNotifications.createNotification('img/error.png', 'Unexpected Result', _this.name + ' responded, but with unexpected results.');
+					var notification = webkitNotifications.createNotification('/test-folder/img/error.png', 'Unexpected Result', _this.name + ' responded, but with unexpected results.');
 					notification.show();
 					setTimeout(function() { notification.cancel(); }, 5000);
 				}
@@ -64,7 +64,7 @@ Site.prototype.updateStatus = function()
 			_this.setStatus(1);
 			if(_this.status != previousStatus && previousStatus != 0 && notifyOnError)
 			{
-				var notification = webkitNotifications.createNotification('img/exclamation.png', 'Server Not Responding', _this.name + ' has become unresponsive or took too long to respond.');
+				var notification = webkitNotifications.createNotification('/test-folder/img/exclamation.png', 'Server Not Responding', _this.name + ' has become unresponsive or took too long to respond.');
 				notification.show();
 				setTimeout(function() { notification.cancel(); }, 5000);
 			}
