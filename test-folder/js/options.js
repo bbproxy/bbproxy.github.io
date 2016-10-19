@@ -154,7 +154,7 @@ $("#reorderServers").live("click", function()
 	var sitesToAdd = $("#servers fieldset");
 	for(i=0;i<sitesToAdd.length;i++)
 	{
-		$("#serverList").append("<li>" + $(sitesToAdd[i]).find(".nameField").val() + "<img src='img/up.png' alt='Move Up' title='Move Up' class='moveUp' /><img src='/test-folder/img/down.png' alt='Move Down' title='Move Down' class='moveDown' /></li>");
+		$("#serverList").append("<li>" + $(sitesToAdd[i]).find(".nameField").val() + "<img src='/test-folder/img/up.png' alt='Move Up' title='Move Up' class='moveUp' /><img src='/test-folder/img/down.png' alt='Move Down' title='Move Down' class='moveDown' /></li>");
 		$("#serverList li:last").data("name", $(sitesToAdd[i]).find(".nameField").val());
 	}
 });
