@@ -1,0 +1,159 @@
+body
+{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 11px;
+}
+
+fieldset
+{
+	width: 400px;
+	margin: 20px;
+	border-radius: 10px;
+	border: 1px solid #999;
+}
+
+#servers fieldset
+{	
+	float: left;	
+}
+legend
+{
+	font-size: 13px;
+	font-weight: bold;
+}
+td
+{
+	padding: 5px;
+}
+td:first-child
+{
+	padding-top: 10px;
+	text-align: right;
+}
+
+a
+{
+	color: blue;
+}
+
+a.getCurrentResponse
+{
+	font-size: 9px;
+}
+input[type='text']
+{
+	width: 300px;
+}
+textarea
+{
+	width: 300px;
+	height: 100px;
+	margin-top: 10px;
+}
+h1
+{
+	font-size: 18px;
+	margin-left: 30px;
+}
+
+#addNewServer
+{
+	margin-left: 30px;
+}
+
+#buttons
+{
+	clear: both;
+	float: left;
+	padding: 10px;
+	margin: 20px 30px;
+	background-color: #ddd;
+	border-radius: 10px;
+}
+
+#buttons button
+{
+	float: left;
+}
+
+button
+{
+	padding: 4px;
+}
+
+button img
+{
+	vertical-align: text-top;
+}
+
+input[type='checkbox'], input[type='radio']
+{
+	position: relative;
+	top: 2px;
+}
+
+#interval, #timeout
+{
+	width: 50px;
+}
+
+#blocker
+{
+	background: -webkit-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+	z-index: 9;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#popup
+{
+	z-index: 10;
+	background-color: white;
+	border: 1px solid #bcc1d0;
+	box-shadow: 0 5px 50px #505050;
+	border-radius: 10px;
+	width: 500px;
+	height: 400px;
+	position: absolute;
+}
+
+#popup h1
+{
+	background: -webkit-linear-gradient(white, #F8F8F8);
+	border-bottom: 1px solid rgba(188, 193, 208, .5);
+	padding: 10px 15px 8px 15px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #53637d;
+	font-size: 14px;
+	margin: 0;
+}
+
+#popup ul
+{
+	border: 1px solid rgba(188, 193, 208, .5);
+	padding: 0;
+	width: 460px;
+	height: 280px;
+	margin: 20px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#popup ul li
+{
+	padding: 5px 10px;
+	background: -webkit-linear-gradient(#e7e7e7, #d6d6d6);
+}
+
+#popup ul li img
+{
+	float: right;
+	cursor: pointer;
+}
+
+#closePopup
+{
+	float: right;
+	margin-right: 20px;
+}
