@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Canvas Test</title>
+	<script src="js/jquery-1.5.1.min.js"></script>
+	<script src="js/site.js"></script>
+	<script src="js/icon.js"></script>
+	<script src="js/checking.js"></script>
+	<script>
+		if(localStorage['setting:notifyOnError'] == undefined)
+			localStorage['setting:notifyOnError'] = 1;
+		if(localStorage['setting:notifyOnWarning'] == undefined)
+			localStorage['setting:notifyOnWarning'] = 1;
+		if(localStorage['setting:notifyOnRepair'] == undefined)
+			localStorage['setting:notifyOnRepair'] = 1;
+		if(localStorage['setting:minutesBetweenChecks'] == undefined)
+			localStorage['setting:minutesBetweenChecks'] = 1;
+		if(localStorage['setting:timeout'] == undefined)
+			localStorage['setting:timeout'] = 5000;
+		
+		var sites = getSitesFromLocalStorage();
+		var minutesBetweenChecks = parseInt(localStorage['setting:minutesBetweenChecks']);
+		var notifyOnError = localStorage['setting:notifyOnError'] == '1' ? true : false;
+		var notifyOnWarning = localStorage['setting:notifyOnWarning'] == '1' ? true : false;
+		var notifyOnRepair = localStorage['setting:notifyOnRepair'] == '1' ? true : false;
+		$.ajaxSetup({timeout: localStorage['setting:timeout']});
+		
+		$(document).ready(function()
+		{
+			runChecks();
+		});
+	</script>
+</head>
+<body>
+	<canvas id="icon" height="19" width="19"></canvas>
+</body>
+</html>
