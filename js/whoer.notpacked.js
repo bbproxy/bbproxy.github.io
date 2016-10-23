@@ -882,11 +882,17 @@ function run_webrtc_check(callback) {
             RtpDataChannels: true
         }]
     };
-    var servers = undefined;
+    /*This is a old function that I had before but was changed to the one below*//*var servers = undefined;
     if (useWebKit)
         servers = {
             iceServers: [{
                 urls: "stun:stun.services.mozilla.com"
+            }]
+        };*/
+    var servers = undefined;
+        servers = {
+            iceServers: [{
+                urls: "stun:stun.l.google.com:19302"
             }]
         };
     var pc = new RTCPeerConnection(servers,mediaConstraints);
