@@ -188,14 +188,14 @@ form,fieldset {
 
 .w2 {
     width: 990px;
-    margin: 0 -505px;
+    /*margin: 0 -505px;*/
     padding: 0 505px 119px;
     background: url(/images/bg-header.jpg) no-repeat;
 }
 
 .w3 {
-    width: 100%;
-    display: none;
+    /*width: 100%;*/
+    display: table;
 }
 
 #header {
