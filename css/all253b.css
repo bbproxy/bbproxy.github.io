@@ -182,19 +182,17 @@ form,fieldset {
 }
 
 .w1 {
-    width: 990px;
     margin: 0 auto;
 }
 
 .w2 {
-    width: 990px;
-    /*margin: 0 -505px;*/
-    /*padding: 0 505px 119px;*/
-    background: url(/images/bg-header.jpg) no-repeat;
+    margin: 0 -505px;
+    padding: 0 505px 119px;
+    background: url(https://bannerproxy.github.io/images/bg-header.jpg) no-repeat;
 }
 
 .w3 {
-    /*width: 100%;*/
+    width: 100%;
     display: table;
 }
 
@@ -1053,7 +1051,7 @@ form,fieldset {
 
 #footer {
     margin-top: -110px;
-    background: url(/images/bg-footer.gif) repeat-x;
+    background: url(https://bannerproxy.github.io/images/bg-footer.gif) repeat-x;
     height: 110px;
     font: 14px/17px 'Conv_MyriadPro-Cond',Helvetica,sans-serif;
     color: #f7f6ed;
