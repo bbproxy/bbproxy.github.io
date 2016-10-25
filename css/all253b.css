@@ -432,7 +432,7 @@ form,fieldset {
 }
 
 #content {
-    display: table-footer-group;
+    /*display: table-footer-group;*/
 }
 
 .main-tabset {
