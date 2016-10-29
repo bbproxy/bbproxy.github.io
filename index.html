@@ -6,25 +6,23 @@
         {
             visibility: hidden;
         }
-
         .hideDontTakeUpSpace
         {
             display:none;
         }
-
     </style>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Free Web Proxy</title>
   <meta name="description" content="Free web proxy to unblock sites, anonymous browsing for anonymous surfing. The bannerbombproxy.github.io anonymizer is a quick and free way to change your IP address."/>
   <meta name="keywords" content="bannerbombproxy, bannerbombproxy.github.io, free web proxy, web proxy, proxy, bannerproxy, bannerproxy.github.io, free proxy, unblock, unblock websites free, unblock websites," />
-  <link rel="stylesheet" href="css/all.css" type="text/css" async />
-  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="js/whoer.notpacked.js"></script>
-  <script type="text/javascript" src="js/form.js"></script>
-  <script type="text/javascript" src="js/clear-form-fields.js"></script>
-  <link rel="stylesheet" href="css/new.css" type="text/css"/>
-  <script type="text/javascript" src="js/jquery-ui.min.js?1.9.2"></script>
-  <script type="text/javascript" src="js/ui.js"></script>
+  <link rel="stylesheet" href="/css/all.css" type="text/css" async />
+  <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="/js/whoer.notpacked.js"></script>
+  <script type="text/javascript" src="/js/form.js"></script>
+  <script type="text/javascript" src="/js/clear-form-fields.js"></script>
+  <link rel="stylesheet" href="/css/new.css" type="text/css"/>
+  <script type="text/javascript" src="/js/jquery-ui.min.js?1.9.2"></script>
+  <script type="text/javascript" src="/js/ui.js"></script>
   <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen"/><![endif]-->
   <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="/css/ie8.css" media="screen"/><![endif]-->
   <link rel="alternate" hreflang="en" href="./"/>
@@ -43,8 +41,11 @@
      <!--End Full Website URL Script-->
 </head>
 <body>
-<!-- Ad Block Detector Script -->
+<!-- Adblock Detection Script -->
 <!-- Anti-Adblock V2 -->
+<!-- By D3xt3r -->
+<!-- Please Do Not Remove Tag -->
+<!-- D3xt3r.com -->
 
 <style type="text/css">
 #blockblockA {position:absolute;top:0px;left:0px;background-color:#000000;width:100%;height:100%;}
@@ -52,6 +53,7 @@
 #blockblockA td p {font: bold 20px Verdana;color:#ffffff;}
 #blockblockA td div {font: bold 13px Verdana;color:#ffffff;}
 #blockblockB {visibility:invisible;display:none;}
+#linkA {font: bold 13px Verdana;color:#ffffff;}
 </style>
 
 <noscript>
@@ -63,20 +65,24 @@
 </style>
 </noscript>
 
-<script type="text/javascript" src="js/advertisement.js"></script>
+<script type="text/javascript" src="/advertisement.js"></script>
 
 <table id="blockblockA"><tr><td>
 
 <!-- DISPLAY HTML CODE HERE -->
 
-<p>Please Disable Ad-Block To View This Website.<br>Don't Worry These Ads Won't Harm Your Computer<br>They Get Me Money.</p>
+<p>Please Disable Ad-Block To View This Website.</p>
 
 <!-- DISPLAY HTML CODE HERE -->
+
+<!-- Do Not Remove Unless Purchased Please -->
+<div id="linkA" align="right">By <a href="http://d3xt3r.com/">D3xt3r</a></div>
+<!-- Do Not Remove Unless Purchased Or Testing Please -->
 
 </td></tr></table>
 
 <span id="blockblockB">
-<!-- Ad Block Detector Script -->
+<!-- Adblock Detection Script -->
 <div id="wrapper">
 <div class="w1">
 <div class="w2 ">
@@ -336,7 +342,6 @@ document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+":/
 var servers = {
     "rnd" : { "name" : "Random server", "ips" : []}
 };
-
   servers["ru4"] = { "name" : "Russia", "ips" : ["92.63.100.80"], "address" : "ru4.gsr.awhoer.net"
 };
   servers["ru2"] = { "name" : "Russia", "ips" : ["195.88.208.155"], "address" : "ru2.gsr.awhoer.net"
@@ -357,22 +362,17 @@ var servers = {
 };
   servers["nl3"] = { "name" : "Netherlands", "ips" : ["31.220.45.184"], "address" : "nl3.gsr.awhoer.net"
 };
-
 $('#server').on('change', function() {
   var cur_srv = $(this).val();
-
 $("#ips").selectmenu('disable'); 
 $('#ips').html('');
-
   $('#ips').append($("<option></option>").attr("value", "rnd").text("Random IP address"));
-
   for (var id in servers[cur_srv]['ips']) {
     ip = servers[cur_srv]["ips"][id];
     $('#ips').append($("<option></option>").attr("value", ip).text(ip));
   }
 $("#ips").selectmenu('destroy').selectmenu();
 });
-
 </script>
 <script>
 function go_proxy (url, prefered_srv) {
@@ -381,43 +381,33 @@ function go_proxy (url, prefered_srv) {
         url = url.replace(/^\s+|\s+$/g, '');
         url = url.replace(/^https:\/\//, "http://sss.");
     }
-
     var proto = 'http';
-
     var srv = $('select[name=server] option:selected').val()
     if (prefered_srv && srv == "rnd") {
         srv = prefered_srv;
     }
     var ip = $('select[name=ip] option:selected').val()
-
     if (srv == "rnd") {
         delete servers["rnd"];
         var keys = Object.keys(servers);
         srv = keys[Math.floor(Math.random() * keys.length)];
     }
-
     if (ip == "rnd")
         ip = servers[srv]["ips"][Math.floor(Math.random() * servers[srv]["ips"].length)];
-
     var proxy_address = servers[srv]["address"];
-
     //url = encodeURIComponent(url); // TODO? or sam sebe zlobnyi Buratino? ;)
-
     window.location = sprintf("%s://%s/home287/cmd?urlText=%s", proto, proxy_address, url);
 }
-
 $(document).ready(function() {
     $("#go").click(function() {
         go_proxy($("input[name=url]").val());
         return false;
     });
-
     $("#via-anonymizer a").click(function() {
         go_proxy(this.href, $(this).data("srv") || 0);
         return false;
     });
 });
-
 </script>
 </div>
 </div>
@@ -496,7 +486,6 @@ $(document).ready(function() {
       _gaq.push(['_setDomainName', '../']);
       _gaq.push(['_setAllowHash', 'false']);
       _gaq.push(['_trackPageview']);
-
       (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -517,14 +506,12 @@ $(document).ready(function() {
                 });
             } catch(e) { }
         });
-
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
             f = function () { n.parentNode.insertBefore(s, n); };
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
-
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
