@@ -21,3 +21,7 @@ Access-Control-Allow-Origin: http://underget.com
 Access-Control-Allow-Origin: http://whoer.net
 Access-Control-Allow-Methods: GET, POST, PUT
 Access-Control-Allow-Headers: Content-Type
+# Deny Access To The Following IP Addresses
+Require all granted
+# Require not ip xxx.xxx.xxx.xxx
+# Require not ip xxx.xxx.xxx.xxy
