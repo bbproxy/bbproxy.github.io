@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+ 
+<link rel="stylesheet" type="text/css" href="https://whoer.net/blog/wp-content/themes/whoer/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://whoer.net/blog/wp-content/themes/whoer/style.css?v=1.1.2">
+<link rel="stylesheet" type="text/css" href="https://whoer.net/blog/wp-content/themes/whoer/css/jquery.formstyler.css">
+<link rel="stylesheet" type="text/css" href="https://whoer.net/blog/wp-content/themes/whoer/css/style_ne.css?1">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<style>.container{width:990px;max-width:none!important;}html,body,header{min-width:1020px;}.navbar-collapse{box-shadow:none!important;}#commentform input[type="text"],#commentform input#email{float:none;margin-right:20px;}	}
+			.category-block .category-title {
+				font-size: 15px !important;
+			}
+		</style>
+		<link href="https://whoer.net/blog/wp-content/themes/whoer/css/no_respons.css" rel="stylesheet">
+<!--		<meta content="width=device-width, height=device-height" name="viewport">-->
+	
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+	<script src="https://whoer.net/blog/wp-content/themes/whoer/js/bootstrap.js"></script>
+	
+		<script src="https://whoer.net/blog/wp-content/themes/whoer/js/jquery.formstyler.min.js"></script>
+		<script src="https://whoer.net/blog/wp-content/themes/whoer/js/jquery.cookie.js"></script>
+		<script src="https://whoer.net/blog/wp-content/themes/whoer/js/loadmore.js"></script>
+		<script src="https://whoer.net/blog/wp-content/themes/whoer/js/isotope.js"></script>
+		<script src="https://whoer.net/blog/wp-content/themes/whoer/js/autoscaling-menu.js"></script>
+	
+<!-- This site is optimized with the Yoast SEO plugin v3.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>How to set up OpenVPN for iOS</title>
+<meta name="description" content="1 To install VPN via OpenVPN on your iOS device like iPhone or iPod, download &#039;OpenVPN Connect&#039; app from the App Store: 2 Connect your smartphone or tablet"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://whoer.net/blog/article/how-to-set-up-openvpn-for-ios/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to set up OpenVPN for iOS" />
+<meta property="og:description" content="1 To install VPN via OpenVPN on your iOS device like iPhone or iPod, download &#039;OpenVPN Connect&#039; app from the App Store: 2 Connect your smartphone or tablet" />
+<meta property="og:url" content="https://whoer.net/blog/article/how-to-set-up-openvpn-for-ios/" />
+<meta property="og:site_name" content="Whoer Blog" />
+<meta property="og:image" content="https://whoer.net/blog/wp-content/uploads/2015/08/whoer_ios.jpg" />
+<meta property="og:image:width" content="580" />
+<meta property="og:image:height" content="360" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="1 To install VPN via OpenVPN on your iOS device like iPhone or iPod, download &#039;OpenVPN Connect&#039; app from the App Store: 2 Connect your smartphone or tablet" />
+<meta name="twitter:title" content="How to set up OpenVPN for iOS" />
+<meta name="twitter:image" content="https://whoer.net/blog/wp-content/uploads/2015/08/whoer_ios.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Whoer Blog &raquo; How to set up OpenVPN for iOS Comments Feed" href="https://whoer.net/blog/article/how-to-set-up-openvpn-for-ios/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/whoer.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='https://whoer.net/blog/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='taxonomy-image-plugin-public-css'  href='https://whoer.net/blog/wp-content/plugins/taxonomy-images/css/style.css?ver=0.9.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-parallax-content-slider-css-css'  href='https://whoer.net/blog/wp-content/plugins/wp-parallax-content-slider/css/style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='https://whoer.net/blog/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.8.min.css?ver=1.5.8.2' type='text/css' media='screen' />
+<script type='text/javascript' src='https://whoer.net/blog/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='https://whoer.net/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='https://whoer.net/blog/wp-content/themes/whoer/loadmore.js?ver=4.3.1'></script>
+<link rel='shortlink' href='https://whoer.net/blog/?p=323' />
+
+<script type="text/javascript">
+	function addHandler(object, event, handler) {
+		if (typeof object.addEventListener != 'undefined') 
+			object.addEventListener(event, handler, false);
+		else
+			if (typeof object.attachEvent != 'undefined')
+				object.attachEvent('on' + event, handler);
+			else 
+				throw 'Incompatible browser';
+	}
+</script>
+
+<!-- Easy FancyBox 1.5.8.2 using FancyBox 1.3.8 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var fb_timeout = null;
+var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'overlayOpacity' : 0.9, 'overlayColor' : '#000', 'showCloseButton' : true, 'margin' : 20, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a), area[href*=".jpg"]:not(.nolightbox), a[href*=".jpeg"]:not(.nolightbox,li.nolightbox>a), area[href*=".jpeg"]:not(.nolightbox), a[href*=".png"]:not(.nolightbox,li.nolightbox>a), area[href*=".png"]:not(.nolightbox)';
+	jQuery(fb_IMG_select).addClass('fancybox image').attr('rel', 'gallery');
+	jQuery('a.fancybox, area.fancybox, li.fancybox a').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : false, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+}
+var easy_fancybox_auto = function(){
+	/* Auto-click */
+	setTimeout(function(){jQuery('#fancybox-auto').trigger('click')},1000);
+}
+/* ]]> */
+</script>
+	<script type="text/javascript"> 
+	  $(function(){ 
+	      var $container = $('#article-isotope'); 
+	      $container.isotope({ 
+	        itemSelector: '.article'
+	      }); 
+	    }); 
+	</script>
+	<script>
+		$( document ).ready( function() {
+  // init Isotope
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function( itemElem ) {
+        var weight = $( itemElem ).find('.weight').text();
+        return parseFloat( weight.replace( /[\(\)]/g, '') );
+      }
+    }
+  });
+
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+
+  // bind filter button click
+  $('#filters').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $container.isotope({ filter: filterValue });
+  });
+
+  // bind sort button click
+  $('#sorts').on( 'click', 'button', function() {
+    var sortByValue = $(this).attr('data-sort-by');
+    $container.isotope({ sortBy: sortByValue });
+  });
+  
+  // change is-checked class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+  
+});
+	</script>
+	<style>
+		#menu-menyu-futeraen li:nth-child(1) a, #menu-menyu-futeraru li:nth-child(1) a { padding-right: 14px; padding-left: 16px; }
+		#menu-menyu-futeraen li:nth-child(1) a, #menu-menyu-futeraru li:nth-child(2) a { padding-left: 14px; padding-right: 16px; }
+		#menu-menyu-futeraen li:nth-child(1) a, #menu-menyu-futeraru li:nth-child(3) a { padding-left: 13px; }
+		.gg img {
+			padding-right: 1px !important; width: 25px !important;
+		}
+	</style>
+			<style>
+
+			.top-block > a > img {
+				padding-right: 1px;
+				width: 25px;
+				height: 24px;
+			}
+			.gg img {
+				width: 26px !important; padding-right: 2px !important;
+			}
+			.about_text { top: 0px}
+		</style>
+			<link rel="stylesheet" type="text/css" href="https://whoer.net/blog/wp-content/themes/whoer/css/unnell.css">
+		
+</head>
+<body class="single single-article postid-323">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+		<script>
+		//Добавление класса с названием языка к select`у выбора языка
+		jQuery(document).ready(function(){
+			var language = jQuery("#lang_choice_polylang-4").find("option[selected='selected']").attr('value');
+			$("#lang_choice_polylang-4").addClass( language );
+		})
+
+  		window.fbAsyncInit = function() {
+  		  FB.init({
+  		    appId      : '871847039563530',
+  		    xfbml      : true,
+  		    version    : 'v2.3'
+  		  });
+  		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	
+</script>
+	<div id="page">
+		<header>
+			<div class="container">
+				<div class="row">
+					<!--Левый  блок(Логотип)-->
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 logo-header">
+						<a href="/" class="logo"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/logo.png" alt="Whoer" title="Whoer"></a>
+					</div>
+					<!--/Левый блок(Логотип)-->
+					
+
+					<!--Правый блок-->
+					<div class="menu-header col-lg-9 col-md-9 col-sm-9 col-xs-9">
+
+						<!--Верхний блок с социальными сетями-->
+						<div class="top-block">
+																<div class="select-lang">
+																					<a id="first-lang" href="https://whoer.net/blog/article/how-to-set-up-openvpn-for-ios/" class="lang">
+												<img src="https://whoer.net/blog/wp-content/polylang/en_GB.png" style="width: 16px; height: 16px;" alt="en"> English											</a>
+																				<ul class="drop">
+																							<li>
+													<a href="http://whoer.net/blog/ru/">
+														<img src="https://whoer.net/blog/wp-content/polylang/ru_RU.png" style="width:16px;height:16px;" alt="ru"> Русский													</a>
+												</li>
+																							<li>
+													<a href="http://whoer.net/blog/de/">
+														<img src="https://whoer.net/blog/wp-content/plugins/polylang/flags/de.png" style="width:16px;height:16px;" alt="de"> Deutsch													</a>
+												</li>
+																							<li>
+													<a href="http://whoer.net/blog/fr/">
+														<img src="https://whoer.net/blog/wp-content/plugins/polylang/flags/fr.png" style="width:16px;height:16px;" alt="fr"> Français													</a>
+												</li>
+																					</ul>
+									</div>
+																<div class="twitter-link"><a href="https://twitter.com/WhoerNet"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/twitter.png" alt="follow us in twitter"><span>Follow us on Twitter</span></a></div>
+							<a href="http://www.facebook.com/share.php?u=http://whoer.net"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/facebook.png" alt="facebook link"></a>
+							<a href="https://plusone.google.com/_/+1/confirm?&url=http://whoer.net" class="gg"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/google.png" alt="google link"></a>
+							<a href="http://twitter.com/share?url=http://whoer.net"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/twitter1.png" alt="twiiter link"></a>
+							<a href="http://vk.com/share.php?url=http://whoer.net"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/vk.png" alt="vk link"></a>
+						</div>
+						<!--/Верхний блок с социальными сетями-->
+
+
+						<!--Блок с баннером-->
+						<!--/Блок с баннером-->
+
+
+						<!--Меню-->
+					<div class="menu-block">
+							<div class="content-header navbar-default">
+								<div class="row navbar">
+									<div class="menu-block">
+										
+										<div class="mobile-menu navbar-header col-sm-4 col-xs-4">
+											<button type="button" class="navbar-toggle btn btn-navbar" data-toggle="collapse" data-target="#responsive-menu">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="sr-only">Открыть навигацию</span>
+											</button>
+										</div>
+										<div id="responsive-menu" class="navigation collapse navbar-collapse">
+										<nav class="menu-glavnoe-menyuen-container"><ul id="menu" class="nav navbar-nav"><li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="http://whoer.net/en">My IP</a></li>
+<li id="menu-item-120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-120"><a href="http://whoer.net/en/speedtest">Speed  test</a></li>
+<li id="menu-item-121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"><a href="http://whoer.net/en/ping">Ping</a></li>
+<li id="menu-item-122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122"><a href="http://whoer.net/en/checkwhois">Whois</a></li>
+<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="https://whoer.net/blog/articles/">Articles</a></li>
+</ul></nav>										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/Меню-->	
+					</div><!--/Правый блок-->
+
+				</div><!--/row-->
+			</div><!--/container-->
+		</header><!--/header-->
+
+<div id="main" class="container bla">
+	<div class="row">
+
+		<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-zero">
+				
+			<p id="breadcrumbs">
+				<span xmlns:v="http://rdf.data-vocabulary.org/#">
+					<span rel="v:child" typeof="v:Breadcrumb">
+													<a href="/blog/articles/" rel="v:url" property="v:title">Articles</a>
+												→
+						<span class="breadcrumb_last">How to set up OpenVPN for iOS</span>
+					</span>
+				</span>
+			</p>
+
+			<article id="post-323" class="post-323 article type-article status-publish has-post-thumbnail hentry article_category-start"> 				<div class="article-img-block">
+					<img width="580" height="360" src="https://whoer.net/blog/wp-content/uploads/2015/08/whoer_ios.jpg" class="attachment-large wp-post-image" alt="whoer ios" />					<h1>How to set up OpenVPN for iOS</h1>
+									</div>
+				<div id="content">
+					<p style="text-align: justify;"><span style="font-weight: 400;"><span class="step-num">1</span> To install VPN via<strong> OpenVPN on your iOS device</strong> like iPhone or iPad, download<a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981?mt=8" target="_blank"> &#8216;OpenVPN Connect&#8217; app from the App Store</a>:</span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><a href="https://whoer.net/blog/wp-content/uploads/2015/08/15.png"><img class="aligncenter wp-image-324 size-full" src="https://whoer.net/blog/wp-content/uploads/2015/08/15.png" alt="1" width="320" height="186" /></a></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><span class="step-num">2</span> Connect your smartphone or tablet to your computer, <strong>sync with iTunes</strong>, open the tab Apps, then <strong>File Sharing</strong>. Select OpenVPN and <strong>click Add</strong>:</span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><a href="https://whoer.net/blog/wp-content/uploads/2015/08/27.png"><img class="aligncenter wp-image-325 size-medium" src="https://whoer.net/blog/wp-content/uploads/2015/08/27-300x164.png" alt="2" width="300" height="164" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><span class="step-num" style="margin-top: -10px;">3</span> Now you need to add one of  <strong>Whoer VPN configuration files (.ovpn)</strong> that you obtained by email.<br />
+</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><span class="step-num" style="margin-top: -10px;">4</span> Check that the message «</span><span style="font-weight: 400;"><strong>New profiles are avavilable</strong>» appeared on screen.</span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><span class="step-num">5</span> If everything is OK, hit the green &#8216;<strong>+</strong>&#8216; button to approve the settings. For connection/disconnection just <strong>select ON/OFF</strong> in the OpenVPN Connect app. </span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-weight: 400;">To check your connection and make sure that you work via Whoer VPN, point your browser to <a href="http://whoer.net/" target="_blank">whoer.net</a>.</span></p>
+<p style="text-align: justify;">
+					<div class='yarpp-related'>
+
+
+<h3 style="margin-top: 40px; text-transform: none; font-weight: normal;">Usefull to read</h3>
+<style>
+	.list_related {
+		padding: 0;
+	}
+	.list_related > li > a img {
+		width: 180px;
+		height: 150px;
+	}
+	.yarpp-related > img { display: none }
+</style>
+	<ol class="list_related">
+									<li style="display: inline-block; width: 180px; vertical-align: top; margin-bottom: 20px;margin-top: 20px;margin-left: 10px;"><a href="https://whoer.net/blog/article/how-to-set-up-viscosity-for-windows/" rel="bookmark" title="How to set up Viscosity for Windows"><span style="height: 100px; width: 180px; display: block; overflow: hidden"><img width="230" height="143" src="https://whoer.net/blog/wp-content/uploads/2015/08/viscosity_win1-242x150.jpg" class="attachment-230x160 wp-post-image" alt="viscosity for windows" /></span><span style="display: block; font-weight: normal; margin-top: 5px;">"How to set up Viscosity for Windows"</span></a></li>
+												<li style="display: inline-block; width: 180px; vertical-align: top; margin-bottom: 20px;margin-top: 20px;margin-left: 10px;"><a href="https://whoer.net/blog/article/how-to-set-up-tunnelblick-for-mac-os/" rel="bookmark" title="How to set up Tunnelblick for Mac OS"><span style="height: 100px; width: 180px; display: block; overflow: hidden"><img width="230" height="143" src="https://whoer.net/blog/wp-content/uploads/2015/08/tunnelblick_mac1-242x150.jpg" class="attachment-230x160 wp-post-image" alt="tunnelblick for mac" /></span><span style="display: block; font-weight: normal; margin-top: 5px;">"How to set up Tunnelblick for Mac OS"</span></a></li>
+												<li style="display: inline-block; width: 180px; vertical-align: top; margin-bottom: 20px;margin-top: 20px;margin-left: 10px;"><a href="https://whoer.net/blog/article/how-to-set-up-openvpn-for-android/" rel="bookmark" title="How to set up OpenVPN for Android"><span style="height: 100px; width: 180px; display: block; overflow: hidden"><img width="230" height="143" src="https://whoer.net/blog/wp-content/uploads/2015/08/whoer_and-242x150.jpg" class="attachment-230x160 wp-post-image" alt="whoer android" /></span><span style="display: block; font-weight: normal; margin-top: 5px;">"How to set up OpenVPN for Android"</span></a></li>
+						</ol>
+</div>
+				</div>
+
+				<div class="loop-bottom" style="width: 964px;">
+
+				<div class="soc_seti">
+			<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-services="facebook,gplus,twitter"></div>
+
+			</div>
+		<div class="un_other">
+				<div class="meta">
+					<span class="loop-comment"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/comment.png" alt="Автор"><a href="https://whoer.net/blog/article/how-to-set-up-openvpn-for-ios/#respond">No Comments</a></span>
+				</div>
+				<div class="clear"></div></div></div>
+			</article>
+				<div style="width:589px;     margin-left: 24px;">
+			
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+<div id="respond">
+
+<h3>Leave a Reply</h3>
+
+<div id="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/article/how-to-set-up-openvpn-for-ios/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="https://whoer.net/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='323' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<noscript><strong><u><font color="red" size="5">To leave a comment please enable JavaScript in your browser settings!</font></u></strong></noscript>
+</form>
+
+</div>
+
+		</div>
+		</section>
+</div>
+</div>
+
+
+<input type="hidden" name="7EaZqsgja42G" id="7EaZqsgja42G" />
+<script type="text/javascript">
+function fbIuADVu7PiXY() {
+	var o=document.getElementById("7EaZqsgja42G");
+	o.value="Jhtkauo6tUbM";
+}
+var b8unJglScLV6i = document.getElementById("submit");
+if (b8unJglScLV6i) {
+	var ckRGDnjZHA9Jx = document.getElementById("7EaZqsgja42G");
+	var p2KjavMBAYT7g = b8unJglScLV6i.parentNode;
+	p2KjavMBAYT7g.appendChild(ckRGDnjZHA9Jx, b8unJglScLV6i);
+	addHandler(b8unJglScLV6i, "mousedown", fbIuADVu7PiXY);
+	addHandler(b8unJglScLV6i, "keypress", fbIuADVu7PiXY);
+}
+</script>
+	
+		</div>
+	</div>
+	<div class="buffer-block"></div>
+	<footer>
+		<div class="container">
+			<div class="col-lg-3 col-xs-3 text-left">
+				<p>Copyright © whoer.net 2008-2015</p>
+			</div>
+
+			<div class="col-lg-6 col-xs-6 text-center">
+				<div class="bottom-menu">
+					<div class="menu-menyu-futeraen-container"><ul id="menu-menyu-futeraen" class="menu"><li id="menu-item-125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125"><a href="http://whoer.net/en/domain/terms_of_use">Terms of use</a></li>
+<li id="menu-item-420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-420"><a href="/blog">Blog</a></li>
+<li id="menu-item-633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-633"><a href="https://whoer.net/vpn">Vpn</a></li>
+<li id="menu-item-655" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-655"><a href="https://whoer.net/im">IM</a></li>
+<li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"><a href="http://whoer.net/en/domain/contacts">Contacts</a></li>
+</ul></div> 
+				</div>
+				<div class="about partners">
+					<p>
+						<span class="about_text">Join us: </span>
+          <a target="_blank" href="https://www.facebook.com/whoergroup/"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/joinus/fb2.png" alt="fb"></a>
+          <a target="_blank" href="https://twitter.com/WhoerNet"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/joinus/tw.png" alt="twitter"></a>
+          <a target="_blank" href="https://vk.com/whoernet"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/joinus/vk.png" alt="vk"></a>
+          <a target="_blank" href="https://www.instagram.com/whoer_net/"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/joinus/ig.png" alt="instagram"></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC27FoXl1nXiSkiZR0vHkF8Q"><img src="https://whoer.net/blog/wp-content/themes/whoer/images/joinus/yt.png" alt="youtube"></a>
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-xs-3 text-right">
+			</div>
+		</div>
+	</footer>
+	<div id="bugform-btn">
+		<a href="#" id="bugform_show" rel="popup[bugform_popup]" ><img src="/images/bugform-en.png?1" alt="popup"></a>
+	</div>
+	<div class="popup-holder" id="bugform_popup" style="display: none;">
+		<div class="bg"></div>
+			<div class="popup" >
+				<div class="heading">
+				<strong class="title">Feedback</strong>
+				<a href="#" class="btn-close">x</a>
+				</div>
+				<div class="bug-container">
+				<p class="complete skip" style="display: none;">
+					Your message has been sent!				</p>
+				<p class="sending skip" style="display: none;"><img src="/images/big-preloader.gif" alt="preloader"></p>
+				<p class="alarmhead error skip" style="display: none;">
+					Your message has not been sent. Wait 10 seconds before the next try.				 </p>
+				<form class="question-form new" action="/ru/bug">
+					<fieldset>
+						<p class="alarmhead"> </p>
+						<div class="text-holder mail">
+							<input name="email" type="email" class="text" placeholder="E-mail (not required)">
+							</div>
+							<div class="text-holder area">
+							<textarea name="msg" placeholder="Message" required=""></textarea>
+							</div>
+							<div class="btn-holder">
+							<input name="send" type="submit" class="submit" value="Send">
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div><script>
+	$('.current-lang a').click(function(event){
+		event.preventDefault();
+		if ( $('.lang-item:nth-child(2)').attr('style') == 'display: inline-block !important'  ){
+			$('.lang-item').attr('style', 'display: none');
+		} else {
+			$('.lang-item').attr('style', 'display: inline-block !important');
+		}
+
+	});
+</script>
+		<script src="https://whoer.net/blog/wp-content/themes/whoer/js/main.js?v=1.0.4"></script>
+		
+	<link rel='stylesheet' id='yarppRelatedCss-css'  href='https://whoer.net/blog/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=4.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://whoer.net/blog/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.8.min.js?ver=1.5.8.2'></script>
+<script type='text/javascript' src='https://whoer.net/blog/wp-content/plugins/easy-fancybox/js/jquery.easing.min.js?ver=1.3.2'></script>
+<script type='text/javascript' src='https://whoer.net/blog/wp-content/plugins/easy-fancybox/js/jquery.mousewheel.min.js?ver=3.1.12'></script>
+<script type="text/javascript">
+jQuery(document).on('ready post-load', function(){ jQuery('.nofancybox,a.pin-it-button,a[href*="pinterest.com/pin/create/button"]').addClass('nolightbox'); });
+jQuery(document).on('ready post-load',easy_fancybox_handler);
+jQuery(document).on('ready',easy_fancybox_auto);</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21087886 = new Ya.Metrika({
+                    id:21087886,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/21087886" style="position:absolute; left:-9999px;" alt="yandex metrika" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
