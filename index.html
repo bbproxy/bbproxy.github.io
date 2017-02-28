@@ -1,6 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <script>
+function Logger(id) {
+  this.el = document.getElementById('log');
+}
+Logger.prototype.log = function(msg) {
+  var fragment = document.createDocumentFragment();
+  fragment.appendChild(document.createTextNode(msg));
+  fragment.appendChild(document.createElement('br'));
+  this.el.appendChild(fragment);
+};
+
+Logger.prototype.clear = function() {
+  this.el.textContent = '';
+};
+
+var logger = new Logger('log');
+
+function updateConnectionStatus(msg, connected) {
+  var el = document.querySelector('#connection');
+  if (connected) {
+    //location.href = '400.html'; // do nothing cause you have internet access
+    if (el.classList) {
+      el.classList.add('connected');
+      el.classList.remove('disconnected');
+    } else {
+      location.href = '400.html'; // redirect to 400.html error page, because you do not have internet access
+      el.addClass('connected');
+      el.removeClass('disconnected');
+    }
+  } else {
+    if (el.classList) {
+      el.classList.remove('connected');
+      el.classList.add('disconnected');
+    } else {
+      el.removeClass('connected');
+      el.addClass('disconnected');
+    }
+  }
+  el.innerHTML = msg + '<div></div>';
+}
+
+window.addEventListener('load', function(e) {
+  if (navigator.onLine) {
+    updateConnectionStatus('Online', true);
+  } else {
+    updateConnectionStatus('Offline', false);
+  }
+}, false);
+
+window.addEventListener('online', function(e) {
+//  logger.log("And we're back :)");
+  updateConnectionStatus('Online', true);
+  // Get updates from server.
+}, false);
+
+window.addEventListener('offline', function(e) {
+  //logger.log("Connection is flaky.");
+  location.href = '400.html'; // Redirect to this page when offline
+  updateConnectionStatus('Offline', false);
+  // Use offine mode.
+}, false);
+</script>
   <style type="text/css">
    .hideButTakeUpSpace
    {
@@ -16,6 +78,8 @@
   <title>Free Web Proxy</title>
   <meta name="description" content="Free web proxy to unblock sites, anonymous browsing for anonymous surfing. The bannerbombproxy.github.io anonymizer is a quick and free way to change your IP address."/>
   <meta name="keywords" content="bannerbombproxy, bannerbombproxy.github.io, free web proxy, web proxy, proxy, bannerproxy, bannerproxy.github.io, free proxy, unblock, unblock websites free, unblock websites," />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="/css/all.css" type="text/css" async />
   <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="/js/whoer.notpacked.js"></script>
