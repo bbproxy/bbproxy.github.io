@@ -77,6 +77,14 @@
 <span class="name">My IP</span>
 </a>
 </li>
+<!--
+<li class="active menu-ico-02">
+<a href="/vpn">
+<span class="visual">&nbsp;</span>
+<span class="name">VPN</span>
+</a>
+</li>
+-->
 <li class=" menu-ico-03">
 <a href="/">
 <span class="visual">&nbsp;</span>
@@ -117,7 +125,7 @@
 <div class="promo-tabset2">
 <div class="tab-control-holder">
 <ul class="tab-control">
-<li id="buy" class="active"><a class="vpn-promo-tab" href="#"><span>VPN <sup>beta</sup></span></a></li>
+<li id="buy" class="active"><a class="vpn-promo-tab" href="#"><span>VPN </span></a></li>
 <li id="faq"><a class="vpn-simple-tab" href="#"><span>FAQ</span></a></li>
 <li id="download"><a class="vpn-simple-tab" href="#"><span>Download</span></a></li>
 </ul>
@@ -131,30 +139,20 @@
     $(".vpn-promo-block").show();
     $(".promo-tabset2 .tab-holder").css("width", "660px");
   });
-  	$(document).ready(function()
-       {
+  	$(document).ready(function() {
 	   
 
 	   f=window.location.search;
 	   fDate=f.split('=')
-		console.log(
-f.indexOf('download')
-
-);
-	if( f.indexOf('download')!=-1)
-	{
+		//console.log(f.indexOf('download'));
+	if( f.indexOf('download')!=-1) {
 	$(".promo-tabset2 .tab-holder .tab:eq(2)").addClass('active');
 	$(".promo-tabset2 .tab-holder").css("width", "990px");
-	}
-	else
-	{
-	if(f.indexOf('faq')!=-1)
-	{
+	} else {
+	if(f.indexOf('faq')!=-1) {
 	$(".promo-tabset2 .tab-holder .tab:eq(1)").addClass('active');
 	$(".promo-tabset2 .tab-holder").css("width", "990px");
-	  }
-	  	  else
-{
+	  } else {
     $(".promo-tabset2 .tab-holder .tab:first-child").addClass('active');
   $(".vpn-promo-block").show();
 }
@@ -281,8 +279,22 @@ f.indexOf('download')
 </div>
 </div>
 <div class="frame">
-<span class="sistem_description">Windows 10, 8, 7,<br>Vista & XP</span>
+<span class="sistem_description">Windows 10, 8, 7,<br>Vista</span>
 <a href="#tabs-1" data-download="/download/whoer.exe" class="btn-download btn-download-file"><span><em>Download</em></span></a>
+</div>
+</li>
+<li id="2">
+<div class="top">
+<div class="holder">
+<div class="ico">
+<img src="/images/ico-110.png" alt="image description" width="43" height="43">
+</div>
+<span class="sistem_name">OS X</span>
+</div>
+</div>
+<div class="frame">
+<span class="sistem_description">10.6 Snow Leopard <br>or higher</span>
+<a href="#tabs-3" data-download="/download/whoer.pkg" class="btn-download btn-download-file"><span><em>Download</em></span></a>
 </div>
 </li>
 <li id="1">
