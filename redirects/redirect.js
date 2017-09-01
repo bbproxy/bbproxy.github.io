@@ -1,6 +1,5 @@
-var 505 = false
+var 503 = false
 
-if (505 === true) {
-  window.location.replace("https://bbproxy.github.io/505");
+if (503 === true) {
+  window.location.replace("https://bbproxy.github.io/503");
 }
-else if ()
