@@ -257,6 +257,7 @@ window.addEventListener('offline', function(e) {
 <input type="checkbox" class="check" id="ssl"/>
 </div>
 <div class="webproxy-servers">
+<!--
 <select class="sproxy-select" id="server" name="server">
 <option value="rnd">Random server</option>
 <option value="fr2">France, Paris</option>
@@ -265,10 +266,23 @@ window.addEventListener('offline', function(e) {
 <option value="ru2">Russia, Moscow</option>
 <option value="ru3">Russia, Saint-Petersburg</option>
 <option value="ru4">Russia, Moscow</option>
-<option value="se2">Sweden, Stockholm</option><!--se1 was value-->
+<option value="se2">Sweden, Stockholm</option>
 <option value="uk2">United Kingdom, London</option>
 <option value="us3">USA, Los Angeles</option>
 <option value="us4">USA, New York</option>
+</select>
+-->
+<select class=sproxy-select id=server name=server>
+<option value=rnd>Random server</option>
+<option value=fr2>France, Paris</option>
+<option value=nl4>Netherlands, Amsterdam</option>
+<option value=nl5>Netherlands, Amsterdam</option>
+<option value=ru2>Russia, Moscow</option>
+<option value=ru3>Russia, Saint-Petersburg</option>
+<option value=ru4>Russia, Moscow</option>
+<option value=se2>Sweden, Stockholm</option>
+<option value=uk2>United Kingdom, London</option>
+<option value=us3>USA, Los Angeles</option>
 </select>
 </div>
 <!-- Tooltip -->
@@ -286,6 +300,7 @@ window.addEventListener('offline', function(e) {
 <span class="title">Proxy servers:</span>
 <div class="row">
 <label>Country</label>
+<!--
 <select class="proxy-select" id="server" name="server">
 <option value="rnd">Random server</option>
 <option value="us4">USA NewYork</option>
@@ -297,7 +312,20 @@ window.addEventListener('offline', function(e) {
 <option value="nl3">Netherlands Amsterdam</option>
 <option value="fr2">France Paris</option>
 <option value="nl4">Netherlands Amsterdam</option>
-<option value="se2">Sweden Stockholm</option><!--se1 was value-->
+<option value="se2">Sweden Stockholm</option>
+</select>
+-->
+<select class=proxy-select id=server name=server>
+<option value=rnd>Random server</option>
+<option value=uk2>United Kingdom London</option>
+<option value=us3>USA LosAngeles</option>
+<option value=se2>Sweden Stockholm</option>
+<option value=ru2>Russia Moscow</option>
+<option value=nl4>Netherlands Amsterdam</option>
+<option value=ru3>Russia SaintPetersburg</option>
+<option value=ru4>Russia Moscow</option>
+<option value=nl5>Netherlands Amsterdam</option>
+<option value=fr2>France Paris</option>
 </select>
 </div>
 <div class="row">
@@ -395,7 +423,8 @@ document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+":/
 </ul>
 </div>
 <script>
-var servers = {
+/*
+ var servers = {
     "rnd" : { "name" : "Random server", "ips" : []}
 };
 
@@ -419,7 +448,29 @@ var servers = {
 };
   servers["nl3"] = { "name" : "Netherlands", "ips" : ["31.220.45.184"], "address" : "nl3.gsr.awhoer.net"
 };
+*/
+ var servers = {
+    "rnd" : { "name" : "Random server", "ips" : []}
+};
 
+  servers["uk2"] = { "name" : "United Kingdom", "ips" : ["209.222.30.93"], "address" : "uk2.gsr.awhoer.net"
+};
+  servers["us3"] = { "name" : "USA", "ips" : ["199.189.108.73"], "address" : "us3.gsr.awhoer.net"
+};
+  servers["se2"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se2.gsr.awhoer.net"
+};
+  servers["ru2"] = { "name" : "Russia", "ips" : ["195.88.208.155"], "address" : "ru2.gsr.awhoer.net"
+};
+  servers["nl4"] = { "name" : "Netherlands", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
+};
+  servers["ru3"] = { "name" : "Russia", "ips" : ["185.22.173.146"], "address" : "ru3.gsr.awhoer.net"
+};
+  servers["ru4"] = { "name" : "Russia", "ips" : ["92.63.100.80"], "address" : "ru4.gsr.awhoer.net"
+};
+  servers["nl5"] = { "name" : "Netherlands", "ips" : ["153.92.127.150"], "address" : "nl5.gsr.awhoer.net"
+};
+  servers["fr2"] = { "name" : "France", "ips" : ["5.135.76.7"], "address" : "fr2.gsr.awhoer.net"
+};
 $('#server').on('change', function() {
   var cur_srv = $(this).val();
 
