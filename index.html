@@ -417,43 +417,17 @@ document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+":/
 </ul>
 </div>
 <script>
-/*
- var servers = {
-    "rnd" : { "name" : "Random server", "ips" : []}
-};
-
-  servers["ru4"] = { "name" : "Russia", "ips" : ["92.63.100.80"], "address" : "ru4.gsr.awhoer.net"
-};
-  servers["ru2"] = { "name" : "Russia", "ips" : ["195.88.208.155"], "address" : "ru2.gsr.awhoer.net"
-};
-  servers["us3"] = { "name" : "USA", "ips" : ["192.52.167.149"], "address" : "us3.gsr.awhoer.net"
-};
-  servers["nl4"] = { "name" : "Netherlands", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
-};
-  servers["ru3"] = { "name" : "Russia", "ips" : ["185.22.173.146"], "address" : "ru3.gsr.awhoer.net"
-};
-  servers["uk2"] = { "name" : "United Kingdom", "ips" : ["209.222.30.93"], "address" : "uk2.gsr.awhoer.net"
-};
-  servers["se2"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se2.gsr.awhoer.net" // servers["se1"] = { "name" : "Sweden", "ips" : ["95.215.44.97"], "address" : "se1.gsr.awhoer.net"
-};
-  servers["fr2"] = { "name" : "France", "ips" : ["5.135.76.7"], "address" : "fr2.gsr.awhoer.net"
-};
-  servers["us4"] = { "name" : "USA", "ips" : ["192.240.96.253"], "address" : "us4.gsr.awhoer.net"
-};
-  servers["nl3"] = { "name" : "Netherlands", "ips" : ["31.220.45.184"], "address" : "nl3.gsr.awhoer.net"
-};
-*/
- var servers = {
+var servers = {
     "rnd" : { "name" : "Random server", "ips" : []}
 };
 
   servers["nl5"] = { "name" : "Netherlands", "ips" : ["153.92.127.150"], "address" : "nl5.gsr.awhoer.net"
 };
-  servers["ru2"] = { "name" : "Russia", "ips" : ["195.88.208.155"], "address" : "ru2.gsr.awhoer.net"
+  servers["ru2"] = { "name" : "Russia", "ips" : ["185.219.42.163"], "address" : "ru2.gsr.awhoer.net"
 };
   servers["nl4"] = { "name" : "Netherlands", "ips" : ["37.1.207.70"], "address" : "nl4.gsr.awhoer.net"
 };
-  servers["uk2"] = { "name" : "United Kingdom", "ips" : ["209.222.30.93"], "address" : "uk2.gsr.awhoer.net"
+  servers["uk2"] = { "name" : "United Kingdom", "ips" : ["109.73.171.48"], "address" : "uk2.gsr.awhoer.net"
 };
   servers["ru4"] = { "name" : "Russia", "ips" : ["92.63.100.80"], "address" : "ru4.gsr.awhoer.net"
 };
@@ -466,6 +440,74 @@ document.write(unescape("%3cscript type='text/javascript' src='"+sa_protocol+":/
   servers["fr2"] = { "name" : "France", "ips" : ["5.135.76.7"], "address" : "fr2.gsr.awhoer.net"
 };
 
+ /*
+ <script>
+
+
+$('#server').on('change', function() {
+  var cur_srv = $(this).val();
+
+$("#ips").selectmenu('disable');
+$('#ips').html('');
+
+  $('#ips').append($("<option></option>").attr("value",
+"rnd").text("Random IP address"));
+
+  for (var id in servers[cur_srv]['ips']) {
+    ip = servers[cur_srv]["ips"][id];
+    $('#ips').append($("<option></option>").attr("value", ip).text(ip));
+  }
+$("#ips").selectmenu('destroy').selectmenu();
+});
+
+<script>
+function go_proxy (url, prefered_srv) {
+    if (!url) {
+        url = $("input[name=url]").val();
+        url = url.replace(/^\s+|\s+$/g, '');
+        url = url.replace(/^https:\/\//, "http://sss.");
+    }
+
+    var proto = 'http';
+
+    var srv = $('select[name=server] option:selected').val()
+    if (prefered_srv && srv == "rnd") {
+        srv = prefered_srv;
+    }
+    var ip = $('select[name=ip] option:selected').val()
+
+    if (srv == "rnd") {
+        delete servers["rnd"];
+        var keys = Object.keys(servers);
+        srv = keys[Math.floor(Math.random() * keys.length)];
+    }
+
+    if (ip == "rnd")
+        ip = servers[srv]["ips"][Math.floor(Math.random() *
+servers[srv]["ips"].length)];
+
+    var proxy_address = servers[srv]["address"];
+
+    window.location = sprintf("%s://%s/home287/cmd?urlText=%s", proto,
+proxy_address, url);
+}
+
+$(document).ready(function() {
+    $("#go").click(function() {
+        go_proxy($("input[name=url]").val());
+        return false;
+    });
+
+    $("#via-anonymizer a").click(function() {
+        go_proxy(this.href, $(this).data("srv") || 0);
+        return false;
+    });
+});
+ */
+ 
+ 
+ 
+ 
 $('#server').on('change', function() {
   var cur_srv = $(this).val();
 
@@ -480,8 +522,6 @@ $('#ips').html('');
   }
 $("#ips").selectmenu('destroy').selectmenu();
 });
-
-
 </script>
 <script>
 function go_proxy (url, prefered_srv) {
