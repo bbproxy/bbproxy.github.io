@@ -251,32 +251,17 @@ window.addEventListener('offline', function(e) {
 <input type="checkbox" class="check" id="ssl"/>
 </div>
 <div class="webproxy-servers">
-<!--
 <select class="sproxy-select" id="server" name="server">
 <option value="rnd">Random server</option>
 <option value="fr2">France, Paris</option>
-<option value="nl3">Netherlands, Amsterdam</option>
 <option value="nl4">Netherlands, Amsterdam</option>
+<option value="nl5">Netherlands, Amsterdam</option>
 <option value="ru2">Russia, Moscow</option>
 <option value="ru3">Russia, Saint-Petersburg</option>
 <option value="ru4">Russia, Moscow</option>
 <option value="se2">Sweden, Stockholm</option>
 <option value="uk2">United Kingdom, London</option>
-<option value="us3">USA, Los Angeles</option>
 <option value="us4">USA, New York</option>
-</select>
--->
-<select class=sproxy-select id=server name=server>
-<option value=rnd>Random server</option>
-<option value=fr2>France, Paris</option>
-<option value=nl4>Netherlands, Amsterdam</option>
-<option value=nl5>Netherlands, Amsterdam</option>
-<option value=ru2>Russia, Moscow</option>
-<option value=ru3>Russia, Saint-Petersburg</option>
-<option value=ru4>Russia, Moscow</option>
-<option value=se2>Sweden, Stockholm</option>
-<option value=uk2>United Kingdom, London</option>
-<option value=us4>USA, New York</option>
 </select>
 </div>
 <!-- Tooltip -->
@@ -294,32 +279,17 @@ window.addEventListener('offline', function(e) {
 <span class="title">Proxy servers:</span>
 <div class="row">
 <label>Country</label>
-<!--
 <select class="proxy-select" id="server" name="server">
 <option value="rnd">Random server</option>
 <option value="us4">USA NewYork</option>
-<option value="us3">USA LosAngeles</option>
-<option value="uk2">United Kingdom London</option>
-<option value="ru2">Russia Moscow</option>
-<option value="ru4">Russia Moscow</option>
-<option value="ru3">Russia SaintPetersburg</option>
-<option value="nl3">Netherlands Amsterdam</option>
-<option value="fr2">France Paris</option>
-<option value="nl4">Netherlands Amsterdam</option>
 <option value="se2">Sweden Stockholm</option>
-</select>
--->
-<select class=proxy-select id=server name=server>
-<option value=rnd>Random server</option>
-<option value=nl5>Netherlands Amsterdam</option>
-<option value=ru2>Russia Moscow</option>
-<option value=nl4>Netherlands Amsterdam</option>
-<option value=uk2>United Kingdom London</option>
-<option value=ru4>Russia Moscow</option>
-<option value=se2>Sweden Stockholm</option>
-<option value=ru3>Russia SaintPetersburg</option>
-<option value=us4>USA NewYork</option>
-<option value=fr2>France Paris</option>
+<option value="ru2">Russia Moscow</option>
+<option value="nl4">Netherlands Amsterdam</option>
+<option value="fr2">France Paris</option>
+<option value="ru3">Russia SaintPetersburg</option>
+<option value="nl5">Netherlands Amsterdam</option>
+<option value="uk2">United Kingdom London</option>
+<option value="ru4">Russia Moscow</option>
 </select>
 </div>
 <div class="row">
@@ -439,76 +409,8 @@ var servers = {
 };
   servers["fr2"] = { "name" : "France", "ips" : ["5.135.76.7"], "address" : "fr2.gsr.awhoer.net"
 };
-
- /*
- <script>
-
-
-$('#server').on('change', function() {
-  var cur_srv = $(this).val();
-
-$("#ips").selectmenu('disable');
-$('#ips').html('');
-
-  $('#ips').append($("<option></option>").attr("value",
-"rnd").text("Random IP address"));
-
-  for (var id in servers[cur_srv]['ips']) {
-    ip = servers[cur_srv]["ips"][id];
-    $('#ips').append($("<option></option>").attr("value", ip).text(ip));
-  }
-$("#ips").selectmenu('destroy').selectmenu();
-});
-
-<script>
-function go_proxy (url, prefered_srv) {
-    if (!url) {
-        url = $("input[name=url]").val();
-        url = url.replace(/^\s+|\s+$/g, '');
-        url = url.replace(/^https:\/\//, "http://sss.");
-    }
-
-    var proto = 'http';
-
-    var srv = $('select[name=server] option:selected').val()
-    if (prefered_srv && srv == "rnd") {
-        srv = prefered_srv;
-    }
-    var ip = $('select[name=ip] option:selected').val()
-
-    if (srv == "rnd") {
-        delete servers["rnd"];
-        var keys = Object.keys(servers);
-        srv = keys[Math.floor(Math.random() * keys.length)];
-    }
-
-    if (ip == "rnd")
-        ip = servers[srv]["ips"][Math.floor(Math.random() *
-servers[srv]["ips"].length)];
-
-    var proxy_address = servers[srv]["address"];
-
-    window.location = sprintf("%s://%s/home287/cmd?urlText=%s", proto,
-proxy_address, url);
-}
-
-$(document).ready(function() {
-    $("#go").click(function() {
-        go_proxy($("input[name=url]").val());
-        return false;
-    });
-
-    $("#via-anonymizer a").click(function() {
-        go_proxy(this.href, $(this).data("srv") || 0);
-        return false;
-    });
-});
- */
  
- 
- 
- 
-$('#server').on('change', function() {
+ $('#server').on('change', function() {
   var cur_srv = $(this).val();
 
 $("#ips").selectmenu('disable'); 
@@ -605,6 +507,12 @@ $(document).ready(function() {
         }
         return false;
     });
+  /*
+  $('#header .plan-box').click(function(event) {
+        location.href = $(this).find('a').attr('href');
+        return false;
+    });
+  */
 });
 </script>
 <div id="bugform-btn">
