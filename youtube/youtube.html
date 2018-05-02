@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Infinite | YouTube</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css?ver=2" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body onload="random();resetChannel();">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="/"><i class="fa fa-unlock" aria-hidden="true"></i> Infinite</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                     <li><a href="/">Home</a>
+                    </li>
+                    <li><a href="/youtube/youtube">YouTube Unblocker</a>
+                    </li>
+                    <li><a href="http://swfgames.000webhostapp.com">Games</a>
+                    </li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="logo"><span class="icon fa-play"></span>
+                </div>
+                <h2>Infinite</h2>
+                <p>YouTube Unblocker / Unrestricted by BannerBomb</p>
+            </div>
+        </section>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+
+            <!-- One -->
+            <div class="inner">
+                <div class="content" align="center" style="background-color:#2e3141">
+                    <br />
+                    <br />
+                    <h1><a href="/">Go back?</a><br />
+                  YouTube Unblocker / Unrestricter<br />
+                  NOTE: Click the 'Current Channel' link to reset the current channel.<br />
+                  You can also hover over a video to see its description.<br />
+                  <a href="javascript:getBookmark()">Here's a bookmark to use for the YT Unblocker!</a><br />
+                  <a href="javascript:resetChannel()" style="display:inline-block" title="Click this button to reset the channel search. The text shows the current channel that all searches will be restricted to.">Current Channel: <div id="channel" style="display:inline-block">All Channels</div></a>
+               </h1>
+                    <center>
+                        <div class="searchform cf">
+                            <input id="ytSearch" type="text" size="70" placeholder="Search for YouTube Video" style="height:100%;text-align:center;" />
+                            <input type="number" id="resultInput" placeholder="&nbsp;Results #" min="1" max="50" style="width:18.5%;height:100%;color:black;text-align:center" />
+                            <button onclick="search()" style="height:100%">Search</button>
+                        </div>
+                        <div class="searchform cf">
+                            <input id="ytSearchChannel" type="text" size="70" placeholder="Search For YouTube Channel" style="height:100%;text-align:center;" />
+                            <input type="number" id="resultInputChannel" placeholder="&nbsp;Results #" min="1" max="50" style="width:18.5%;height:100%;color:black;text-align:center" />
+                            <button onclick="channelSearch()" style="height:100%">Search</button>
+                        </div>
+                        
+                        <div class="searchform cf">
+                            <input id="ytSearchPlaylist" type="text" size="70" placeholder="Search For YouTube Playlist" style="height:100%;text-align:center;" />
+                            <input type="number" id="resultInputPlaylist" placeholder="&nbsp;Results #" min="1" max="50" style="width:18.5%;height:100%;color:black;text-align:center" />
+                            <button onclick="playlistSearch()" style="height:100%">Search</button>
+                       </div>
+                    </center>
+                    <div id="search-results" align="left" style="margin-left:15%"></div>
+                    <div id="pageButtons" style="display:none">
+                        <button onclick="prevPage()">← Previous Page</button>
+                        <button onclick="nextPage()">Next Page →</button>
+                    </div>
+                    <div id="pageButtons2" style="display:none">
+                        <button onclick="prevPageChannel()">← Previous Page</button>
+                        <button onclick="nextPageChannel()">Next Page →</button>
+                    </div>
+                     <div id="pageButtons3" style="display:none">
+                        <button onclick="prevPagePlaylist()">← Previous Page</button>
+                        <button onclick="nextPagePlaylist()">Next Page →</button>
+                    </div>
+                    <br />
+                    <div class="searchform cf">
+                        <input id="ytID" size="79" placeholder="Insert YouTube Link / ID" style="height:100%;width:78%;text-align:center;color:black;" />
+                        <button onclick="submit()" style="height:100%">Submit</button>
+                    </div>
+                    <br>
+                    <br>
+
+                    <iframe id="player" width="812" height="512" src="" allowfullscreen></iframe>
+                    <br />
+                    <div id="playlistButtons" style="display:none">
+                        <button onclick="prevVid()">← Previous Video</button>&nbsp;
+                        Video <div id="playlistItem" style="display:inline-block"></div>&nbsp;
+                        <button onclick="nextVid()">Next Video →</button>
+                    </div>
+                    <br />
+                    <br />
+                    <h1>Note: You might need to click the download button twice to get it to download.</h1>
+                   <iframe id="download" src="" style="width: 320px; height: 100px; border: 0px;"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+      <!--
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">Contact Me:</h2>
+                <p>Feedback? Suggestions? Feel free to contact me here on anything.</p>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" required name="name" id="name" />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" required name="email" id="email" />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea required name="message" id="message" rows="4"></textarea>
+                    </div>
+                    <ul class="actions">
+                        <li>
+                            <input onclick="send()" type="submit" value="Send Message" />
+                        </li>
+                    </ul>
+                <script>
+                  function send() {
+                    var name = document.getElementById("name").value;
+                    var msg = document.getElementById("message").value;
+                    var email = document.getElementById("email").value;
+                    location.href = "https://transvert.herokuapp.com/index.php?name=" + name + "&msg=" + msg + "&email=" + email;
+                  }
+                </script>
+                <ul class="copyright">
+                    <li>&copy; Bryce C
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>. All rights reserved.</li>
+                </ul>
+            </div>
+        </section>
+-->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="youtube.js"></script>
+    <script>
+      function getBookmark()
+      {
+        var string = "javascript:var a=location.href,b=a.substr(a.indexOf('='));location.href='https://bbproxy.github.io/youtube/youtube?id'+b;";
+        prompt("Add the code below to a bookmark!\nUse the script on any YouTube page, and it will lead to the YT Unblocker.", string);
+      }
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+</body>
+
+</html>
